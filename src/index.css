@@ -20,7 +20,6 @@
 :root {
   /*========== Colors ==========*/
   --first-color: #373d46;
-  --text-first-color: #FFFFFF;
   --bg-first-color: #FFFFFF;
   --modal-bg-color: #fff;
   --bg-color: #414260;
@@ -30,6 +29,12 @@
   --btn-color: #ddc0a1;
   --border-color: #EDEDED;
   --light-blue: #2ECDCD;
+
+  /* ogtagorcvox */
+  --dark-blue: #0C0D34;
+  --text-first-color: #F6F6F6;
+
+  /* end */
 
   --font-weight-thin: 100;
   --font-weight-extra-light: 200;
@@ -64,4 +69,73 @@ input[type="text"]:focus {
 
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+model-viewer {
+  width: 100%;
+  height: 250px;
+}
+
+model-viewer::part(default-progress-bar) {
+  display: none;
+}
+
+model-viewer::part(default-ar-button) {
+  display: none;
+}
+
+@media screen and (max-width: 1536px) {
+  model-viewer {
+    width: 100%;
+    height: 175px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  model-viewer {
+    width: 100%;
+    height: 175px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio:0) {
+  model-viewer {
+    width: 100%;
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  model-viewer {
+    width: 100%;
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  model-viewer {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  model-viewer {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  model-viewer {
+    width: 100%;
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  model-viewer {
+    width: 100%;
+    height: 129px;
+  }
 }

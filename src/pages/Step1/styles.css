@@ -1,0 +1,142 @@
+.container-view {
+    width: 100%;
+}
+
+.button-right {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #2ECDCD;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.icon-button{
+    margin-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.models {
+    padding: 12px;
+    border-radius: 0 0 50px 50px;
+    height: 166px;
+    /* background: linear-gradient(#f1f1f1, #dbdbdb);
+    backdrop-filter: brightness(0.7); */
+}
+
+
+@media screen and (max-width: 1536px) {
+    .button-right {
+        bottom: 34%;
+        right: 7%;
+    }
+
+    .models {
+        height: 149px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .button-right {
+        bottom: 34%;
+        right: 7%;
+    }
+
+    .models {
+        height: 149px;
+    }
+
+    .icon-button{
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio:0) {
+    .button-right {
+        bottom: 34%;
+        right: 7%;
+    }
+
+    .models {
+        height: 120px;
+    }
+
+    .icon-button{
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .button-right {
+        bottom: 34%;
+        right: 7%;
+    }
+
+    .models {
+        height: 120px;
+    }
+
+    .icon-button{
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .button-right {
+        bottom: 34%;
+        right: 7%;
+    }
+
+    .models {
+        height: 135px;
+    }
+
+    .icon-button{
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .button-right {
+        bottom: 34%;
+        right: 7%;
+    }
+
+    .icon-button{
+        margin-bottom: 25px;
+    }
+
+    .models {
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .button-right {
+        bottom: 34%;
+        right: 7%;
+    }
+
+    .models {
+        height: 122px;
+    }
+
+    .icon-button {
+        margin-bottom: 3px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .models {
+        height: 122px;
+    }
+
+    .icon-button {
+        margin-bottom: 30px;
+    }
+}
+
+
+

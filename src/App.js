@@ -1,11 +1,12 @@
-import './App.css';
 
-function App() {
+import { ThemeProvider } from 'context';
+
+import Layout from './layout';
+
+export default function App() {
   return (
-    <div className="App">
-
-    </div>
+    <ThemeProvider>
+      <Layout />
+    </ThemeProvider>
   );
-}
-
-export default App;
+};
