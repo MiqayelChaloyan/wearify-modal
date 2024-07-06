@@ -22,3 +22,29 @@
     margin: 5px;
     cursor: pointer;
 }
+
+
+/* Input Range */
+.range {
+    margin: 35px auto;
+    width: 70%;
+}
+
+.range-titles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.range-title {
+    font-size: 10.91px;
+    color: var(--dark-blue);
+    font-weight: 500;
+    text-align: left;
+}
+
+
+
+
+
+
+
