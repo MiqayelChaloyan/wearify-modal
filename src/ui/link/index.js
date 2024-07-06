@@ -6,7 +6,7 @@ const SafeExternalLink = ({
     <a
         href={href}
         target='_blank'
-        rel='noopener'
+        rel='noopener noreferrer'
         className={className}
     >
         {children}

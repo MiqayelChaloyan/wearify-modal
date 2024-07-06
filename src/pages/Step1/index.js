@@ -1,19 +1,21 @@
 import React, { useRef, useState } from 'react';
 
-import Square from 'icons/square'
+import Square from 'icons/square';
 
 import { motion } from 'framer-motion';
 
 import Models from 'components/models';
 import Header from 'components/header';
 import ModelViewer from 'components/model-viewer';
+import Measurements from 'components/measurements';
+import LayoutPopup from 'components/popup1/layout';
 
 import { colors } from 'constants';
 
 import './styles.css';
 
 // TODO
-import { models } from 'utils/fakeApi';
+import { masurements, models } from 'utils/fakeApi';
 //
 
 const Step1 = React.memo(() => {
@@ -34,6 +36,8 @@ const Step1 = React.memo(() => {
         <div>
             <Header />
             <div className='container-view' ref={ref}>
+                {masurements && <Measurements />}
+                <LayoutPopup />
                 <ModelViewer uriGlb={uriGlb} />
                 <div className='icon-button'>
                     {
@@ -80,3 +84,29 @@ const Step1 = React.memo(() => {
 });
 
 export default Step1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

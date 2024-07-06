@@ -4,8 +4,7 @@ import { CgClose } from 'react-icons/cg';
 
 import SafeExternalLink from 'ui/link';
 
-import { colors } from 'constants';
-import { ButtonsTexts } from 'constants';
+import { ButtonsTexts, colors } from 'constants';
 
 import { scanning } from 'utils/fakeApi';
 

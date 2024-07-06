@@ -5,11 +5,14 @@
     padding-left: 30px;
     padding-right: 20px;
     margin-top: 42px;
+    /* margin-bottom: 10px; */
 }
 
 .button-try-on {
     font-size: 17px;
-    padding: 10px 20px 10px 20px;
+    /* padding: 10px 20px 10px 20px; */
+    width: 143px;
+    height: 52px;
     font-weight: 500;
     background-color: var(--dark-blue);
     border: 1px solid var(--dark-blue);

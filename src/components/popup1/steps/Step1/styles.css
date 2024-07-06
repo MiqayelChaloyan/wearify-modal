@@ -1,0 +1,24 @@
+.step {
+    /* background-color: green; */
+    text-align: center;
+}
+
+.options {
+    margin-top: 20px;
+    height: 220px;
+}
+
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.button-sizes {
+    width: 77px;
+    height: 24px;
+    background-color: #D9D9D9;
+    color: var(--dark-blue);
+    border-radius: 7px;
+    margin: 5px;
+    cursor: pointer;
+}

@@ -1,6 +1,6 @@
 const colors = {
     darkBlue: '#0C0D34',
-    white: '#ECEDEA',
+    lightGray: '#ECEDEA',
 };
 
 const ButtonsTexts = {
@@ -10,7 +10,7 @@ const ButtonsTexts = {
 };
 
 const ImagePaths = {
-    logoUrl: 'https://drive.google.com/thumbnail?id=1vT4xy5UQYQ4s4AwPdnliDVkk6LKJvDw2'
+    logoUrl: 'https://drive.google.com/thumbnail?id=1vT4xy5UQYQ4s4AwPdnliDVkk6LKJvDw2',
 };
 
 const DeepARLink = 'https://www.figma.com/design/ZWZaBqAbrTZNLmcFQOtGrz/Untitled?node-id=0-1&t=Bp14r7lo9f8RKLoE-0'

@@ -55,6 +55,7 @@ ul li {
 
 button {
   outline: none;
+  border: none;
 }
 
 button:active,
@@ -139,3 +140,10 @@ model-viewer::part(default-ar-button) {
     height: 129px;
   }
 }
+
+
+
+
+
+
+

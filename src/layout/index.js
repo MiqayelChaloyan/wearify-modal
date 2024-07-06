@@ -9,8 +9,6 @@ import useTheme from 'hooks/useTheme';
 import { colors } from 'constants';
 
 export default function Layout() {
-    // const handleNext = () => next();
-
     const { setTheme } = useTheme();
 
     const { currentStepIndex, step, back, next } =
@@ -24,7 +22,7 @@ export default function Layout() {
 
         const intervalId = setTimeout(() => {
             if (isMounted) {
-                setTheme(colors.white);
+                setTheme(colors.lightGray);
                 next();
             }
         }, 5000);

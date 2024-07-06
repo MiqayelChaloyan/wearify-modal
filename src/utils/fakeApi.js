@@ -1,4 +1,5 @@
 const scanning = true;
+const masurements = true;
 
 const models = [
     {
@@ -20,5 +21,6 @@ const models = [
 
 export {
     scanning,
-    models
+    models,
+    masurements
 }

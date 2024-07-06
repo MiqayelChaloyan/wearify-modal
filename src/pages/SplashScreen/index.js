@@ -1,7 +1,9 @@
-import { ImagePaths } from "constants";
-import useTheme from "hooks/useTheme";
-import { useEffect } from "react";
-import { colors } from "constants";
+import { useEffect } from 'react';
+
+import useTheme from 'hooks/useTheme';
+
+import { ImagePaths, colors } from 'constants';
+
 import './styles.css';
 
 

@@ -1,0 +1,23 @@
+.containter {
+    position: relative;
+    z-index: 20;
+}
+
+.measurements {
+    display: grid;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    top: 8px
+}
+
+.button {
+    font-size: 17px;
+    margin: 5px 10px;
+    padding: 4px;
+    font-weight: 500;
+    background-color: none;
+    cursor: pointer;
+    transition: .5s;
+}
