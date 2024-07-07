@@ -1,0 +1,13 @@
+.shape-button {
+    background-color: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 59px;
+    height: 59px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.active {
+    border: 1px solid var(--dark-blue);
+}

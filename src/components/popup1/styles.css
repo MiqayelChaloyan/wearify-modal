@@ -31,31 +31,39 @@
 }
 
 .button-popup {
-    font-size: 17px;
-    /* padding: 10px 20px 10px 20px; */
+    font-size: 10.98px;
     width: 92.51px;
     height: 36.43px;
     font-weight: 500;
-    background-color: var(--dark-blue);
-    border: 1px solid var(--dark-blue);
     border-radius: 60px;
     cursor: pointer;
-    color: var(--text-first-color);
     text-decoration: none;
     transition: .5s;
     margin: 5px;
 }
 
-.button-popup:hover {
+.variant-1 {
+    background-color: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
+    color: var(--text-first-color);
+}
+
+.variant-1:hover {
     color: var(--dark-blue);
     background-color: var(--text-first-color);
+}
+
+.variant-2 {
+    background-color: var(--text-first-color);
+    color: #A5A5A5;
+    border: 1px solid #A5A5A5;
 }
 
 /* Header */
 .header {
     display: flex;
     justify-content: flex-end;
-    padding: 10px;
+    padding: 10px 15px;
 }
 
 .title {

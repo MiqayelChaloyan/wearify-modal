@@ -1,15 +1,15 @@
 import React from 'react';
 
+import './styles.css';
 
-const ShapeItem = ({ 
-    source 
-}) => {
+
+const ShapeItem = ({ source, isActive, onClick }) => {
     return (
-        <div>
-            <div style={{ width: '59px', height: '59px', borderRadius: '10px', backgroundColor: '#D9D9D9' }} />
-            {/* <img src={item.source} alt={item.title} style={{ width: '59px', height: '59px', borderRadius: '10px' }} /> */}
-        </div>
-    )
+        <button className={`shape-button ${isActive ? 'active' : ''}`} onClick={onClick}>
+            <div style={{ backgroundColor: '#D9D9D9' }} />
+            {/* <img src={source} alt={source} style={{ width: '100%', height: '100%', borderRadius: '10px' }} /> */}
+        </button>
+    );
 };
 
 export default ShapeItem;

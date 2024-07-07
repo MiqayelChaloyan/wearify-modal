@@ -18,7 +18,7 @@
     cursor: pointer;
 }
 
-.active {
+.active-sizes {
     background-color: #D9D9D9;
     color: var(--dark-blue);
 }

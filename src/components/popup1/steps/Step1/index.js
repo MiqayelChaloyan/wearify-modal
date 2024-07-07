@@ -27,8 +27,8 @@ const Step1 = () => {
             <Header title={'INPUT SIZE'} />
             <div className='options'>
                 <div className='toggle-buttons'>
-                    <button className={`button-sizes ${isCentimeter ? 'active' : ''}`} onClick={handleChangeMeasurements}>CM</button>
-                    <button className={`button-sizes ${!isCentimeter ? 'active' : ''}`} onClick={handleChangeMeasurements}>IN</button>
+                    <button className={`button-sizes ${isCentimeter ? 'active-sizes' : ''}`} onClick={handleChangeMeasurements}>CM</button>
+                    <button className={`button-sizes ${!isCentimeter ? 'active-sizes' : ''}`} onClick={handleChangeMeasurements}>IN</button>
                 </div>
                 <div className='range'>
                     <div>

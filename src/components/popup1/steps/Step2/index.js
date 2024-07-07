@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import SlickSlider from 'ui/slickSlider';
 import ShapeItem from 'components/shape';
@@ -10,8 +10,34 @@ import './styles.css';
 
 
 const Step2 = React.memo(() => {
-    const slideItems = images?.map(item => (<ShapeItem key={item.title} source={item.source} />));
-    const shapeItems = images.slice(0, 5)?.map(item => (<ShapeItem key={item.title} source={item.source} />));
+    const [activeIndexSkin, setActiveIndexSkin] = useState(null);
+    const [activeIndexshape, setActiveIndexShape] = useState(null);
+
+    const handleChangeSkin = (index) => {
+        setActiveIndexSkin(index);
+    };
+
+    const handleChangeShape = (index) => {
+        setActiveIndexShape(index);
+    };
+
+    const slideItems = images?.map((item, index) => (
+        <ShapeItem
+            key={item.title}
+            source={item.source}
+            isActive={index === activeIndexSkin}
+            onClick={() => handleChangeSkin(index)}
+        />
+    ));
+
+    const shapeItems = images.slice(0, 5)?.map((item, index) => (
+        <ShapeItem
+            key={item.title}
+            source={item.source}
+            isActive={index === activeIndexshape}
+            onClick={() => handleChangeShape(index)}
+        />
+    ));
 
     return (
         <div className='step'>

@@ -33,12 +33,12 @@ const Popup = ({
                 <div>
                     {currentStepIndex === 0 ? (
                         <div className='buttons'>
-                            <button className='button-popup' onClick={_handleNext}>Next</button>
+                            <button className='button-popup variant-1' onClick={_handleNext}>Next</button>
                         </div>
                     ) : (
                         <div className='buttons'>
-                            <button className='button-popup' onClick={_handleBack}>Back</button>
-                            <button className='button-popup' onClick={handleClose}>Ok</button>
+                            <button className='button-popup variant-2' onClick={_handleBack}>Back</button>
+                            <button className='button-popup variant-1' onClick={handleClose}>Ok</button>
                         </div>
                     )}
                 </div>
