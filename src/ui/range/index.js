@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-const InputRange = ({
+const InputRange = React.memo(({
     rangeValue,
     handleRangeChange
 }) => {
@@ -18,6 +18,6 @@ const InputRange = ({
       />
     </>
   );
-};
+});
 
 export default InputRange;

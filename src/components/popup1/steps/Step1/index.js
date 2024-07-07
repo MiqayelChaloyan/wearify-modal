@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 
 const Step1 = () => {
+    const [isCentimeter, setIsCentimeter] = useState(true)
     const [rangeValueHeight, setValueHeight] = useState(150);
     const [rangeValueWeight, setValueWeight] = useState(150);
 
@@ -17,13 +18,17 @@ const Step1 = () => {
         setValueWeight(e.target.value)
     }
 
+    const handleChangeMeasurements = () => {
+        setIsCentimeter(!isCentimeter)
+    }
+
     return (
-        <div className='step'>
+        <div>
             <Header title={'INPUT SIZE'} />
             <div className='options'>
                 <div className='toggle-buttons'>
-                    <button className='button-sizes'>CM</button>
-                    <button className='button-sizes'>IN</button>
+                    <button className={`button-sizes ${isCentimeter ? 'active' : ''}`} onClick={handleChangeMeasurements}>CM</button>
+                    <button className={`button-sizes ${!isCentimeter ? 'active' : ''}`} onClick={handleChangeMeasurements}>IN</button>
                 </div>
                 <div className='range'>
                     <div>

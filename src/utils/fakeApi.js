@@ -19,8 +19,48 @@ const models = [
     },
 ];
 
+const images = [
+    {
+        source:
+            "https://images.pexels.com/photos/6447203/pexels-photo-6447203.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        title: "Little Venice in Colmar"
+    },
+    {
+        source:
+            "https://images.pexels.com/photos/3283186/pexels-photo-3283186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        title: "Back View of a Man Standing on a Rock near the Waterfalls"
+    },
+    {
+        source:
+            "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        title: "Machu Pichu, Peru"
+    },
+    {
+        source:
+            "https://images.pexels.com/photos/507410/pexels-photo-507410.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        title: "Train With Smoke"
+    },
+    {
+        source:
+            "https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        title: "Hot air ballons in the sky"
+    },
+    {
+        source:
+            "https://images.pexels.com/photos/2901209/pexels-photo-2901209.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        title: "Canal Beside Houses"
+    },
+    {
+        source:
+            "https://images.pexels.com/photos/4275885/pexels-photo-4275885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        title:
+            "Brown Wooden House on Green Grass Field Near Green Trees and Mountains"
+    }
+];
+
 export {
     scanning,
     models,
-    masurements
+    masurements,
+    images
 }

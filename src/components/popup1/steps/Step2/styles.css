@@ -1,9 +1,26 @@
 .step {
-    /* background-color: green; */
     text-align: center;
 }
 
 .options {
     margin-top: 20px;
     height: 220px;
+}
+
+.title-type {
+    text-align: center;
+    font-size: 10.91px;
+    color: var(--dark-blue);
+}
+
+.skin-slide {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.shape-types {
+    width: 87%;
+    display: flex;
+    justify-content:space-evenly;
+    margin: 10px auto;
 }
