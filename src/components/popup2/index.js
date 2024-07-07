@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { handleSwitchStatusPopup1 } from 'store/features/PopupState';
+import { handleSwitchStatusPopup2 } from 'store/features/PopupState';
 
 import Close from './close';
 
@@ -14,14 +14,14 @@ const Popup = ({
     _handleBack,
     _handleNext
 }) => {
-    const { isPopup1Active } = useSelector((state) => state.popup);
+    const { isPopup2Active } = useSelector((state) => state.popup);
     const dispatch = useDispatch();
 
     const handleClose = () => {
-        dispatch(handleSwitchStatusPopup1());
+        dispatch(handleSwitchStatusPopup2());
     };
 
-    return isPopup1Active && (
+    return isPopup2Active && (
         <div className='container'>
             <div className='popup'>
                 <div className='header'>

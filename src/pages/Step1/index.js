@@ -8,7 +8,8 @@ import Models from 'components/models';
 import Header from 'components/header';
 import ModelViewer from 'components/model-viewer';
 import Measurements from 'components/measurements';
-import LayoutPopup from 'components/popup1/layout';
+import LayoutPopup1 from 'components/popup1/layout';
+import LayoutPopup2 from 'components/popup2/layout';
 
 import { colors } from 'constants';
 
@@ -37,7 +38,8 @@ const Step1 = React.memo(() => {
             <Header />
             <div className='container-view' ref={ref}>
                 {masurements && <Measurements />}
-                <LayoutPopup />
+                <LayoutPopup1 />
+                <LayoutPopup2 />
                 <ModelViewer uriGlb={uriGlb} />
                 <div className='icon-button'>
                     {
