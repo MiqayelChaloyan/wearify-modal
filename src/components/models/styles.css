@@ -22,7 +22,7 @@
     border: 1.5px solid var(--dark-blue);
     cursor: default;
 }
-
+/* 
 @media screen and (max-width: 1536px) {
     .column {
         width: 98px;
@@ -122,4 +122,4 @@
         height: 100px !important;
         padding: 17px 0
     }
-}
+} */

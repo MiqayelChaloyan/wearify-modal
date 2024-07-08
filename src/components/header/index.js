@@ -16,7 +16,7 @@ import Loader from 'components/loader';
 //
 
 const Header = React.memo(() => {
-    const [isLoading, setIsLaoding] = useState(true);
+    const [isLoading, setIsLaoding] = useState(false);
     const handleClose = () => document.getElementById('web-modal').style.display = 'none';
 
     const handleSubmit = () => {
