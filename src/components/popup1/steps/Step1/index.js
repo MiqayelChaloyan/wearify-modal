@@ -1,11 +1,15 @@
+import React from 'react';
 
 import InputRange from 'ui/range';
 import Header from '../header';
-import './styles.css';
+
 import { useState } from 'react';
+import { Titles, UnitsOfMeasurement } from 'constants';
+
+import './styles.css';
 
 
-const Step1 = () => {
+const Step1 = React.memo(() => {
     const [isCentimeter, setIsCentimeter] = useState(true)
     const [rangeValueHeight, setValueHeight] = useState(150);
     const [rangeValueWeight, setValueWeight] = useState(150);
@@ -24,23 +28,27 @@ const Step1 = () => {
 
     return (
         <div>
-            <Header title={'INPUT SIZE'} />
+            <Header title={Titles.sizes} />
             <div className='options'>
                 <div className='toggle-buttons'>
-                    <button className={`button-sizes ${isCentimeter ? 'active-sizes' : ''}`} onClick={handleChangeMeasurements}>CM</button>
-                    <button className={`button-sizes ${!isCentimeter ? 'active-sizes' : ''}`} onClick={handleChangeMeasurements}>IN</button>
+                    <button className={`button-sizes ${isCentimeter ? 'active-sizes' : ''}`} onClick={handleChangeMeasurements}>
+                        {UnitsOfMeasurement.cm}
+                    </button>
+                    <button className={`button-sizes ${!isCentimeter ? 'active-sizes' : ''}`} onClick={handleChangeMeasurements}>
+                        {UnitsOfMeasurement.in}
+                    </button>
                 </div>
                 <div className='range'>
                     <div>
                         <div className='range-titles'>
-                            <h3 className='range-title'>HEIGHT</h3>
+                            <h3 className='range-title'>{Titles.height}</h3>
                             <h3 className='range-title'>{rangeValueHeight}</h3>
                         </div>
                         <InputRange handleRangeChange={handleRangeChangeHeight} />
                     </div>
                     <div>
                         <div className='range-titles'>
-                            <h3 className='range-title'>WEIGHT</h3>
+                            <h3 className='range-title'>{Titles.weight}</h3>
                             <h3 className='range-title'>{rangeValueWeight}</h3>
                         </div>
                         <InputRange handleRangeChange={handleRangeChangeWeight} />
@@ -49,6 +57,6 @@ const Step1 = () => {
             </div>
         </div>
     )
-};
+});
 
 export default Step1;

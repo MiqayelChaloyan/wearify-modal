@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { CgClose } from 'react-icons/cg';
 
 import SafeExternalLink from 'ui/link';
-
 import { ButtonsTexts, colors } from 'constants';
 
 import { scanning } from 'utils/fakeApi';

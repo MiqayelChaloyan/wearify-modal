@@ -3,6 +3,8 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { handleSwitchStatusPopup1 } from 'store/features/PopupState';
 
+import { ButtonsTexts } from 'constants';
+
 import Close from './close';
 
 import './styles.css';
@@ -33,12 +35,18 @@ const Popup = ({
                 <div>
                     {currentStepIndex === 0 ? (
                         <div className='buttons'>
-                            <button className='button-popup variant-1' onClick={_handleNext}>Next</button>
+                            <button className='button-popup variant-1' onClick={_handleNext}>
+                                {ButtonsTexts.next}
+                            </button>
                         </div>
                     ) : (
                         <div className='buttons'>
-                            <button className='button-popup variant-2' onClick={_handleBack}>Back</button>
-                            <button className='button-popup variant-1' onClick={handleClose}>Ok</button>
+                            <button className='button-popup variant-2' onClick={_handleBack}>
+                                {ButtonsTexts.back}
+                            </button>
+                            <button className='button-popup variant-1' onClick={handleClose}>
+                                {ButtonsTexts.ok}
+                            </button>
                         </div>
                     )}
                 </div>

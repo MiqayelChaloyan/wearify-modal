@@ -1,8 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import UploadImage from 'icons/upload';
-import { IoMdImages } from "react-icons/io";
+import { useEffect, useRef, useState } from 'react';
 
-import Close from "./close";
+import UploadImage from 'icons/upload';
+import { IoMdImages } from 'react-icons/io';
+
+import Close from './close';
+
+import { ErrorMessege, OptionsTexts } from 'constants';
 
 import './styles.css';
 
@@ -18,7 +21,7 @@ const ImageUpload = () => {
     const fileSelectedHandler = (e) => {
         const selectedFiles = Array.from(e.target.files);
         if (images.length + selectedFiles.length > 10) {
-            setErrorMessage("You can upload a maximum of 10 images.");
+            setErrorMessage(ErrorMessege.messege);
         } else {
             setErrorMessage("");
             setImages([...images, ...selectedFiles]);
@@ -57,7 +60,7 @@ const ImageUpload = () => {
     return (
         <>
             <input
-                type="file"
+                type='file'
                 multiple
                 ref={fileInputRef}
                 onChange={fileSelectedHandler}
@@ -68,13 +71,13 @@ const ImageUpload = () => {
                     <div>
                         <UploadImage />
                     </div>
-                    <p>Upload</p>
+                    <p>{OptionsTexts.upload}</p>
                 </button>
                 <button className={`${images.length === 0 ? 'disabled' : 'upload-button'}`} onClick={handleOpenImages} disabled={images.length === 0}>
                     <div>
                         <IoMdImages size={30} color='#ACACAC' />
                     </div>
-                    <p>Images</p>
+                    <p>{OptionsTexts.images}</p>
                 </button>
             </div>
             {errorMessage && <p className="error-message">{errorMessage}</p>}

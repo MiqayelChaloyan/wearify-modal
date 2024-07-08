@@ -5,6 +5,8 @@ import { handleSwitchStatusPopup2 } from 'store/features/PopupState';
 
 import Close from './close';
 
+import { ButtonsTexts } from 'constants';
+
 import './styles.css';
 
 
@@ -31,27 +33,21 @@ const Popup = ({
                     {children}
                 </div>
                 <div>
-                    {/* {currentStepIndex === 0 ? (
-                        <div className='buttons'>
-                            <button className='button-popup variant-1' onClick={_handleNext}>Next</button>
-                        </div>
-                    ) : (
-                        <div className='buttons'>
-                            <button className='button-popup variant-2' onClick={_handleBack}>Back</button>
-                            <button className='button-popup variant-1' onClick={_handleNext}>Ok</button>
-                        </div>
-                    )} */}
-
-
                     {currentStepIndex === 0 && (
                         <div className='buttons'>
-                            <button className='button-popup variant-1' onClick={_handleNext}>Next</button>
+                            <button className='button-popup variant-1' onClick={_handleNext}>
+                                {ButtonsTexts.next}
+                            </button>
                         </div>
                     )}
                     {currentStepIndex === 1 && (
                         <div className='buttons'>
-                            <button className='button-popup variant-2' onClick={_handleBack}>Back</button>
-                            <button className='button-popup variant-1' onClick={_handleNext}>Ok</button>
+                            <button className='button-popup variant-2' onClick={_handleBack}>
+                                {ButtonsTexts.back}
+                            </button>
+                            <button className='button-popup variant-1' onClick={_handleNext}>
+                                {ButtonsTexts.ok}
+                            </button>
                         </div>
                     )}
                 </div>

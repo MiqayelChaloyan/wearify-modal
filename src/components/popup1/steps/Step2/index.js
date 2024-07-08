@@ -4,6 +4,8 @@ import SlickSlider from 'ui/slickSlider';
 import ShapeItem from 'components/shape';
 import Header from '../header';
 
+import { Titles } from 'constants';
+
 import { images } from 'utils/fakeApi';
 
 import './styles.css';
@@ -41,10 +43,12 @@ const Step2 = React.memo(() => {
 
     return (
         <div className='step'>
-            <Header title={'SELECT SKIN & SHAPE'} />
+            <Header title={Titles.selectSkin} />
             <div className='options'>
                 <div>
-                    <h3 className='title-type'>SKIN</h3>
+                    <h3 className='title-type'>
+                        {Titles.skin}
+                    </h3>
                     <div className='skin-slide'>
                         <SlickSlider >
                             {slideItems}
@@ -52,7 +56,9 @@ const Step2 = React.memo(() => {
                     </div>
                 </div>
                 <div>
-                    <h3 className='title-type'>SHAPE</h3>
+                    <h3 className='title-type'>
+                        {Titles.shape}
+                    </h3>
                     <div className='shape-types'>
                         {shapeItems}
                     </div>

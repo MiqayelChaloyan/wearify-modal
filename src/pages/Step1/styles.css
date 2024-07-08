@@ -21,9 +21,7 @@
 .models {
     padding: 12px;
     border-radius: 0 0 50px 50px;
-    height: 166px;
-    /* background: linear-gradient(#f1f1f1, #dbdbdb);
-    backdrop-filter: brightness(0.7); */
+    height: 166px; 
 }
 
 

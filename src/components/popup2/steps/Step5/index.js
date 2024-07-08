@@ -1,14 +1,18 @@
-import ArrowRight from 'icons/arrow';
-
-import LoadingBar from 'ui/loading-bar';
+import React from 'react';
 
 import { useDispatch } from 'react-redux';
 import { handleSwitchStatusPopup2 } from 'store/features/PopupState';
 
+import ArrowRight from 'icons/arrow';
+
+import LoadingBar from 'ui/loading-bar';
+
+import { Texts, colors } from 'constants';
+
 import './styles.css';
 
 
-const Step5 = () => {
+const Step5 = React.memo(() => {
     const dispatch = useDispatch();
 
     const handleClose = () => {
@@ -19,15 +23,17 @@ const Step5 = () => {
         <div className='child'>
             <div className='process'>
                 <div className='div'></div>
-                <ArrowRight width={19} height={19} fill='gray' />
+                <ArrowRight width={19} height={19} fill={colors.lightGray} />
                 <div className='div'></div>
             </div>
-            <p className='queue-text'>Your task is in the queue...</p>
+            <p className='queue-text'>
+                {Texts.loadingDescription1}
+            </p>
             <div className='loader'>
                 <LoadingBar handleSubmit={handleClose} />
             </div>
         </div>
     );
-}
+})
 
 export default Step5;

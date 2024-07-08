@@ -1,13 +1,20 @@
-import Header from "components/popup2/header";
+import React, { useState } from 'react';
+
+import Header from 'components/popup2/header';
+import ShapeItem from 'components/shape';
+
+import SlickSlider from 'ui/slickSlider';
+
+import { Titles } from 'constants';
+
+// TODO
+import { images } from 'utils/fakeApi';
+// 
 
 import './styles.css';
-import { useState } from "react";
-import ShapeItem from "components/shape";
-import { images } from "utils/fakeApi";
-import SlickSlider from "ui/slickSlider";
 
 
-const Step4 = () => {
+const Step4 = React.memo(() => {
     const [activeIndexSkin, setActiveIndexSkin] = useState(null);
     const [activeIndexshape, setActiveIndexShape] = useState(null);
 
@@ -39,10 +46,10 @@ const Step4 = () => {
 
     return (
         <div className='step'>
-            <Header title={'BE YOUR OWN MODEL'} />
+            <Header title={Titles.ownModel} />
             <div className='options'>
                 <div>
-                    <h3 className='title-type'>SKIN</h3>
+                    <h3 className='title-type'>{Titles.skin}</h3>
                     <div className='skin-slide'>
                         <SlickSlider>
                             {slideItems}
@@ -50,7 +57,7 @@ const Step4 = () => {
                     </div>
                 </div>
                 <div>
-                    <h3 className='title-type'>AGE</h3>
+                    <h3 className='title-type'>{Titles.age}</h3>
                     <div className='shape-types'>
                         {shapeItems}
                     </div>
@@ -58,6 +65,6 @@ const Step4 = () => {
             </div>
         </div>
     )
-}
+});
 
 export default Step4;
