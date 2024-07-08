@@ -5,29 +5,26 @@
     padding-left: 30px;
     padding-right: 20px;
     margin-top: 42px;
-    /* margin-bottom: 10px; */
 }
 
 .button-try-on {
     font-size: 17px;
-    /* padding: 10px 20px 10px 20px; */
     width: 143px;
     height: 52px;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     background-color: var(--dark-blue);
     border: 1px solid var(--dark-blue);
     border-radius: 60px;
     cursor: pointer;
     color: var(--text-first-color);
     text-decoration: none;
-    transition: .5s;
+    transition: var(--transition);
 }
 
 .button-try-on:hover {
     color: var(--dark-blue);
     background-color: var(--text-first-color);
 }
-
 
 .close-modal {
     border: none;

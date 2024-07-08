@@ -13,7 +13,7 @@ input[type=range]::-webkit-slider-runnable-track {
     height: 3px;
     cursor: pointer;
     animate: 0.2s;
-    background: #D9D9D9;
+    background: var(--input-bg);
     border-radius: 25px;
 }
 
@@ -21,15 +21,14 @@ input[type=range]::-webkit-slider-thumb {
     height: 15.99px;
     width: 15.99px;
     border-radius: 50%;
-    background: #0C0D34;
-    /* box-shadow: 0 0 4px 0 white; */
+    background: var(--dark-blue);
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -8px;
-    outline: 1px solid #D9D9D9;
+    outline: 1px solid var(--input-bg);
     outline-offset: 2px
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #D9D9D9;
+    background: var(--input-bg);
 }

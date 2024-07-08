@@ -2,10 +2,9 @@
     height: 130px;
     width: 115px;
     border-radius: 20px;
-    background-color: #ECEDEA;
-    ;
-    transition: .5s;
-    border: 1.5px solid #FDFDFC;
+    background-color: var(--pink);
+    transition: var(--transition);
+    border: 1.5px solid var(var(--pink));
     cursor: pointer;
 }
 
@@ -20,7 +19,7 @@
     cursor: default
 }
 
-
+/* media */
 @media screen and (max-width: 1536px) {
     .column {
         height: 130px;

@@ -12,7 +12,7 @@ const ButtonsTexts = {
 };
 
 const OptionsTexts = {
-    uplaod: 'Upload',
+    upload: 'Upload',
     images: 'Images'
 };
 

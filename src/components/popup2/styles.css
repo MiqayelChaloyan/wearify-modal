@@ -5,7 +5,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: #747474f5;
+    background-color: var(--blur);
     border-radius: 50px;
     -webkit-backdrop-filter: blur(3px);
     -moz-backdrop-filter: blur(3px);
@@ -16,13 +16,13 @@
 .popup {
     width: 380px;
     height: 380px;
-    background-color: #fff;
+    background-color: var(--modal-bg-color);
     border-radius: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0px 15px 24px -15px #000000a1;
+    box-shadow: 0px 15px 24px -15px var(--shadow-color);
 }
 
 .buttons {
@@ -34,11 +34,10 @@
     font-size: 10.98px;
     width: 92.51px;
     height: 36.43px;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     border-radius: 60px;
     cursor: pointer;
     text-decoration: none;
-    /* transition: .5s; */
     margin: 5px;
 }
 
@@ -55,8 +54,8 @@
 
 .variant-2 {
     background-color: var(--text-first-color);
-    color: #A5A5A5;
-    border: 1px solid #A5A5A5;
+    color: var(--dark-gray);
+    border: 1px solid var(--dark-gray);
 }
 
 /* Header */
@@ -67,7 +66,7 @@
 }
 
 .title {
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     font-size: 20px;
     line-height: 21.48px;
     text-align: center;
@@ -78,5 +77,5 @@
     width: 70%;
     height: 3px;
     margin: 0 auto;
-    background-color: #D9D9D9;
+    background-color: var(--line-color);
 }

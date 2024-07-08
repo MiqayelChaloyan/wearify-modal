@@ -11,15 +11,15 @@
 .button-sizes {
     width: 77px;
     height: 24px;
-    background-color: #F8FAFC;
-    color: #D9D9D9;
+    background-color: var(--btn-color);
+    color: var(--btn-text-first-color);
     border-radius: 7px;
     margin: 5px;
     cursor: pointer;
 }
 
 .active-sizes {
-    background-color: #D9D9D9;
+    background-color: var(--btn-text-first-color);
     color: var(--dark-blue);
 }
 

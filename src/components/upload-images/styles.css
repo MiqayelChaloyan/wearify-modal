@@ -5,15 +5,15 @@
     width: 58.59px;
     height: 58.59px;
     border-radius: 9px;
-    background-color: #F2F5F9;
+    background-color: var(--container-bg);
     padding: 5px;
     margin: 0 auto;
     cursor: pointer;
-    transition: .5s;
+    transition: var(--transition);
 }
 
 .disabled {
-    background-color:   #D9D9D9;
+    background-color:  var(--btn-text-first-color);
     display: grid;
     justify-content: center;
     align-items: center;
@@ -30,10 +30,10 @@
 }
 
 .upload-button p, .disabled p {
-    color: #ACACAC;
+    color: var(--gray);
     line-height: 13.1px;
     font-size: 10.98px;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
 }
 
 .uploades-buttons {
@@ -44,10 +44,7 @@
     margin: 0 auto;
 }
 
-
-
 /* Image View */
-
 .images-view {
     z-index: 30;
     position: fixed;
@@ -55,7 +52,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: #747474f5;
+    background-color: var(--modal-bg-color);
     border-radius: 25px;
     -webkit-backdrop-filter: blur(3px);
     -moz-backdrop-filter: blur(3px);
@@ -66,13 +63,13 @@
 .images-popup {
     width: 380px;
     height: 380px;
-    background-color: #fff;
+    background-color: var(--modal-bg-colo);
     border-radius: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0px 15px 24px -15px #000000a1;
+    box-shadow: 0px 15px 24px -15px var(--shadow-color);
 }
 
 .images-header {
@@ -84,7 +81,6 @@
 .images {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    /* grid-template-rows:60px; */
     width: 90%;
     margin: 0 auto;
     height: 140px;
@@ -95,9 +91,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* margin: 4px; */
 }
-
 
 .remove {
     display: flex;
@@ -109,11 +103,10 @@
     font-size: 10.98px;
     width: 92.51px;
     height: 36.43px;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     border-radius: 60px;
     cursor: pointer;
     text-decoration: none;
-    /* transition: .5s; */
     text-align: center;
 }
 
@@ -121,13 +114,13 @@
     border-radius: 10px;
     width: 59px;
     height: 59px;
-    border: 1px solid white;
+    border: 1px solid var(--white);
     margin: 4px;
     cursor: pointer;
 }
 
 .remove-elem {
-    border: 1px solid red
+    border: 1px solid var(--red)
 }
 
 .error-message {
@@ -135,6 +128,6 @@
     color: var(--dark-blue);
     line-height: 13.1px;
     font-size: 10.98px;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     margin: 25px auto;
 }

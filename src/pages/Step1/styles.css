@@ -6,7 +6,7 @@
     border: none;
     background: none;
     cursor: pointer;
-    color: #2ECDCD;
+    color: var(--sky);
     font-size: 20px;
     margin-top: 20px;
 }
@@ -24,7 +24,7 @@
     height: 166px; 
 }
 
-
+/* media */
 @media screen and (max-width: 1536px) {
     .button-right {
         bottom: 34%;

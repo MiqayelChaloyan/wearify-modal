@@ -9,7 +9,7 @@
 .info-text {
     font-size: 10.91px;
     color:  var(--dark-blue);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     line-height: 13.02px;
     margin-bottom: 10px;
 }
@@ -23,7 +23,7 @@
 .div8 {
     width: 55px;
     height: 55px;
-    background-color: #F2F5F9;
+    background-color: var(--container-bg);
     border-radius: 10px;
 }
 

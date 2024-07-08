@@ -16,8 +16,8 @@
     font-size: 17px;
     margin: 5px 10px;
     padding: 4px;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     background-color: none;
     cursor: pointer;
-    transition: .5s;
+    transition: var(--transition);
 }

@@ -19,36 +19,23 @@
 
 :root {
   /*========== Colors ==========*/
-  --first-color: #373d46;
-  --bg-first-color: #FFFFFF;
-  --modal-bg-color: #fff;
-  --bg-color: #414260;
-  --text-input-bg: #FFFFFF;
-  --text-color: #FFFFFF;
-  --container-bg: #c7ad91;
-  --btn-color: #ddc0a1;
-  --border-color: #EDEDED;
-  --light-blue: #2ECDCD;
-  --black: #000000;
-  --ash-black: #222;
-  --white: #fafafa;
-  --sky: #00ccff;
-  --green: #22dddd;
-  --blue: #1300ff;
-  --dusk: #6600ff;
-  --purple: #9900ff;
-  --pink: #ff0066;
-  --red: #fe0222;
-  --orange: #fd7702;
-  --yellow: #ffbb00;
-
-  --background: var(--dusk);
-  --accent: var(--white);
-
-  /* ogtagorcvox */
   --dark-blue: #0C0D34;
+  --white: #fafafa;
+  --red: #fe0222;
+  --sky: #2ECDCD;
+  --gray: #ACACAC;
+  --dark-gray: #A5A5A5;
   --text-first-color: #F6F6F6;
-
+  --container-bg: #F2F5F9;
+  --modal-bg-color: #fff;
+  --pink: #ECEDEA;
+  --btn-color: #F8FAFC;
+  --btn-text-first-color: #D9D9D9;
+  --loading-bar-color: #D9D9D9;
+  --line-color: #D9D9D9;
+  --shadow-color: #000000a1;
+  --blur: #747474f5;
+  --input-bg: #D9D9D9;
   /* end */
 
   --font-weight-thin: 100;
@@ -60,6 +47,8 @@
   --font-weight-bold: 700;
   --font-weight-extra-bold: 800;
   --font-weight-black: 900;
+
+  --transition: .5s
 }
 
 ul li {
