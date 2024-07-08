@@ -6,6 +6,7 @@ import Close from "./close";
 
 import './styles.css';
 
+
 const ImageUpload = () => {
     const [images, setImages] = useState([]);
     const [imageURLs, setImageURLs] = useState([]);
@@ -76,7 +77,6 @@ const ImageUpload = () => {
                     <p>Images</p>
                 </button>
             </div>
-
             {errorMessage && <p className="error-message">{errorMessage}</p>}
 
             {isView && (

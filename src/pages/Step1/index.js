@@ -10,6 +10,7 @@ import ModelViewer from 'components/model-viewer';
 import Measurements from 'components/measurements';
 import LayoutPopup1 from 'components/popup1/layout';
 import LayoutPopup2 from 'components/popup2/layout';
+import Loader from 'components/loader';
 
 import { colors } from 'constants';
 

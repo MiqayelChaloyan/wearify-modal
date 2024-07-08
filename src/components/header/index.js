@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { CgClose } from 'react-icons/cg';
 
@@ -12,17 +12,22 @@ import './styles.css';
 
 // TODO
 import { DeepARLink } from 'constants';
+import Loader from 'components/loader';
 //
 
 const Header = React.memo(() => {
+    const [isLoading, setIsLaoding] = useState(true);
     const handleClose = () => document.getElementById('web-modal').style.display = 'none';
 
     const handleSubmit = () => {
         console.log('next scan page');
     }
 
+    const handleCloseLoading = () => setIsLaoding(false);
+
     return (
         <div className='buttons-group-person'>
+            {isLoading && <Loader handleClose={handleCloseLoading}/>}
             <button
                 id='close-modal'
                 type='button'

@@ -1,0 +1,32 @@
+.loader-bar {
+    position: absolute;
+    height: 145px;
+    display: grid;
+    justify-content: flex-start;
+    top: 25px
+}
+
+.info-text {
+    font-size: 10.91px;
+    color:  var(--dark-blue);
+    font-weight: 500;
+    line-height: 13.02px;
+    margin-bottom: 10px;
+}
+
+.process8 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.div8 {
+    width: 55px;
+    height: 55px;
+    background-color: #F2F5F9;
+    border-radius: 10px;
+}
+
+.arrow-loading {
+    margin-left: 15px;
+}
