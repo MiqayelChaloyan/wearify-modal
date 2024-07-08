@@ -2,7 +2,7 @@
     width: 415px;
     height: 550px;
     background-color: #fff;
-    border-radius: 30px;
+    border-radius: 50px;
     position: fixed;
     top: 40%;
     transform: translate(0%, -50%);
@@ -15,44 +15,37 @@
     .modal {
         width: 415px;
         height: 470px;
-        background-color:gray !important;
     }
 }
 
 @media screen and (max-width: 1280px) {
     .modal {
         height: 485px;
-        background-color:green !important;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .modal {
-        background-color:red !important;
         height: 480px;
     }
 }
 @media screen and (max-width: 1024px) {
     .modal {
-        background-color:black !important;
         height: 455px;
     }
 }
 @media screen and (max-width: 900px) {
     .modal {
-        background-color:rgb(171, 27, 27) !important;
         height: 455px;
     }
 }
 @media screen and (max-width: 768px) {
     .modal {
-        background-color:rgb(27, 99, 171) !important;
         height: 462px;
     }
 }
 @media screen and (max-width: 640px) {
     .modal {
-        background-color:rgb(171, 142, 27) !important;
         height: 511px;
         transform: translate(-50%, -50%);
         left: 50%;
@@ -61,14 +54,12 @@
 }
 @media screen and (max-width: 480px) {
     .modal {
-        background-color:rgb(27, 171, 152) !important;
         height: 460px;
         width: 80%;
     }
 }
 @media screen and (max-width: 320px) {
     .modal {
-        background-color:rgb(89, 171, 27) !important;
         height: 460px;
         width: 80%;
     }

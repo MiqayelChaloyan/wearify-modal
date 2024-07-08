@@ -2,6 +2,94 @@
     height: 130px;
     width: 115px;
     border-radius: 20px;
+    background-color: #ECEDEA;
+    ;
+    transition: .5s;
+    border: 1.5px solid #FDFDFC;
+    cursor: pointer;
+}
+
+.model-image {
+    width: 100%;
+    height: 129px !important;
+    padding: 17px 0
+}
+
+.active-slide {
+    border: 1.5px solid var(--dark-blue);
+    cursor: default
+}
+
+
+@media screen and (max-width: 1536px) {
+    .column {
+        height: 130px;
+        width: 115px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .column {
+        height: 120px;
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .column {
+        height: 120px;
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .column {
+        height: 120px;
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .column {
+        height: 120px;
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .column {
+        height: 120px;
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .column {
+        height: 120px;
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .column {
+        height: 120px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .column {
+        height: 120px;
+        width: 100px;
+    }
+}
+
+
+
+/* .column {
+    height: 130px;
+    width: 115px;
+    border-radius: 20px;
     background-color: #ECEDEA;;
     transition: .5s;
     border: 1.5px solid  #FDFDFC;
@@ -21,7 +109,10 @@
     transition: .5s;
     border: 1.5px solid var(--dark-blue);
     cursor: default;
-}
+} */
+
+
+
 /* 
 @media screen and (max-width: 1536px) {
     .column {
