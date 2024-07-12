@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { useDispatch } from 'react-redux';
-import { handleSwitchStatusPopup1, handleSwitchStatusPopup2 } from 'store/features/PopupState';
+import { handleSwitchStatusPopup1, handleSwitchStatusPopup2 } from 'reducer/features/PopupState';
 
 import MeasurementsIcon from 'icons/measurements';
 import UserIcon from 'icons/user'
-import { colors } from 'constants';
+import colors from 'themes/colors';
 
 import './styles.css';
 

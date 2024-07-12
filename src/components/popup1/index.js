@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { handleSwitchStatusPopup1 } from 'store/features/PopupState';
+import { handleSwitchStatusPopup1 } from 'reducer/features/PopupState';
 
 import { ButtonsTexts } from 'constants';
 

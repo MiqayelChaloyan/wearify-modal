@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 
 import { CgClose } from 'react-icons/cg';
 
+import Loader from 'components/loader';
+
 import SafeExternalLink from 'ui/link';
-import { ButtonsTexts, colors } from 'constants';
+import { ButtonsTexts } from 'constants';
+import colors from 'themes/colors';
 
 import { scanning } from 'utils/fakeApi';
 
@@ -11,7 +14,6 @@ import './styles.css';
 
 // TODO
 import { DeepARLink } from 'constants';
-import Loader from 'components/loader';
 //
 
 const Header = React.memo(() => {
@@ -26,7 +28,7 @@ const Header = React.memo(() => {
 
     return (
         <div className='buttons-group-person'>
-            {isLoading && <Loader handleClose={handleCloseLoading}/>}
+            {isLoading && <Loader handleClose={handleCloseLoading} />}
             <button
                 id='close-modal'
                 type='button'
@@ -36,7 +38,10 @@ const Header = React.memo(() => {
                 <CgClose size={30} fill={colors.darkBlue} />
             </button>
             {scanning ? (
-                <button className='button-try-on' onClick={handleSubmit}>
+                <button
+                    className='button-try-on'
+                    onClick={handleSubmit}
+                >
                     {ButtonsTexts.tryOn}
                 </button>
             ) : (

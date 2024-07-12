@@ -6,6 +6,7 @@ import Header from '../header';
 import { useState } from 'react';
 import { Titles, UnitsOfMeasurement } from 'constants';
 
+import cn from 'classnames';
 import './styles.css';
 
 
@@ -31,10 +32,16 @@ const Step1 = React.memo(() => {
             <Header title={Titles.sizes} />
             <div className='options'>
                 <div className='toggle-buttons'>
-                    <button className={`button-sizes ${isCentimeter ? 'active-sizes' : ''}`} onClick={handleChangeMeasurements}>
+                    <button
+                        className={cn('button-sizes', isCentimeter && 'active-sizes')}
+                        onClick={handleChangeMeasurements}
+                    >
                         {UnitsOfMeasurement.cm}
                     </button>
-                    <button className={`button-sizes ${!isCentimeter ? 'active-sizes' : ''}`} onClick={handleChangeMeasurements}>
+                    <button
+                        className={cn('button-sizes', !isCentimeter && 'active-sizes')}
+                        onClick={handleChangeMeasurements}
+                    >
                         {UnitsOfMeasurement.in}
                     </button>
                 </div>

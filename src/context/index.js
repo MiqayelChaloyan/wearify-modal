@@ -1,5 +1,5 @@
 import React, { createContext, useMemo, useState } from 'react';
-import { colors } from 'constants';
+import colors from 'themes/colors';
 
 export const ThemeContext = createContext();
 

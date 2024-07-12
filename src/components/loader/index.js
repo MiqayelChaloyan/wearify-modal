@@ -2,7 +2,8 @@ import React from 'react';
 
 import LoadingBar from 'ui/loading-bar';
 import ArrowRight from 'icons/arrow';
-import { Texts, colors } from 'constants';
+import { Texts } from 'constants';
+import colors from 'themes/colors';
 
 import './styles.css'
 

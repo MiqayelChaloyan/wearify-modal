@@ -11,7 +11,7 @@ import Measurements from 'components/measurements';
 import LayoutPopup1 from 'components/popup1/layout';
 import LayoutPopup2 from 'components/popup2/layout';
 
-import { colors } from 'constants';
+import colors from 'themes/colors';
 
 import './styles.css';
 

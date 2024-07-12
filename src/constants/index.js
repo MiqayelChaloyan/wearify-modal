@@ -1,8 +1,3 @@
-const colors = {
-    darkBlue: '#0C0D34',
-    lightGray: '#ECEDEA',
-};
-
 const ButtonsTexts = {
     send: 'Send',
     next: 'Next',
@@ -34,12 +29,18 @@ const Titles = {
     selectSkin: 'SELECT SKIN & SHAPE',
     sizes: 'INPUT SIZE',
     ownModel: 'BE YOUR OWN MODEL',
-    age: 'AGE'
+    age: 'AGE',
+    gender: 'GENDER'
 };
 
 const UnitsOfMeasurement = {
     cm: 'CM',
     in: 'IN'
+};
+
+const Gender = {
+    female: 'FEMALE',
+    male: 'MALE'
 };
 
 const ImagePaths = {
@@ -49,7 +50,6 @@ const ImagePaths = {
 const DeepARLink = 'https://www.figma.com/design/ZWZaBqAbrTZNLmcFQOtGrz/Untitled?node-id=0-1&t=Bp14r7lo9f8RKLoE-0'
 
 export {
-    colors,
     ButtonsTexts,
     ImagePaths,
     DeepARLink,
@@ -57,5 +57,6 @@ export {
     Titles,
     UnitsOfMeasurement,
     ErrorMessege,
-    OptionsTexts
+    OptionsTexts,
+    Gender
 }

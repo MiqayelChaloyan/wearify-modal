@@ -1,6 +1,6 @@
 import React from 'react';
 import { CgClose } from 'react-icons/cg';
-import { colors } from 'constants';
+import colors from 'themes/colors';
 
 export default function Close({
     className,

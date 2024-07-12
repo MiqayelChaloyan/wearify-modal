@@ -2,7 +2,8 @@ import { useEffect } from 'react';
 
 import useTheme from 'hooks/useTheme';
 
-import { ImagePaths, colors } from 'constants';
+import { ImagePaths } from 'constants';
+import colors from 'themes/colors';
 
 import './styles.css';
 

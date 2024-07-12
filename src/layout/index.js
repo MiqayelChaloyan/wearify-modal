@@ -6,7 +6,7 @@ import { useMultistepForm } from 'hooks/useMultistepForm';
 import Modal from 'components/modal';
 import SplashScreen from 'pages/SplashScreen';
 import useTheme from 'hooks/useTheme';
-import { colors } from 'constants';
+import colors from 'themes/colors';
 
 export default function Layout() {
     const { setTheme } = useTheme();

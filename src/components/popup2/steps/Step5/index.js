@@ -1,13 +1,14 @@
 import React from 'react';
 
 import { useDispatch } from 'react-redux';
-import { handleSwitchStatusPopup2 } from 'store/features/PopupState';
+import { handleSwitchStatusPopup2 } from 'reducer/features/PopupState';
 
 import ArrowRight from 'icons/arrow';
 
 import LoadingBar from 'ui/loading-bar';
 
-import { Texts, colors } from 'constants';
+import { Texts } from 'constants';
+import colors from 'themes/colors';
 
 import './styles.css';
 

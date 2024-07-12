@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { handleSwitchStatusPopup2 } from 'store/features/PopupState';
+import { handleSwitchStatusPopup2 } from 'reducer/features/PopupState';
 
 import Close from './close';
 
