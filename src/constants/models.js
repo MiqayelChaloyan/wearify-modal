@@ -37,8 +37,8 @@ const COMBINED_MODELS = {
             id: 1,
             name: 'sport wearing',
             link: 'https://style.clo-set.com/fitting/IR5k8MMQlGf3QPkI80wHZw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
-            imgPath: 'https://drive.google.com/thumbnail?id=1A6b7nYJwCEaXFnqVMIS9015DV7IZMwJI',
-            glbPath: '',
+            imgPath: 'https://drive.google.com/thumbnail?id=185R0E69OO_gtMLDLE9TjAbqkF_aRSKKS',
+            glbPath: 'https://style.clo-set.com/fitting/IR5k8MMQlGf3QPkI80wHZw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
             result: [
                 'https://drive.google.com/thumbnail?id=1XXN0I5vHzEGMVXQMYKUxbaQFKpTA3FUY',
                 'https://drive.google.com/thumbnail?id=1rLml0Php91nelUaNcAy9_cNgKWUl11jZ',
@@ -49,32 +49,8 @@ const COMBINED_MODELS = {
             id: 2,
             name: 'sport wearing',
             link: 'https://style.clo-set.com/fitting/IR5k8MMQlGf3QPkI80wHZw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
-            imgPath: 'https://drive.google.com/thumbnail?id=1A6b7nYJwCEaXFnqVMIS9015DV7IZMwJI',
-            glbPath: '',
-            result: [
-                'https://drive.google.com/thumbnail?id=1XXN0I5vHzEGMVXQMYKUxbaQFKpTA3FUY',
-                'https://drive.google.com/thumbnail?id=1rLml0Php91nelUaNcAy9_cNgKWUl11jZ',
-                'https://drive.google.com/thumbnail?id=1rLml0Php91nelUaNcAy9_cNgKWUl11jZ'
-            ]
-        },
-        {
-            id: 3,
-            name: 'sport wearing',
-            link: 'https://style.clo-set.com/fitting/IR5k8MMQlGf3QPkI80wHZw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
-            imgPath: 'https://drive.google.com/thumbnail?id=1A6b7nYJwCEaXFnqVMIS9015DV7IZMwJI',
-            glbPath: '',
-            result: [
-                'https://drive.google.com/thumbnail?id=1XXN0I5vHzEGMVXQMYKUxbaQFKpTA3FUY',
-                'https://drive.google.com/thumbnail?id=1rLml0Php91nelUaNcAy9_cNgKWUl11jZ',
-                'https://drive.google.com/thumbnail?id=1rLml0Php91nelUaNcAy9_cNgKWUl11jZ'
-            ]
-        },
-        {
-            id: 4,
-            name: 'sport wearing',
-            link: 'https://style.clo-set.com/fitting/IR5k8MMQlGf3QPkI80wHZw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
-            imgPath: 'https://drive.google.com/thumbnail?id=1A6b7nYJwCEaXFnqVMIS9015DV7IZMwJI',
-            glbPath: '',
+            imgPath: 'https://drive.google.com/thumbnail?id=1yFi63gbSqE6_xVIpiooL0Y4bl3nn7e1N',
+            glbPath: 'https://style.clo-set.com/fitting/IR5k8MMQlGf3QPkI80wHZw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
             result: [
                 'https://drive.google.com/thumbnail?id=1XXN0I5vHzEGMVXQMYKUxbaQFKpTA3FUY',
                 'https://drive.google.com/thumbnail?id=1rLml0Php91nelUaNcAy9_cNgKWUl11jZ',

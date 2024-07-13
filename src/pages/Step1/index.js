@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import Square from 'icons/square';
 
@@ -18,21 +18,32 @@ import './styles.css';
 // TODO
 import { masurements } from 'utils/fakeApi';
 import COMBINED_MODELS from 'constants/models';
+import Iframe from 'components/iframe';
+import { useDispatch } from 'react-redux';
+import { handleAddItem } from 'reducer/features/ItemReducer';
 //
 
 const Step1 = React.memo(({
     _handleBack,
     _handleNext
 }) => {
-    const [uriGlb, setUriGlb] = useState(COMBINED_MODELS.sneakers[0].glbPath)
+    const dispatch = useDispatch();
+    // const models = masurements ? COMBINED_MODELS.sportWearing : COMBINED_MODELS.sneakers;
+    
+    const [uriGlb, setUriGlb] = useState(COMBINED_MODELS.sportWearing[0].glbPath)
     const [hide, setHide] = useState(true);
     const [activeIndex, setActiveIndex] = useState(0);
 
     const ref = useRef(null);
 
+    useEffect(() => {
+        dispatch(handleAddItem(COMBINED_MODELS.sportWearing[0]));
+    }, [])
+
     const handleSubmit = (index) => {
-        setUriGlb(COMBINED_MODELS.sneakers[index].glbPath)
-        setActiveIndex(index)
+        setUriGlb(COMBINED_MODELS.sportWearing[index].glbPath)
+        setActiveIndex(index);
+        dispatch(handleAddItem(COMBINED_MODELS.sportWearing[index]));
     }
 
     const handleHide = () => setHide(!hide);
@@ -44,7 +55,9 @@ const Step1 = React.memo(({
                 {masurements && <Measurements />}
                 <LayoutPopup1 />
                 <LayoutPopup2 />
-                <ModelViewer uriGlb={uriGlb} />
+                {masurements ?
+                    <Iframe src={uriGlb} /> :
+                    <ModelViewer uriGlb={uriGlb} />}
                 <div className='icon-button'>
                     {
                         hide ? (
@@ -77,7 +90,7 @@ const Step1 = React.memo(({
                             viewport={{ once: true }}
                         >
                             <Models
-                                models={COMBINED_MODELS.sneakers}
+                                models={COMBINED_MODELS.sportWearing}
                                 onClick={handleSubmit}
                                 activeIndex={activeIndex}
                             />

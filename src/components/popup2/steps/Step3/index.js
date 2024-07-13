@@ -13,13 +13,13 @@ import './styles.css';
 
 
 const Step3 = React.memo(() => {
-    const { isFemale: defaultFemale } = useSelector((state) => state.data);
-    const [isFemale, setIsFemale] = useState(defaultFemale);
+    const { isFemale } = useSelector((state) => state.data);
     const dispatch = useDispatch();
+    // const [isFemale, setIsFemale] = useState(defaultFemale);
 
     const handleChangeGender = (gender) => {
-        setIsFemale(gender);
         dispatch(handleUpdateData({ isFemale: gender }));
+        // setIsFemale(gender);
     };
 
     return (

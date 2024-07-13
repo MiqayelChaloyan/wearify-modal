@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { handleSwitchStatusPopup2 } from 'reducer/features/PopupState';
+import { handleUpdateData } from 'reducer/features/State';
 
 import ArrowRight from 'icons/arrow';
 
@@ -14,7 +15,14 @@ import './styles.css';
 
 
 const Step5 = React.memo(() => {
+    const { images } = useSelector(state => state.imageReducer);
+    const { item } = useSelector((state) => state.ItemReducer);
+
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(handleUpdateData({ uploadImages: [...images] }));
+    }, []);
 
     const handleClose = () => {
         dispatch(handleSwitchStatusPopup2());
@@ -23,9 +31,9 @@ const Step5 = React.memo(() => {
     return (
         <div className='child'>
             <div className='process'>
-                <div className='div'></div>
+                <img className='div' src={images[0]?.source} alt={images[0]?.id} />
                 <ArrowRight width={19} height={19} fill={colors.lightGray} />
-                <div className='div'></div>
+                <img className='div' src={item?.imgPath} alt={item?.name} />
             </div>
             <p className='queue-text'>
                 {Texts.loadingDescription1}

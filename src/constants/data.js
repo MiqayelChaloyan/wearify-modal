@@ -206,7 +206,7 @@ const HEIGHT = [
     }
 ];
 
-
+// TODO: add kg/pounds
 const WEIGHT = [
     {
         unit: 'CENTIMETER',

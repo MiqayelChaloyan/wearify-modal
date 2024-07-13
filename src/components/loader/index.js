@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { useSelector } from 'react-redux';
+
 import LoadingBar from 'ui/loading-bar';
 import ArrowRight from 'icons/arrow';
 import { Texts } from 'constants';
@@ -8,6 +10,8 @@ import colors from 'themes/colors';
 import './styles.css'
 
 const Loader = React.memo(({ handleClose }) => {
+    const { item } = useSelector((state) => state.ItemReducer);
+
     return (
         <div className='loader-bar'>
             <div className='process8'>

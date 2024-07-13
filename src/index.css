@@ -150,5 +150,17 @@ model-viewer::part(default-ar-button) {
 
 
 
+ 
+.css-crejbx, .e19gzogf3 {
+  display: none !important;
+  position: relative !important;
+  z-index: -1000 !important;
+}
 
+
+.css-crejbx, .e19gzogf3{
+  display: none !important;
+  position: relative !important;
+  z-index: -1000 !important;
+}
 

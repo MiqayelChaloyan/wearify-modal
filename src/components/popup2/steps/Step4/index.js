@@ -21,10 +21,11 @@ import './styles.css';
 const Step4 = React.memo(() => {
     const { isFemale, age, skinTone } = useSelector((state) => state.data);
     const dispatch = useDispatch();
+    
     const ages = isFemale ? FEMALE_IMAGES.AGE : MALE_IMAGES.AGE;
     const skinTones = isFemale ? FEMALE_IMAGES.SKIN_TONE : MALE_IMAGES.SKIN_TONE;
 
-    const [activeIndexSkin, setActiveIndexSkin] = useState(null);
+    // const [activeIndexSkin, setActiveIndexSkin] = useState(null);
     // const [activeIndexshape, setActiveIndexShape] = useState(null);
 
     const handleChangeSkin = (skinToneId) => {

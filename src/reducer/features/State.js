@@ -8,8 +8,14 @@ const State = createSlice({
     handleUpdateData: (state, action) => {
       return { ...state, ...action.payload };
     },
+    handleAddImage: (state, action) => {
+      return {
+        ...state,
+        uploadImages: [...state.uploadImages, ...action.payload.uploadImages],
+      };
+    },
   },
 });
 
-export const { handleUpdateData } = State.actions;
+export const { handleUpdateData, handleAddImage } = State.actions;
 export default State.reducer;
