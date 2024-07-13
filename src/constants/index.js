@@ -29,6 +29,7 @@ const Titles = {
     selectSkin: 'SELECT SKIN & SHAPE',
     sizes: 'INPUT SIZE',
     ownModel: 'BE YOUR OWN MODEL',
+    yourModel: 'BE YOUR OWN MODEL',
     age: 'AGE',
     gender: 'GENDER'
 };

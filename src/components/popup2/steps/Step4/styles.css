@@ -2,3 +2,15 @@
     margin-top: 20px;
     height: 220px;
 }
+
+.skin-slide {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.age-types {
+    width: 87%;
+    display: flex;
+    justify-content:space-evenly;
+    margin: 10px auto;
+}

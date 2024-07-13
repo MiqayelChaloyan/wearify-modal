@@ -2,11 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 import MEASUREMENTS from 'constants/initialValues';
 
 const State = createSlice({
-  name: 'state',
+  name: 'data',
   initialState: { ...MEASUREMENTS },
   reducers: {
-    handleUpdateData: (state) => {
-      state.isPopup1Active = !state.isPopup1Active;
+    handleUpdateData: (state, action) => {
+      return { ...state, ...action.payload };
     },
   },
 });

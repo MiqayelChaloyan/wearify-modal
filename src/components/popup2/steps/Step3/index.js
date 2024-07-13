@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { handleUpdateData } from 'reducer/features/State';
+
 import Header from 'components/popup2/header';
 import ImagesUpload from 'components/upload-images';
 
@@ -10,28 +13,31 @@ import './styles.css';
 
 
 const Step3 = React.memo(() => {
-    const [userGender, setUserGender] = useState(Gender.female);
+    const { isFemale: defaultFemale } = useSelector((state) => state.data);
+    const [isFemale, setIsFemale] = useState(defaultFemale);
+    const dispatch = useDispatch();
 
     const handleChangeGender = (gender) => {
-        setUserGender(gender)
-    }
+        setIsFemale(gender);
+        dispatch(handleUpdateData({ isFemale: gender }));
+    };
 
     return (
         <div>
-            <Header title={Titles.ownModel} />
+            <Header title={Titles.yourModel} />
             <div className='options'>
                 <div>
                     <h3 className='toggle-title'>{Titles.gender}</h3>
                     <div className='toggle-buttons'>
                         <button
-                            className={cn('button-sizes', userGender === Gender.female && 'active-sizes')}
-                            onClick={() => handleChangeGender(Gender.female)}
+                            className={cn('button-sizes', isFemale && 'active-sizes')}
+                            onClick={() => handleChangeGender(1)}
                         >
                             {Gender.female}
                         </button>
                         <button
-                            className={cn('button-sizes', userGender === Gender.male && 'active-sizes')}
-                            onClick={() => handleChangeGender(Gender.male)}
+                            className={cn('button-sizes', !isFemale && 'active-sizes')}
+                            onClick={() => handleChangeGender(0)}
                         >
                             {Gender.male}
                         </button>

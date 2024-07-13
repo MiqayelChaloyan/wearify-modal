@@ -1,43 +1,53 @@
 import React, { useState } from 'react';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { handleUpdateData } from 'reducer/features/State';
+
 import SlickSlider from 'ui/slickSlider';
-import ShapeItem from 'components/shape';
+import Item from 'components/slideItem';
 import Header from '../header';
 
 import { Titles } from 'constants';
-
-import { images } from 'utils/fakeApi';
+import { FEMALE_IMAGES, MALE_IMAGES } from 'constants/data';
 
 import './styles.css';
 
 
 const Step2 = React.memo(() => {
-    const [activeIndexSkin, setActiveIndexSkin] = useState(null);
-    const [activeIndexshape, setActiveIndexShape] = useState(null);
+    const { isFemale, skin, shape } = useSelector((state) => state.data);
+    const dispatch = useDispatch();
 
-    const handleChangeSkin = (index) => {
-        setActiveIndexSkin(index);
+    // const [activeIndexSkin, setActiveIndexSkin] = useState(skin);
+    // const [activeIndexshape, setActiveIndexShape] = useState(shape);
+
+    const shapes = isFemale ? FEMALE_IMAGES.SHAPE : MALE_IMAGES.SHAPE;
+    const skins = isFemale ? FEMALE_IMAGES.SKIN : MALE_IMAGES.SKIN;
+
+    const handleChangeSkin = (skinId) => {
+        // setActiveIndexSkin(index);
+        dispatch(handleUpdateData({ skin: skinId }));
     };
 
-    const handleChangeShape = (index) => {
-        setActiveIndexShape(index);
+    const handleChangeShape = (shapeId) => {
+        // setActiveIndexShape(index);
+        dispatch(handleUpdateData({ shape: shapeId }));
     };
 
-    const slideItems = images?.map((item, index) => (
-        <ShapeItem
+    const slideItems = skins?.map((item) => (
+        <Item
             key={item.title}
             source={item.source}
-            isActive={index === activeIndexSkin}
-            onClick={() => handleChangeSkin(index)}
+            isActive={item.id === skin}
+            onClick={() => handleChangeSkin(item.id)}
         />
     ));
 
-    const shapeItems = images.slice(0, 5)?.map((item, index) => (
-        <ShapeItem
+    const shapeItems = shapes?.map((item) => (
+        <Item
             key={item.title}
             source={item.source}
-            isActive={index === activeIndexshape}
-            onClick={() => handleChangeShape(index)}
+            isActive={item.id  === shape}
+            onClick={() => handleChangeShape(item.id)}
         />
     ));
 

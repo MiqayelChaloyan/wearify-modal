@@ -1,31 +1,44 @@
-import React from 'react';
+import React, { useState }  from 'react';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { handleUpdateData } from 'reducer/features/State';
 
 import InputRange from 'ui/range';
 import Header from '../header';
 
-import { useState } from 'react';
 import { Titles, UnitsOfMeasurement } from 'constants';
+import { HEIGHT, WEIGHT } from 'constants/data';
 
 import cn from 'classnames';
+
 import './styles.css';
 
 
 const Step1 = React.memo(() => {
-    const [isCentimeter, setIsCentimeter] = useState(true)
-    const [rangeValueHeight, setValueHeight] = useState(150);
-    const [rangeValueWeight, setValueWeight] = useState(150);
+    const { isCentimeter, height, weight } = useSelector((state) => state.data);
+    const dispatch = useDispatch();
+
+    // const [isCentimeter, setIsCentimeter] = useState(defaultisCentimeter)
+    // const [rangeValueHeight, setValueHeight] = useState(height);
+    // const [rangeValueWeight, setValueWeight] = useState(weight);
+
+    const selectedHeight = isCentimeter ? HEIGHT[0] : HEIGHT[1];
+    const selectedWeight = isCentimeter ? WEIGHT[0] : WEIGHT[1];
 
     const handleRangeChangeHeight = (e) => {
-        setValueHeight(e.target.value)
-    }
+        dispatch(handleUpdateData({ height: e.target.value }));
+        // setValueHeight(e.target.value)
+    };
 
     const handleRangeChangeWeight = (e) => {
-        setValueWeight(e.target.value)
-    }
+        dispatch(handleUpdateData({ weight: e.target.value }));
+        // setValueWeight(e.target.value);
+    };
 
-    const handleChangeMeasurements = () => {
-        setIsCentimeter(!isCentimeter)
-    }
+    const handleChangeUnit = () => {
+        dispatch(handleUpdateData({ isCentimeter: !isCentimeter }));
+        // setIsCentimeter(!isCentimeter);
+    };
 
     return (
         <div>
@@ -34,13 +47,13 @@ const Step1 = React.memo(() => {
                 <div className='toggle-buttons'>
                     <button
                         className={cn('button-sizes', isCentimeter && 'active-sizes')}
-                        onClick={handleChangeMeasurements}
+                        onClick={handleChangeUnit}
                     >
                         {UnitsOfMeasurement.cm}
                     </button>
                     <button
                         className={cn('button-sizes', !isCentimeter && 'active-sizes')}
-                        onClick={handleChangeMeasurements}
+                        onClick={handleChangeUnit}
                     >
                         {UnitsOfMeasurement.in}
                     </button>
@@ -49,16 +62,24 @@ const Step1 = React.memo(() => {
                     <div>
                         <div className='range-titles'>
                             <h3 className='range-title'>{Titles.height}</h3>
-                            <h3 className='range-title'>{rangeValueHeight}</h3>
+                            <h3 className='range-title'>{height}</h3>
                         </div>
-                        <InputRange handleRangeChange={handleRangeChangeHeight} />
+                        <InputRange
+                            max={selectedHeight.max}
+                            min={selectedHeight.min}
+                            handleRangeChange={handleRangeChangeHeight}
+                        />
                     </div>
                     <div>
                         <div className='range-titles'>
                             <h3 className='range-title'>{Titles.weight}</h3>
-                            <h3 className='range-title'>{rangeValueWeight}</h3>
+                            <h3 className='range-title'>{weight}</h3>
                         </div>
-                        <InputRange handleRangeChange={handleRangeChangeWeight} />
+                        <InputRange
+                            handleRangeChange={handleRangeChangeWeight}
+                            max={selectedWeight.max}
+                            min={selectedWeight.min}
+                        />
                     </div>
                 </div>
             </div>
