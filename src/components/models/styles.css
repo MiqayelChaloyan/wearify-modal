@@ -1,10 +1,10 @@
 .column {
-    height: 130px;
-    width: 115px;
+    height: 120px;
+    width: 100px;
     border-radius: 20px;
     background-color: var(--pink);
     transition: var(--transition);
-    border: 1.5px solid var(--white);
+    border: 2px solid var(--white);
     cursor: pointer;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .active-slide {
-    border: 1.5px solid var(--dark-blue);
+    border: 2px solid var(--dark-blue);
     cursor: default
 }
 

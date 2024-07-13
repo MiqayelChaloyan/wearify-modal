@@ -16,18 +16,22 @@ import colors from 'themes/colors';
 import './styles.css';
 
 // TODO
-import { masurements, models } from 'utils/fakeApi';
+import { masurements } from 'utils/fakeApi';
+import COMBINED_MODELS from 'constants/models';
 //
 
-const Step1 = React.memo(() => {
-    const [uriGlb, setUriGlb] = useState(models[0].glbPath)
+const Step1 = React.memo(({
+    _handleBack,
+    _handleNext
+}) => {
+    const [uriGlb, setUriGlb] = useState(COMBINED_MODELS.sneakers[0].glbPath)
     const [hide, setHide] = useState(true);
     const [activeIndex, setActiveIndex] = useState(0);
 
     const ref = useRef(null);
 
     const handleSubmit = (index) => {
-        setUriGlb(models[index].glbPath)
+        setUriGlb(COMBINED_MODELS.sneakers[index].glbPath)
         setActiveIndex(index)
     }
 
@@ -35,7 +39,7 @@ const Step1 = React.memo(() => {
 
     return (
         <div>
-            <Header />
+            <Header _handleBack={_handleBack} _handleNext={_handleNext} />
             <div className='container-view' ref={ref}>
                 {masurements && <Measurements />}
                 <LayoutPopup1 />
@@ -45,12 +49,12 @@ const Step1 = React.memo(() => {
                     {
                         hide ? (
                             <button className='button-right' onClick={handleHide} whiletap={{ scale: 0.95 }}>
-                                <Square width={30} height={30} fill='rgb(212, 215, 215)' />
+                                <Square width={25} height={25} fill='rgb(212, 215, 215)' />
                             </button>
                         ) : (
 
                             <button className='button-right' onClick={handleHide} whiletap={{ scale: 0.95 }}>
-                                <Square width={30} height={30} fill={colors.darkBlue} />
+                                <Square width={25} height={25} fill={colors.darkBlue} />
                             </button>
                         )
                     }
@@ -73,7 +77,7 @@ const Step1 = React.memo(() => {
                             viewport={{ once: true }}
                         >
                             <Models
-                                models={models}
+                                models={COMBINED_MODELS.sneakers}
                                 onClick={handleSubmit}
                                 activeIndex={activeIndex}
                             />

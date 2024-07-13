@@ -43,6 +43,33 @@ const FEMALE_IMAGES = {
             title: 'TRIANGLE',
         },
     ],
+    SKIN_TONE: [
+        {
+            id: 0,
+            source: 'https://drive.google.com/thumbnail?id=1oRsnLPz33xb_cHtC4KLVkcS9hOiRjgOJ',
+            title: '1'
+        },
+        {
+            id: 1,
+            source: 'https://drive.google.com/thumbnail?id=1YDSfbeHBttPSRiiGKlaSuuTAChCBLw3x',
+            title: '2'
+        },
+        {
+            id: 2,
+            source: 'https://drive.google.com/thumbnail?id=1OzZianpJ3aUHmSI-o1hmyuc8gdjVf_EF',
+            title: '2'
+        },
+        {
+            id: 3,
+            source: 'https://drive.google.com/thumbnail?id=1B8Hiz22nOPdZSJaGbSfkdoY40ybRQtN1',
+            title: '3'
+        },
+        {
+            id: 4,
+            source: 'https://drive.google.com/thumbnail?id=19q1mvVZ_ys6Vv4F7KzMsVR5XBpPkous9',
+            title: '4'
+        },
+    ],
     AGE: [
         {
             id: 0,
@@ -114,6 +141,33 @@ const MALE_IMAGES = {
             title: 'TRIANGLE',
         },
     ],
+    SKIN_TONE: [
+        {
+            id: 0,
+            source: 'https://drive.google.com/thumbnail?id=19ggDJEYxtxlNXDVn5qBDFbQdOLK7RVVY',
+            title: '1'
+        },
+        {
+            id: 1,
+            source: 'https://drive.google.com/thumbnail?id=1I0qOlnhoA4cXH6-YVhHPa98A-4dgmuCe',
+            title: '2'
+        },
+        {
+            id: 2,
+            source: 'https://drive.google.com/thumbnail?id=1A5FZ3vrpXnVV9OQ1ZHRO9ymCi8NWrXAk',
+            title: '2'
+        },
+        {
+            id: 3,
+            source: 'https://drive.google.com/thumbnail?id=1j3rgWEpwVVlvmsM4KlwaEHkET2lZArd4',
+            title: '3'
+        },
+        {
+            id: 4,
+            source: 'https://drive.google.com/thumbnail?id=181BIo1CJQfZKXYr9Wr6jFe2QKJ_e8z-K',
+            title: '4'
+        },
+    ],
     AGE: [
         {
             id: 0,
@@ -131,7 +185,7 @@ const MALE_IMAGES = {
             id: 3,
             source: 'https://storage-web.pixocial.com/vmake-prod/~/static/images/c3c9d918333425bd98fc.jpg'
         },
-        {   
+        {
             id: 4,
             source: 'https://storage-web.pixocial.com/vmake-prod/~/static/images/86e2103894354069be7f.jpg'
         },
@@ -166,11 +220,12 @@ const WEIGHT = [
     }
 ];
 
+
 export {
     FEMALE_IMAGES,
     MALE_IMAGES,
     HEIGHT,
-    WEIGHT
+    WEIGHT,
 };
 
 

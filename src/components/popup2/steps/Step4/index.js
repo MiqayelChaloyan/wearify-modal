@@ -19,16 +19,17 @@ import './styles.css';
 
 
 const Step4 = React.memo(() => {
-    const { isFemale, age } = useSelector((state) => state.data);
+    const { isFemale, age, skinTone } = useSelector((state) => state.data);
     const dispatch = useDispatch();
     const ages = isFemale ? FEMALE_IMAGES.AGE : MALE_IMAGES.AGE;
-
+    const skinTones = isFemale ? FEMALE_IMAGES.SKIN_TONE : MALE_IMAGES.SKIN_TONE;
 
     const [activeIndexSkin, setActiveIndexSkin] = useState(null);
     // const [activeIndexshape, setActiveIndexShape] = useState(null);
 
-    const handleChangeSkin = (index) => {
-        setActiveIndexSkin(index);
+    const handleChangeSkin = (skinToneId) => {
+        dispatch(handleUpdateData({ skinTone: skinToneId }));
+        // setActiveIndexSkin(index);
     };
 
     const handleChangeAge = (ageId) => {
@@ -36,12 +37,12 @@ const Step4 = React.memo(() => {
         // setActiveIndexShape(index);
     };
 
-    const slideItems = images?.map((item, index) => (
+    const slideItems = skinTones?.map((item) => (
         <Item
             key={item.title}
             source={item.source}
-            isActive={index === activeIndexSkin}
-            onClick={() => handleChangeSkin(index)}
+            isActive={item.id === skinTone}
+            onClick={() => handleChangeSkin(item.id)}
         />
     ));
 

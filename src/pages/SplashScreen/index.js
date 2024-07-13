@@ -15,7 +15,11 @@ export default function SplashScreen() {
 
     return (
         <div className='container-splash'>
-            <img src={ImagePaths.logoUrl} alt='logo' className='img' />
+            <img
+                src={ImagePaths.logoUrl}
+                alt='logo'
+                className='logo'
+            />
         </div>
     )
 };

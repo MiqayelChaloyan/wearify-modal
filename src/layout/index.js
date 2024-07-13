@@ -1,12 +1,15 @@
 import { useEffect } from 'react';
 
-
+import SplashScreen from 'pages/SplashScreen';
 import Step1 from 'pages/Step1';
+import ScanQR from 'pages/ScanQR';
+
 import { useMultistepForm } from 'hooks/useMultistepForm';
 import Modal from 'components/modal';
-import SplashScreen from 'pages/SplashScreen';
+
 import useTheme from 'hooks/useTheme';
 import colors from 'themes/colors';
+
 
 export default function Layout() {
     const { setTheme } = useTheme();
@@ -14,7 +17,8 @@ export default function Layout() {
     const { currentStepIndex, step, back, next } =
         useMultistepForm([
             <SplashScreen />,
-            <Step1/>
+            <Step1 />,
+            <ScanQR />
         ]);
 
     useEffect(() => {
@@ -37,6 +41,7 @@ export default function Layout() {
         <Modal
             currentStepIndex={currentStepIndex}
             _handleBack={back}
+            _handleNext={next}
         >
             {step}
         </Modal>

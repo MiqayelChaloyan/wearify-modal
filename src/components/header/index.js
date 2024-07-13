@@ -16,12 +16,15 @@ import './styles.css';
 import { DeepARLink } from 'constants';
 //
 
-const Header = React.memo(() => {
+const Header = React.memo(({
+    _handleBack,
+    _handleNext
+}) => {
     const [isLoading, setIsLaoding] = useState(false);
     const handleClose = () => document.getElementById('web-modal').style.display = 'none';
 
     const handleSubmit = () => {
-        console.log('next scan page');
+        _handleNext()
     }
 
     const handleCloseLoading = () => setIsLaoding(false);
@@ -35,7 +38,7 @@ const Header = React.memo(() => {
                 className='close-modal'
                 onClick={handleClose}
             >
-                <CgClose size={30} fill={colors.darkBlue} />
+                <CgClose size={25} fill={colors.darkBlue} />
             </button>
             {scanning ? (
                 <button

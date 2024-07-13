@@ -193,6 +193,7 @@ const ImageUpload = () => {
                 onChange={fileSelectedHandler}
                 style={{ display: 'none' }}
             />
+            {errorMessage && <p className="error-message">{errorMessage}</p>}
             <div>
                 {!imageURLs.length ?
                     (<div className='uploades-buttons'>
@@ -223,16 +224,16 @@ const ImageUpload = () => {
                         </div>
                     ) : (
                         <div className='images-bg'>
-                           <div>
-                           <button
-                                className={`${images.length >= 10 ? 'disabled' : 'upload-button'}`}
-                                onClick={handleUploadClick} disabled={images.length >= 10}
-                            >
-                                <div>
-                                    <UploadImage />
-                                </div>
-                                <p>{OptionsTexts.upload}</p>
-                            </button>
+                            <div>
+                                <button
+                                    className={`${images.length >= 10 ? 'disabled' : 'upload-button'}`}
+                                    onClick={handleUploadClick} disabled={images.length >= 10}
+                                >
+                                    <div>
+                                        <UploadImage />
+                                    </div>
+                                    <p>{OptionsTexts.upload}</p>
+                                </button>
                             </div>
                             {imageURLsSlide}
                         </div>
@@ -240,8 +241,6 @@ const ImageUpload = () => {
                     )
                 }
             </div>
-
-            {errorMessage && <p className="error-message">{errorMessage}</p>}
         </>
     );
 };

@@ -26,7 +26,7 @@ const Measurements = React.memo(() => {
         <div className='containter'>
             <div className='measurements'>
                 <button className='button' onClick={_handleSubmitPopup2} disabled={!isFinish}>
-                    <UserIcon width={25} height={25} fill={isFinish ? colors.darkBlue : colors.gray} />
+                    <UserIcon width={22} height={22} fill={isFinish ? colors.darkBlue : colors.gray} />
                 </button>
                 <button className='button' onClick={_handleSubmitPopup1}>
                     <MeasurementsIcon />

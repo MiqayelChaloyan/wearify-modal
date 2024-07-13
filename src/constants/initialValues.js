@@ -4,8 +4,8 @@ const MEASUREMENTS = {
     weight: 0,
     skin: 0,
     shape: 0,
-    skin2: null,
-    age: null,
+    skinTone: 0,
+    age: 0,
     isFemale: 1,
     uploadImages: [],
 };

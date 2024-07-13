@@ -8,9 +8,9 @@
 }
 
 .button-try-on {
-    font-size: 17px;
-    width: 143px;
-    height: 52px;
+    font-size: 15px;
+    width: 120px;
+    height: 46px;
     font-weight: var(--font-weight-medium);
     background-color: var(--dark-blue);
     border: 1px solid var(--dark-blue);

@@ -26,7 +26,7 @@ const Popup = ({
     return isPopup2Active && (
         <div className='container'>
             <div className='popup'>
-                <div className='header'>
+                <div className='header-popup'>
                     <Close className='close-modal' onClose={handleClose} />
                 </div>
                 <div>

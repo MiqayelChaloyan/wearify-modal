@@ -8,11 +8,16 @@ import './styles.css';
 export default function Modal({
     children,
     // currentStepIndex,
-    // _handleBack
+    _handleBack,
+    _handleNext
 }) {
     const { theme } = useTheme();
 
     const styles = { backgroundColor: theme };
+
+    const childrenWithProps = React.Children.map(children, child =>
+        React.cloneElement(child, { _handleBack, _handleNext })
+    );
 
     return (
         <div
@@ -21,7 +26,7 @@ export default function Modal({
             style={styles}
         >
             <div role='document'>
-                {children}
+                {childrenWithProps}
             </div>
         </div>
     )

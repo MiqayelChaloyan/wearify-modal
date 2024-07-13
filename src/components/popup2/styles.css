@@ -14,7 +14,7 @@
 }
 
 .popup {
-    width: 380px;
+    width: 320px;
     height: 380px;
     background-color: var(--modal-bg-color);
     border-radius: 30px;
@@ -59,7 +59,7 @@
 }
 
 /* Header */
-.header {
+.header-popup {
     display: flex;
     justify-content: flex-end;
     padding: 10px 15px;
