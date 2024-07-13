@@ -168,6 +168,7 @@ const ImageUpload = () => {
         <div
             key={item.id}
             className='slide-container-item'
+            onClick={() => handleRemoveClick(item.id)}
         >
             <button className='slide-button'>
                 <img
@@ -176,10 +177,10 @@ const ImageUpload = () => {
                     className='slide-image'
                 />
             </button>
-            <div
+            {/* <div
                 className='remove-button-container'
                 onClick={() => handleRemoveClick(item.id)}
-            />
+            /> */}
         </div>
     ));
 
