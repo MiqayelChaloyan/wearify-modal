@@ -88,3 +88,156 @@
     color: var(--dark-blue);
     text-align: left;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media */
+@media screen and (max-width: 1536px) {
+    .button-back {
+        width: 120px;
+        height: 46px;
+    }
+
+    .button-information {
+        font-size: 19px;
+        width: 46px;
+        height: 46px;
+    }
+
+    .scanning-title {
+        font-size: 24px;
+        line-height: 32.12px;
+        margin-bottom: 10px;
+    }
+
+
+    .scanning-text {
+        font-size: 14.89px;
+        line-height: 14.89px;
+    }
+
+    .qr-image {
+        object-fit: cover;
+        width: 190px;
+        height: 190px;
+        border-radius: 30px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .button-back {
+        font-size: 14px;
+        width: 100px;
+        height: 40px;
+    }
+
+    .button-information {
+        font-size: 17px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .scanning-title {
+        font-size: 22px;
+        line-height: 30.12px;
+        margin-bottom: 10px;
+    }
+
+    .qr-image {
+        object-fit: cover;
+        width: 180px;
+        height: 180px;
+        border-radius: 30px;
+    }
+
+    .qr-block {
+        margin: 15px auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .button-back {
+        font-size: 14px;
+        padding: 5px 10px 5px 10px;
+    }
+
+    .button-information {
+        font-size: 17px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .scanning-text {
+        font-size: 13.89px;
+        line-height: 13.89px;
+    }
+
+    .footer-text {
+        font-size: 14.89px;
+        line-height: 20.89px;
+        font-weight: var(--font-weight-medium);
+        color: var(--dark-blue);
+        text-align: left;
+    }
+
+    .line-qr {
+        margin: 15px auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .button-back {
+        font-size: 14px;
+        padding: 5px 15px;
+    }
+
+    .button-information {
+        font-size: 15px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .button-back {
+        font-size: 17px;
+        padding: 10px 20px 10px 20px;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .button-back {
+        font-size: 15px;
+        padding: 5px 10px 5px 10px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .button-back {
+        font-size: 14px;
+        padding: 5px 10px 5px 10px;
+        width: 120px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .button-back {
+        font-size: 14px;
+        padding: 5px 10px 5px 10px;
+    }
+}

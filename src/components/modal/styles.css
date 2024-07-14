@@ -11,43 +11,44 @@
     display: none
 }
 
-
 @media screen and (max-width: 1536px) {
     .modal {
-        width: 415px;
-        height: 470px;
+        width: 362px;
+        height: 609px;
     }
 }
 
 @media screen and (max-width: 1280px) {
     .modal {
-        height: 485px;
+        width: 362px;
+        height: 549px;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .modal {
-        height: 480px;
+        width: 362px;
+        height: 549px;
     }
 }
 @media screen and (max-width: 1024px) {
     .modal {
-        height: 455px;
+        height: 520px;
     }
 }
 @media screen and (max-width: 900px) {
     .modal {
-        height: 455px;
+        height: 520px;
     }
 }
 @media screen and (max-width: 768px) {
     .modal {
-        height: 462px;
+        height: 520px;
     }
 }
 @media screen and (max-width: 640px) {
     .modal {
-        height: 511px;
+        height: 520px;
         transform: translate(-50%, -50%);
         left: 50%;
         right: 0;
@@ -55,13 +56,13 @@
 }
 @media screen and (max-width: 480px) {
     .modal {
-        height: 460px;
+        height: 520px;
         width: 90%;
     }
 }
 @media screen and (max-width: 320px) {
     .modal {
-        height: 405px;
+        height: 520px;
         width: 90%;
         border-radius: 30px;
     }

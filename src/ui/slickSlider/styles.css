@@ -42,3 +42,13 @@
       width: 20px;
       margin: 1px;
   }
+
+
+  .slick-arrow.slick-next {
+    right: -10px;
+    z-index: 20;
+}
+.slick-arrow.slick-prev { 
+    left: -10px;
+    z-index: 20;
+}

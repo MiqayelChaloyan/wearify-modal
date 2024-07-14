@@ -22,15 +22,15 @@
 /* media */
 @media screen and (max-width: 1536px) {
     .column {
-        height: 130px;
-        width: 115px;
+        height: 120px;
+        width: 100px;
     }
 }
 
 @media screen and (max-width: 1280px) {
     .column {
         height: 120px;
-        width: 110px;
+        width: 100px;
     }
 }
 
@@ -44,42 +44,42 @@
 @media screen and (max-width: 1024px) {
     .column {
         height: 120px;
-        width: 110px;
+        width: 100px;    
     }
 }
 
 @media screen and (max-width: 900px) {
     .column {
         height: 120px;
-        width: 110px;
+        width: 100px;   
     }
 }
 
 @media screen and (max-width: 768px) {
     .column {
         height: 120px;
-        width: 110px;
+        width: 100px;  
     }
 }
 
 @media screen and (max-width: 640px) {
     .column {
         height: 120px;
-        width: 110px;
+        width: 100px;  
     }
 }
 
 @media screen and (max-width: 480px) {
     .column {
         height: 120px;
-        width: 100px;
+        width: 100px;  
     }
 }
 
 @media screen and (max-width: 320px) {
     .column {
-        height: 110px;
-        width: 80px;
+        height: 120px;
+        width: 100px;  
     }
 }
 
