@@ -5,7 +5,6 @@ const ItemReducer = createSlice({
   initialState: { item: null },
   reducers: {
     handleAddItem: (state, action) => {
-      console.log( action.payload)
       state.item = action.payload;
     },
   },

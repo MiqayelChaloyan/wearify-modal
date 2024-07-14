@@ -6,9 +6,10 @@ const Iframe = ({ src }) => {
             src={src}
             title="DeepAR Try On"
             allow="camera *; microphone *"
-            frameborder="0"
+            frameBorder="0"
             scrolling="no"
             className='iframe'
+            id='my-iframe'
         />
     )
 };

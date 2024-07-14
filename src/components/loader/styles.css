@@ -3,7 +3,13 @@
     height: 145px;
     display: grid;
     justify-content: flex-start;
-    top: 25px
+    background-color: none;
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+    padding: 15px;
+    background-color: var(--pink);
+    border-radius: 0 50px 0 0;
 }
 
 .info-text {
@@ -17,13 +23,14 @@
 .process8 {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 
 .div8 {
     width: 55px;
     height: 55px;
     background-color: var(--container-bg);
+    /* margin: 20px;  */
     border-radius: 10px;
 }
 

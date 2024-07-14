@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { useDispatch, useSelector } from 'react-redux';
+
 import { CgClose } from 'react-icons/cg';
 
 import Loader from 'components/loader';
@@ -14,20 +16,27 @@ import './styles.css';
 
 // TODO
 import { DeepARLink } from 'constants';
+import { handleSwitchPopup, handleSwitchResultLoading } from 'reducer/features/ResultReducer';
 //
 
 const Header = React.memo(({
     _handleBack,
     _handleNext
 }) => {
-    const [isLoading, setIsLaoding] = useState(false);
+    const { isLoading } = useSelector((state) => state.result);
+    const dispatch = useDispatch();
+
+    // const [isLoading, setIsLaoding] = useState(false);
     const handleClose = () => document.getElementById('web-modal').style.display = 'none';
 
     const handleSubmit = () => {
         _handleNext()
     }
 
-    const handleCloseLoading = () => setIsLaoding(false);
+    const handleCloseLoading = () => {
+        dispatch(handleSwitchResultLoading())
+        dispatch(handleSwitchPopup());
+    };
 
     return (
         <div className='buttons-group-person'>

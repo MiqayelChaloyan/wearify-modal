@@ -1,11 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { handleAddItem } from 'reducer/features/ItemReducer';
+
 import Square from 'icons/square';
 
 import { motion } from 'framer-motion';
 
 import Models from 'components/models';
 import Header from 'components/header';
+import Iframe from 'components/iframe';
+import Result from 'components/result';
 import ModelViewer from 'components/model-viewer';
 import Measurements from 'components/measurements';
 import LayoutPopup1 from 'components/popup1/layout';
@@ -18,18 +23,17 @@ import './styles.css';
 // TODO
 import { masurements } from 'utils/fakeApi';
 import COMBINED_MODELS from 'constants/models';
-import Iframe from 'components/iframe';
-import { useDispatch } from 'react-redux';
-import { handleAddItem } from 'reducer/features/ItemReducer';
 //
 
 const Step1 = React.memo(({
     _handleBack,
     _handleNext
 }) => {
+    const { isOpen } = useSelector((state) => state.result);
+
     const dispatch = useDispatch();
     // const models = masurements ? COMBINED_MODELS.sportWearing : COMBINED_MODELS.sneakers;
-    
+
     const [uriGlb, setUriGlb] = useState(COMBINED_MODELS.sportWearing[0].glbPath)
     const [hide, setHide] = useState(true);
     const [activeIndex, setActiveIndex] = useState(0);
@@ -55,6 +59,7 @@ const Step1 = React.memo(({
                 {masurements && <Measurements />}
                 <LayoutPopup1 />
                 <LayoutPopup2 />
+                {isOpen && <Result />}
                 {masurements ?
                     <Iframe src={uriGlb} /> :
                     <ModelViewer uriGlb={uriGlb} />}

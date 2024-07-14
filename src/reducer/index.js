@@ -5,6 +5,8 @@ import stateSwitchReducer from './features/State';
 import stateStepsReducer from './features/Steps';
 import imageReducer from './features/ImagesState';
 import ItemReducer from './features/ItemReducer';
+import ResultReducer from './features/ResultReducer';
+
 
 const store = configureStore({
     reducer: {
@@ -12,7 +14,8 @@ const store = configureStore({
         data: stateSwitchReducer,
         steps: stateStepsReducer,
         imageReducer: imageReducer,
-        ItemReducer: ItemReducer
+        ItemReducer: ItemReducer,
+        result: ResultReducer
     },
 });
 

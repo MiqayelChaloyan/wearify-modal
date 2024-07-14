@@ -2,9 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 30px;
+    padding-left: 20px;
     padding-right: 20px;
-    margin-top: 42px;
+    margin-top: 25px;
 }
 
 .button-try-on {

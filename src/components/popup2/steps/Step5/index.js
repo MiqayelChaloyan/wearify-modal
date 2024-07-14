@@ -12,12 +12,12 @@ import { Texts } from 'constants';
 import colors from 'themes/colors';
 
 import './styles.css';
+import { handleSwitchResultLoading } from 'reducer/features/ResultReducer';
 
 
 const Step5 = React.memo(() => {
     const { images } = useSelector(state => state.imageReducer);
     const { item } = useSelector((state) => state.ItemReducer);
-
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -26,6 +26,7 @@ const Step5 = React.memo(() => {
 
     const handleClose = () => {
         dispatch(handleSwitchStatusPopup2());
+        dispatch(handleSwitchResultLoading());
     };
 
     return (

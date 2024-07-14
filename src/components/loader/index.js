@@ -10,16 +10,17 @@ import colors from 'themes/colors';
 import './styles.css'
 
 const Loader = React.memo(({ handleClose }) => {
+    const { images } = useSelector(state => state.imageReducer);
     const { item } = useSelector((state) => state.ItemReducer);
 
     return (
         <div className='loader-bar'>
             <div className='process8'>
-                <div className='div8'></div>
+                <img className='div8' src={images[0]?.source} alt={images[0]?.id} />
                 <div className='arrow-loading'>
                     <ArrowRight width={19} height={19} fill={colors.lightGray} />
                 </div>
-                <div className='div8 arrow-loading'></div>
+                <img className='div8 arrow-loading' src={item?.imgPath} alt={item?.name} />
             </div>
             <div>
                 <p className='info-text'>
