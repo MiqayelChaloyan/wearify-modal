@@ -32,22 +32,22 @@ const Step1 = React.memo(({
     const { isOpen } = useSelector((state) => state.result);
 
     const dispatch = useDispatch();
-    // const models = masurements ? COMBINED_MODELS.sportWearing : COMBINED_MODELS.sneakers;
+    const models = masurements ? COMBINED_MODELS.sportWearing : COMBINED_MODELS.sneakers;
 
-    const [uriGlb, setUriGlb] = useState(COMBINED_MODELS.sneakers[0].glbPath)
+    const [uriGlb, setUriGlb] = useState(models[0].glbPath)
     const [hide, setHide] = useState(true);
     const [activeIndex, setActiveIndex] = useState(0);
 
     const ref = useRef(null);
 
     useEffect(() => {
-        dispatch(handleAddItem(COMBINED_MODELS.sneakers[0]));
+        dispatch(handleAddItem(models[0]));
     }, [])
 
     const handleSubmit = (index) => {
         setUriGlb(COMBINED_MODELS.sportWearing[index].glbPath)
         setActiveIndex(index);
-        dispatch(handleAddItem(COMBINED_MODELS.sportWearing[index]));
+        dispatch(handleAddItem(models[index]));
     }
 
     const handleHide = () => setHide(!hide);
@@ -95,7 +95,7 @@ const Step1 = React.memo(({
                             viewport={{ once: true }}
                         >
                             <Models
-                                models={COMBINED_MODELS.sneakers}
+                                models={models}
                                 onClick={handleSubmit}
                                 activeIndex={activeIndex}
                             />

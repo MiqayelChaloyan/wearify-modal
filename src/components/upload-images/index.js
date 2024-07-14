@@ -169,6 +169,7 @@ import { ErrorMessege, OptionsTexts } from 'constants';
 import cn from 'classnames';
 
 import './styles.css';
+import RemovePopup from './remove';
 
 
 const ImageUpload = React.memo(() => {
@@ -176,6 +177,7 @@ const ImageUpload = React.memo(() => {
 
     const [images, setImages] = useState([]);
     const [imageURLs, setImageURLs] = useState([]);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
     const fileInputRef = useRef(null);
 
@@ -209,17 +211,32 @@ const ImageUpload = React.memo(() => {
         fileInputRef.current.click();
     };
 
+
+    const [removeId, setRemoveId] = useState(null)
+
+    const handleYesClick = (id) => {
+        setIsModalOpen(false);
+        handleRemoveClick(removeId);
+    };
+
     const handleRemoveClick = (id) => {
         setImageURLs(imageURLs.filter(image => image.id !== id));
         setImages(images.filter((_, index) => imageURLs[index].id !== id));
         dispatch(removeImage(id));
     };
 
+    const handleNoClick = () => {
+        setIsModalOpen(false);
+    };
+
     const imageURLsSlide = imageURLs?.map((item) => (
         <div
             key={item.id}
             className='slide-container-item'
-            onClick={() => handleRemoveClick(item.id)}
+            onClick={() => {
+                setIsModalOpen(true);
+                setRemoveId(item.id)
+            }}
         >
             <button className='slide-button'>
                 <img
@@ -288,6 +305,12 @@ const ImageUpload = React.memo(() => {
                     )
                 }
             </div>
+
+            {isModalOpen &&
+                <RemovePopup
+                    handleYesClick={handleYesClick}
+                    handleNoClick={handleNoClick}
+                />}
         </>
     );
 });
