@@ -93,56 +93,56 @@ model-viewer::part(default-ar-button) {
 @media screen and (max-width: 1536px) {
   model-viewer {
     width: 100%;
-    height: 175px;
+    height: 320px;
   }
 }
 
 @media screen and (max-width: 1280px) {
   model-viewer {
     width: 100%;
-    height: 175px;
+    height: 268px;
   }
 }
 
 @media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio:0) {
   model-viewer {
     width: 100%;
-    height: 160px;
+    height: 258px;
   }
 }
 
 @media screen and (max-width: 768px) {
   model-viewer {
     width: 100%;
-    height: 160px;
+    height: 258px;
   }
 }
 
 @media screen and (max-width: 640px) {
   model-viewer {
     width: 100%;
-    height: 250px;
+    height: 248px;
   }
 }
 
 @media screen and (max-width: 635px) {
   model-viewer {
     width: 100%;
-    height: 200px;
+    height: 248px;
   }
 }
 
 @media screen and (max-width: 475px) {
   model-viewer {
     width: 100%;
-    height: 160px;
+    height: 248px;
   }
 }
 
 @media screen and (max-width: 320px) {
   model-viewer {
     width: 100%;
-    height: 129px;
+    height: 248px;
   }
 }
 

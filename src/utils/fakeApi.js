@@ -1,5 +1,5 @@
 const scanning = true;
-const masurements = true;
+const masurements = false;
 
 // const models = [
 //     {
