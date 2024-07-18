@@ -52,6 +52,20 @@ const Step1 = React.memo(({
 
     const handleHide = () => setHide(!hide);
 
+
+
+    useEffect(() => {
+        window.addEventListener('message', function(event) {
+            if (event.data.action === 'hideElements') {
+              var elements = document.getElementsByClassName(event.data.classToHide);
+              for (var i = 0; i < elements.length; i++) {
+                elements[i].style.display = 'none';
+              }
+            }
+          });
+          
+      }, [])
+
     return (
         <div>
             <Header _handleBack={_handleBack} _handleNext={_handleNext} />
