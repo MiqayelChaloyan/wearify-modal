@@ -1,5 +1,5 @@
 .modal {
-    width: 362px;
+    width: 410px;
     height: 609px;
     background-color: var(--modal-bg-color);
     border-radius: 50px;
@@ -13,21 +13,21 @@
 
 @media screen and (max-width: 1536px) {
     .modal {
-        width: 362px;
+        width: 410px;
         height: 609px;
     }
 }
 
 @media screen and (max-width: 1280px) {
     .modal {
-        width: 362px;
+        width: 410px;
         height: 549px;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .modal {
-        width: 362px;
+        width: 410px;
         height: 549px;
     }
 }
