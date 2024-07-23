@@ -11,6 +11,17 @@
     margin-top: 20px;
 }
 
+.close-modal-fitting {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px
+}
+
 .icon-button{
     margin-right: 20px;
     display: flex;

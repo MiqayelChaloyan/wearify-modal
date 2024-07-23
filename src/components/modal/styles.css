@@ -14,7 +14,7 @@
 @media screen and (max-width: 1536px) {
     .modal {
         width: 410px;
-        height: 602px;
+        height: 559px;
     }
 }
 
@@ -28,27 +28,27 @@
 @media screen and (max-width: 1200px) {
     .modal {
         width: 410px;
-        height: 549px;
+        height: 512px;
     }
 }
 @media screen and (max-width: 1024px) {
     .modal {
-        height: 522px;
+        height: 490px;
     }
 }
 @media screen and (max-width: 900px) {
     .modal {
-        height: 520px;
+        height: 490px;
     }
 }
 @media screen and (max-width: 768px) {
     .modal {
-        height: 520px;
+        height: 493px;
     }
 }
 @media screen and (max-width: 640px) {
     .modal {
-        height: 527px;
+        height: 493px;
         transform: translate(-50%, -50%);
         left: 50%;
         right: 0;
@@ -56,13 +56,13 @@
 }
 @media screen and (max-width: 480px) {
     .modal {
-        height: 515px;
+        height: 485px;
         width: 90%;
     }
 }
 @media screen and (max-width: 320px) {
     .modal {
-        height: 515px;
+        height: 485px;
         width: 90%;
         border-radius: 30px;
     }

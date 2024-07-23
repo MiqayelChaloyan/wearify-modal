@@ -37,22 +37,22 @@
 }
 
 .scanning-title {
-    font-size: 34.3px;
+    font-size: 30px;
     font-weight: var(--font-weight-bold);
     color: var(--dark-blue);
     text-align: center;
     white-space: pre-line;
-    line-height: 42.12px;
+    line-height: 40.12px;
     margin-bottom: 10px;
 }
 
 .scanning-text {
-    font-size: 15.89px;
+    font-size: 14.89px;
     font-weight: var(--font-weight-medium);
     color: var(--dark-blue);
     text-align: center;
     white-space: pre-line;
-    line-height: 15.89px;
+    line-height: 14.89px;
 }
 
 .qr-block {
@@ -82,28 +82,12 @@
 }
 
 .footer-text {
-    font-size: 15.89px;
-    line-height: 27.89px;
+    font-size: 14.89px;
+    line-height: 25.89px;
     font-weight: var(--font-weight-medium);
     color: var(--dark-blue);
     text-align: left;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* @media */
 @media screen and (max-width: 1536px) {
@@ -152,7 +136,7 @@
     }
 
     .scanning-title {
-        font-size: 22px;
+        font-size: 20px;
         line-height: 30.12px;
         margin-bottom: 10px;
     }

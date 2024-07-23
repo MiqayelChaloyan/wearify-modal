@@ -21,8 +21,9 @@ import colors from 'themes/colors';
 import './styles.css';
 
 // TODO
-import { masurements } from 'utils/fakeApi';
+import { productId } from 'utils/fakeApi';
 import COMBINED_MODELS from 'constants/models';
+import { CgClose } from 'react-icons/cg';
 //
 
 const Step1 = React.memo(({
@@ -32,7 +33,7 @@ const Step1 = React.memo(({
     const { isOpen } = useSelector((state) => state.result);
 
     const dispatch = useDispatch();
-    const models = masurements ? COMBINED_MODELS.sportWearing : COMBINED_MODELS.sneakers;
+    const models = productId ? COMBINED_MODELS.sportWearing : COMBINED_MODELS.sneakers;
 
     const [uriGlb, setUriGlb] = useState(models[0].glbPath)
     const [hide, setHide] = useState(true);
@@ -52,57 +53,75 @@ const Step1 = React.memo(({
 
     const handleHide = () => setHide(!hide);
 
+    const handleClose = () => document.getElementById('web-modal').style.display = 'none';
+
 
     return (
         <div>
-            <Header _handleBack={_handleBack} _handleNext={_handleNext} />
+            {productId ?
+                (<button
+                    id='close-modal-fitting'
+                    type='button'
+                    className='close-modal-fitting'
+                    onClick={handleClose}
+                >
+                    <CgClose size={25} fill={colors.darkBlue} />
+                </button>) : (<Header _handleBack={_handleBack} _handleNext={_handleNext} />)
+            }
             <div className='container-view' ref={ref}>
-                {masurements && <Measurements />}
-                <LayoutPopup1 />
-                <LayoutPopup2 />
+                {productId && (
+                    <>
+                        <Measurements />
+                        <LayoutPopup1 />
+                        <LayoutPopup2 />
+                    </>
+                )}
                 {isOpen && <Result />}
-                {masurements ?
+                {productId ?
                     <Iframe src={uriGlb} /> :
-                    <ModelViewer uriGlb={uriGlb} />}
-                <div className='icon-button'>
-                    {
-                        hide ? (
-                            <button className='button-right' onClick={handleHide} whiletap={{ scale: 0.95 }}>
-                                <Square width={25} height={25} fill='rgb(212, 215, 215)' />
-                            </button>
-                        ) : (
+                    <ModelViewer uriGlb={uriGlb} />
+                }
+                <>
+                    <div className='icon-button'>
+                        {
+                            hide ? (
+                                <button className='button-right' onClick={handleHide} whiletap={{ scale: 0.95 }}>
+                                    <Square width={25} height={25} fill='rgb(212, 215, 215)' />
+                                </button>
+                            ) : (
 
-                            <button className='button-right' onClick={handleHide} whiletap={{ scale: 0.95 }}>
-                                <Square width={25} height={25} fill={colors.darkBlue} />
-                            </button>
+                                <button className='button-right' onClick={handleHide} whiletap={{ scale: 0.95 }}>
+                                    <Square width={25} height={25} fill={colors.darkBlue} />
+                                </button>
+                            )
+                        }
+                    </div>
+                    {
+                        hide && (
+                            <motion.div className='models'
+                                initial={{
+                                    opacity: 0,
+                                    x: 8,
+                                    y: 0
+                                }}
+                                whileInView={{
+                                    opacity: 1,
+                                    y: -8,
+                                    transition: {
+                                        duration: 3
+                                    }
+                                }}
+                                viewport={{ once: true }}
+                            >
+                                <Models
+                                    models={models}
+                                    onClick={handleSubmit}
+                                    activeIndex={activeIndex}
+                                />
+                            </motion.div>
                         )
                     }
-                </div>
-                {
-                    hide && (
-                        <motion.div className='models'
-                            initial={{
-                                opacity: 0,
-                                x: 0,
-                                y: -20
-                            }}
-                            whileInView={{
-                                opacity: 1,
-                                y: -30,
-                                transition: {
-                                    duration: 3
-                                }
-                            }}
-                            viewport={{ once: true }}
-                        >
-                            <Models
-                                models={models}
-                                onClick={handleSubmit}
-                                activeIndex={activeIndex}
-                            />
-                        </motion.div>
-                    )
-                }
+                </>
             </div>
         </div>
     )

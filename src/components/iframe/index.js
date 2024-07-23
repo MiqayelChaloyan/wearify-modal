@@ -15,6 +15,7 @@ const Iframe = ({ src }) => {
             allow="fullscreen"
         />
         <div className='btn_hide'/>
+        <div className='btn_hide_fitting'/>
       </>
     );
 };
