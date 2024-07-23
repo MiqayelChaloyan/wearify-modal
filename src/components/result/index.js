@@ -2,14 +2,17 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
+import { handleSwitchPopup } from 'reducer/features/ResultReducer';
+import { handleNext } from 'reducer/features/Steps';
+
 import Slider from 'react-slick';
 import settings from './settings';
 
-import './styles.css';
 import { CgClose } from 'react-icons/cg';
 import colors from 'themes/colors';
-import { handleSwitchPopup } from 'reducer/features/ResultReducer';
-import { handleNext } from 'reducer/features/Steps';
+
+
+import './styles.css';
 
 
 const Result = () => {

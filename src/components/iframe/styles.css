@@ -1,9 +1,13 @@
 .iframe {
     width: 100%;
     height: 320px;
-    padding-top: 60px;
+    margin-top: 20px;
+    pointer-events: none;
+    border: none;
+    /* border: 2px solid rgb(236, 237, 234); */
     
 }
+
 
 @media screen and (max-width: 1536px) {
     .iframe {
@@ -59,4 +63,19 @@
         width: 100%;
         height: 248px;
     }
+}
+
+
+
+
+
+/* Hide buttons clo-set */
+
+.btn_hide {
+    width: 100px;
+    height: 250px;
+    background-color: rgb(236, 237, 234);
+    position: absolute;
+    top: 100px;
+    right: 1px;
 }
