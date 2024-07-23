@@ -12,6 +12,7 @@ const Iframe = ({ src }) => {
             scrolling="no"
             className='iframe'
             id='my-iframe'
+            allow="fullscreen"
         />
         <div className='btn_hide'/>
       </>

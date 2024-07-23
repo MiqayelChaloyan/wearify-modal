@@ -1,6 +1,6 @@
 .modal {
     width: 410px;
-    height: 609px;
+    height: 602px;
     background-color: var(--modal-bg-color);
     border-radius: 50px;
     position: fixed;
@@ -14,7 +14,7 @@
 @media screen and (max-width: 1536px) {
     .modal {
         width: 410px;
-        height: 609px;
+        height: 602px;
     }
 }
 
@@ -33,7 +33,7 @@
 }
 @media screen and (max-width: 1024px) {
     .modal {
-        height: 520px;
+        height: 522px;
     }
 }
 @media screen and (max-width: 900px) {
@@ -48,7 +48,7 @@
 }
 @media screen and (max-width: 640px) {
     .modal {
-        height: 520px;
+        height: 527px;
         transform: translate(-50%, -50%);
         left: 50%;
         right: 0;
@@ -56,13 +56,13 @@
 }
 @media screen and (max-width: 480px) {
     .modal {
-        height: 520px;
+        height: 515px;
         width: 90%;
     }
 }
 @media screen and (max-width: 320px) {
     .modal {
-        height: 520px;
+        height: 515px;
         width: 90%;
         border-radius: 30px;
     }
