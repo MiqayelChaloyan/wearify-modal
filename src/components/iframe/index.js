@@ -7,15 +7,15 @@ const Iframe = ({ src }) => {
       <>
         <iframe
             src={src}
-            title="DeepAR Try On"
-            frameBorder="0"
-            scrolling="no"
+            // title="DeepAR Try On"
+            // frameBorder="0"
+            // scrolling="no"
             className='iframe'
             id='my-iframe'
-            allow="fullscreen"
+            // allow="fullscreen"
         />
-        <div className='btn_hide'/>
-        <div className='btn_hide_fitting'/>
+        {/* <div className='btn_hide'/>
+        <div className='btn_hide_fitting'/> */}
       </>
     );
 };
