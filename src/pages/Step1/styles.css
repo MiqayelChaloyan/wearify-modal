@@ -19,7 +19,7 @@
     cursor: pointer;
     position: absolute;
     top: 20px;
-    right: 20px
+    left: 20px
 }
 
 .icon-button{
@@ -27,13 +27,20 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 20px;
+    position: absolute;
+    bottom: 130px;
+    right: 0
+
 }
 
 .models {
     padding: 12px;
     border-radius: 0 0 50px 50px;
     height: 166px; 
+    position: relative;
+    bottom: 140px;
 }
+
 
 /* media */
 @media screen and (max-width: 1536px) {

@@ -15,8 +15,9 @@ const Iframe = ({ src }) => {
             loading="lazy" 
             // allow="fullscreen"
         />
-        <div className='btn_hide'/>
-        <div className='btn_hide_fitting'/>
+        {/* <div className='btn_hide'/>
+        <div className='btn_hide_fitting'/> */}
+        <div className='hide-border'/>
       </>
     );
 };

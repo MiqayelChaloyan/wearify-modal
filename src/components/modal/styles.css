@@ -2,7 +2,7 @@
     width: 410px;
     height: 602px;
     background-color: var(--modal-bg-color);
-    border-radius: 50px;
+    border-radius: 30px;
     position: fixed;
     top: 40%;
     transform: translate(0%, -50%);

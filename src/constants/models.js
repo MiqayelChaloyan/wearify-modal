@@ -38,7 +38,7 @@ const COMBINED_MODELS = {
             name: 'sport wearing',
             link: 'https://style.clo-set.com/fitting/IR5k8MMQlGf3QPkI80wHZw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
             imgPath: 'https://drive.google.com/thumbnail?id=185R0E69OO_gtMLDLE9TjAbqkF_aRSKKS',
-            glbPath: 'https://style.clo-set.com/fitting/dxHpcm6cq08oKNptygCT%2Bg%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
+            glbPath: 'https://style.clo-set.com/fitting/IR5k8MMQlGf3QPkI80wHZw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
             result: [
                 'https://drive.google.com/thumbnail?id=1XXN0I5vHzEGMVXQMYKUxbaQFKpTA3FUY',
                 'https://drive.google.com/thumbnail?id=1vb225jy9V4vrZb2PGYHkVH-90NgpS1GP',

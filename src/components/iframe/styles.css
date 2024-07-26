@@ -1,7 +1,6 @@
 .iframe {
     width: 100%;
-    height: 360px;
-    margin-top: 20px;
+    height: 602px;
     /* pointer-events: none; */
     
     user-select: none;
@@ -11,7 +10,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
      
-    border-radius: 50px;
+    border-radius: 30px;
     /* border: none;     */
     /* border: 2px solid black */
 }
@@ -79,7 +78,7 @@
 
 /* Hide buttons clo-set */
 
-.btn_hide {
+/* .btn_hide {
     width: 78px;
     height: 120px;
     background-color:rgb(236, 237, 234);
@@ -97,6 +96,18 @@
     top: 130px;
     right: 18px;
     border-radius: 35px 0 35px 35px;
-}
+} */
 
 /* END */
+
+
+
+.hide-border {
+    width: 100%;
+    height: 602px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 30px;
+    border: 2px solid rgb(236, 237, 234);
+}
