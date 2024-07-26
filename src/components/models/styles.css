@@ -1,7 +1,7 @@
 .column {
     height: 120px;
     width: 100px;
-    border-radius: 0;
+    border-radius: 30px;
     background-color: var(--pink);
     transition: var(--transition);
     border: 2px solid var(--white);
