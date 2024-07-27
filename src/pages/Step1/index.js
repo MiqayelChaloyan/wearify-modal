@@ -27,7 +27,6 @@ import { productId } from 'utils/fakeApi';
 import COMBINED_MODELS from 'constants/models';
 import { CgClose } from 'react-icons/cg';
 import { handleSwitchPopup, handleSwitchResultLoading } from 'reducer/features/ResultReducer';
-//
 
 const Step1 = React.memo(({
     _handleBack,

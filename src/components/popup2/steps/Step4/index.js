@@ -13,7 +13,6 @@ import { FEMALE_IMAGES, MALE_IMAGES } from 'constants/data';
 
 // TODO
 import { images } from 'utils/fakeApi';
-// 
 
 import './styles.css';
 

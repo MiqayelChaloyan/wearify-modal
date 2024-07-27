@@ -220,12 +220,23 @@ const WEIGHT = [
     }
 ];
 
+const API_URL = "https://wearify-api.ew.r.appspot.com/";
+
+const API_ENDPOINTS = {
+    bodyShape: 'body-shape',
+    getData: 'data',
+    measurements: 'bmt?height='
+};
+
+
 
 export {
     FEMALE_IMAGES,
     MALE_IMAGES,
     HEIGHT,
     WEIGHT,
+    API_URL,
+    API_ENDPOINTS
 };
 
 
