@@ -143,9 +143,9 @@
 
     .qr-image {
         object-fit: cover;
-        width: 180px;
-        height: 180px;
-        border-radius: 30px;
+        width: 150px;
+        height: 150px;
+        border-radius: 20px;
     }
 
     .qr-block {

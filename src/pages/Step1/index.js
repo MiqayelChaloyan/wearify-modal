@@ -90,48 +90,48 @@ const Step1 = React.memo(({
                     <Iframe src={uriGlb} /> :
                     <ModelViewer uriGlb={uriGlb} />
                 }
-                {isLoading &&
-                 <>
-                    <div className='icon-button'>
-                        {
-                            hide ? (
-                                <button className='button-right' onClick={handleHide} whiletap={{ scale: 0.95 }}>
-                                    <Square width={25} height={25} fill='rgb(212, 215, 215)' />
-                                </button>
-                            ) : (
+                {isLoading  &&
+                    <>
+                        <div className='icon-button'>
+                            {
+                                hide ? (
+                                    <button className='button-right' onClick={handleHide} whiletap={{ scale: 0.95 }}>
+                                        <Square width={25} height={25} fill='rgb(212, 215, 215)' />
+                                    </button>
+                                ) : (
 
-                                <button className='button-right' onClick={handleHide} whiletap={{ scale: 0.95 }}>
-                                    <Square width={25} height={25} fill={colors.darkBlue} />
-                                </button>
+                                    <button className='button-right' onClick={handleHide} whiletap={{ scale: 0.95 }}>
+                                        <Square width={25} height={25} fill={colors.darkBlue} />
+                                    </button>
+                                )
+                            }
+                        </div>
+                        {
+                            hide && (
+                                <motion.div className='models'
+                                    initial={{
+                                        opacity: 0,
+                                        x: productId ? 8 : 0,
+                                        y: productId ? 0 : 210
+                                    }}
+                                    whileInView={{
+                                        opacity: 1,
+                                        y: productId ? -8 : 200,
+                                        transition: {
+                                            duration: 3
+                                        }
+                                    }}
+                                    viewport={{ once: true }}
+                                >
+                                    <Models
+                                        models={models}
+                                        onClick={handleSubmit}
+                                        activeIndex={activeIndex}
+                                    />
+                                </motion.div>
                             )
                         }
-                    </div>
-                    {
-                        hide && (
-                            <motion.div className='models'
-                                initial={{
-                                    opacity: 0,
-                                    x: 8,
-                                    y: 0
-                                }}
-                                whileInView={{
-                                    opacity: 1,
-                                    y: -8,
-                                    transition: {
-                                        duration: 3
-                                    }
-                                }}
-                                viewport={{ once: true }}
-                            >
-                                <Models
-                                    models={models}
-                                    onClick={handleSubmit}
-                                    activeIndex={activeIndex}
-                                />
-                            </motion.div>
-                        )
-                    }
-                </>}
+                    </>}
             </div>
         </div>
     )

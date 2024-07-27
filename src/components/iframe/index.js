@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { handleSwitchLoading } from 'reducer/features/LoaderCloSet';
 
+import IframeLoad from 'ui/loading';
+
 import './styles.css';
 
 
@@ -23,9 +25,13 @@ function IFrame({ src }) {
     }
   }, [ref]);
 
+
   return (
     <>
-      {!loaded && <div className="loader">Loading...</div>}
+      {!loaded &&
+        <div className="loader">
+          <IframeLoad />
+        </div>}
       <iframe
         title="iframe"
         ref={setRef}
