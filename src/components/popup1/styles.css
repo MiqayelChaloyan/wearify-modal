@@ -5,7 +5,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: var(--gray);
+    background-color: #b4b4b6e8;
     border-radius: 30px;
     -webkit-backdrop-filter: blur(3px);
     -moz-backdrop-filter: blur(3px);
