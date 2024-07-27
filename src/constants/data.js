@@ -196,13 +196,13 @@ const MALE_IMAGES = {
 const HEIGHT = [
     {
         unit: 'CENTIMETER',
-        min: 50,
-        max: 150
+        min: 149,
+        max: 179
     },
     {
         unit: 'INCHES',
-        min: 5,
-        max: 15
+        min: 127,
+        max: 238
     }
 ];
 
@@ -210,13 +210,13 @@ const HEIGHT = [
 const WEIGHT = [
     {
         unit: 'CENTIMETER',
-        min: 50,
-        max: 150
+        min: 58,
+        max: 108
     },
     {
         unit: 'INCHES',
-        min: 5,
-        max: 15
+        min: 127,
+        max: 238
     }
 ];
 

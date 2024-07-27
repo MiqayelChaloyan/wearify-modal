@@ -16,6 +16,7 @@ import ModelViewer from 'components/model-viewer';
 import Measurements from 'components/measurements';
 import LayoutPopup1 from 'components/popup1/layout';
 import LayoutPopup2 from 'components/popup2/layout';
+import Example from 'components/example';
 
 import colors from 'themes/colors';
 
@@ -80,6 +81,7 @@ const Step1 = React.memo(({
             <div className='container-view' ref={ref}>
                 {productId && (
                     <>
+                        {isLoading && <Example />}
                         <Measurements />
                         <LayoutPopup1 />
                         <LayoutPopup2 />
@@ -90,7 +92,7 @@ const Step1 = React.memo(({
                     <Iframe src={uriGlb} /> :
                     <ModelViewer uriGlb={uriGlb} />
                 }
-                {isLoading  &&
+                {isLoading &&
                     <>
                         <div className='icon-button'>
                             {
