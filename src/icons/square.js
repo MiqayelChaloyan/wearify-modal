@@ -1,4 +1,4 @@
-const logo = ({ width, height, fill }) => {
+const Logo = ({ width, height, fill }) => {
     return (
         <svg width={width} height={height} viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="15.4545" height="15.4545" rx="3" fill={fill} />
@@ -9,4 +9,4 @@ const logo = ({ width, height, fill }) => {
     )
 };
 
-export default logo;
+export default Logo;

@@ -1,119 +1,30 @@
-.iframe {
-    width: 100%;
-    height: 602px;
-    /* pointer-events: none; */
-    user-select: none;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    /* border: 3px solid rgb(236, 237, 234); */
-    border-radius: 0;
-    /* border: none;     */
-    /* border: 2px solid black */
-}
-
-
-
-@media screen and (max-width: 1536px) {
-    .iframe {
-        width: 100%;
-        height: 320px;
-    }
-}
-
-@media screen and (max-width: 1280px) {
-    .iframe {
-        width: 100%;
-        height: 268px;
-    }
-}
-
-@media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio:0) {
-    .iframe {
-        width: 100%;
-        height: 258px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .iframe {
-        width: 100%;
-        height: 258px;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .iframe {
-        width: 100%;
-        height: 248px;
-    }
-}
-
-@media screen and (max-width: 635px) {
-    .iframe {
-        width: 100%;
-        height: 248px;
-    }
-}
-
-@media screen and (max-width: 475px) {
-    .iframe {
-        width: 100%;
-        height: 248px;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .iframe {
-        width: 100%;
-        height: 248px;
-    }
-}
-
-
-
-
-
-/* Hide buttons clo-set */
-
-/* .btn_hide {
-    width: 78px;
-    height: 120px;
-    background-color:rgb(236, 237, 234);
-    position: absolute;
-    top: 38px;
-    right: 19px;
-    border-radius: 35px;
-}
-
-.btn_hide_fitting {
-    width: 57px;
-    height: 166px;
-    background-color: rgb(236, 237, 234);
-    position: absolute;
-    top: 130px;
-    right: 18px;
-    border-radius: 35px 0 35px 35px;
-} */
-
-/* END */
-
-
 .loader {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 24px;
+    text-align: center;
     color: #333;
 }
 
 .iframe {
     display: none;
     border-radius: 30px;
-    aspect-ratio: 16/10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .iframe.loaded {
@@ -135,7 +46,86 @@
 
 .Iframe {
     position: relative;
+    width: 100%;
+    height: 602px;
+    overflow: hidden;
 }
+
+
+
+@media screen and (max-width: 1536px) {
+    .Iframe {
+        width: 100%;
+        height: 559px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .Iframe {
+        width: 100%;
+        height: 549px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .Iframe {
+        width: 100%;
+        height: 512px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio:0) {
+    .Iframe {
+        width: 100%;
+        height: 490px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .Iframe {
+        width: 100%;
+        height: 490px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Iframe {
+        width: 100%;
+        height: 493px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .Iframe {
+        width: 100%;
+        height: 493px;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .Iframe {
+        width: 100%;
+        height: 493px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Iframe {
+        width: 100%;
+        height: 485px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .Iframe {
+        width: 100%;
+        height: 485px;
+    }
+}
+
+
 
 
 

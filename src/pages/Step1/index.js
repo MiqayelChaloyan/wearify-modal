@@ -69,13 +69,13 @@ const Step1 = React.memo(({
                 </button>) : (<Header _handleBack={_handleBack} _handleNext={_handleNext} />)
             }
             <div className='container-view' ref={ref}>
-                {/* {productId && (
+                {productId && (
                     <>
                         <Measurements />
                         <LayoutPopup1 />
                         <LayoutPopup2 />
                     </>
-                )} */}
+                )}
                 {isOpen && <Result />}
                 {productId ?
                     <Iframe src={uriGlb} /> :
