@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { handleSwitchLoading } from 'reducer/features/LoaderCloSet';
 
 import './styles.css';
 
@@ -6,11 +8,13 @@ import './styles.css';
 function IFrame({ src }) {
   const [ref, setRef] = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (ref) {
       const handleLoad = () => {
         setLoaded(true);
+        dispatch(handleSwitchLoading(true));
       };
       ref.addEventListener('load', handleLoad);
       return () => {
@@ -18,7 +22,6 @@ function IFrame({ src }) {
       };
     }
   }, [ref]);
-
 
   return (
     <>

@@ -11,7 +11,9 @@ import './styles.css';
 
 
 const Measurements = React.memo(() => {
+    const { isLoading } = useSelector(state => state.loaderCloSet);
     const { isFinish } = useSelector((state) => state.steps);
+
     const dispatch = useDispatch();
 
     const _handleSubmitPopup1 = () => {
@@ -22,11 +24,11 @@ const Measurements = React.memo(() => {
         dispatch(handleSwitchStatusPopup2());
     };
 
-    return (
+    return isLoading && (
         <div className='containter'>
             <div className='measurements'>
                 <button className='button' onClick={_handleSubmitPopup1}>
-                    <MeasurementsIcon size={24} fill={'rgb(235, 235, 237)'}/>
+                    <MeasurementsIcon size={24} fill={'rgb(235, 235, 237)'} />
                 </button>
                 <div className='line-horizontal' />
                 <button className='button' onClick={_handleSubmitPopup2} disabled={!isFinish}>

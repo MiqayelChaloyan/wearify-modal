@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { CgClose } from 'react-icons/cg';
 
-import Loader from 'components/loader';
+// import Loader from 'components/loader';
 
 import SafeExternalLink from 'ui/link';
 import { ButtonsTexts } from 'constants';
@@ -16,7 +16,7 @@ import './styles.css';
 
 // TODO
 import { DeepARLink } from 'constants';
-import { handleSwitchPopup, handleSwitchResultLoading } from 'reducer/features/ResultReducer';
+// import { handleSwitchPopup, handleSwitchResultLoading } from 'reducer/features/ResultReducer';
 //
 
 const Header = React.memo(({
@@ -26,21 +26,20 @@ const Header = React.memo(({
     const { isLoading } = useSelector((state) => state.result);
     const dispatch = useDispatch();
 
-    // const [isLoading, setIsLaoding] = useState(false);
     const handleClose = () => document.getElementById('web-modal').style.display = 'none';
 
     const handleSubmit = () => {
         _handleNext()
     }
 
-    const handleCloseLoading = () => {
-        dispatch(handleSwitchResultLoading())
-        dispatch(handleSwitchPopup());
-    };
+    // const handleCloseLoading = () => {
+    //     dispatch(handleSwitchResultLoading())
+    //     dispatch(handleSwitchPopup());
+    // };
 
-    return (
+    return ( 
         <div className='buttons-group-person'>
-            {isLoading && <Loader handleClose={handleCloseLoading} />}
+            {/* {isLoading && <Loader handleClose={handleCloseLoading} />} */}
             <button
                 id='close-modal'
                 type='button'

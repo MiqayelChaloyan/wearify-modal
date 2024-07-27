@@ -7,6 +7,7 @@ import Square from 'icons/square';
 
 import { motion } from 'framer-motion';
 
+import Loader from 'components/loader';
 import Models from 'components/models';
 import Header from 'components/header';
 import Iframe from 'components/iframe';
@@ -24,6 +25,7 @@ import './styles.css';
 import { productId } from 'utils/fakeApi';
 import COMBINED_MODELS from 'constants/models';
 import { CgClose } from 'react-icons/cg';
+import { handleSwitchPopup, handleSwitchResultLoading } from 'reducer/features/ResultReducer';
 //
 
 const Step1 = React.memo(({
@@ -31,6 +33,7 @@ const Step1 = React.memo(({
     _handleNext
 }) => {
     const { isOpen } = useSelector((state) => state.result);
+    const { isLoading } = useSelector(state => state.loaderCloSet);
 
     const dispatch = useDispatch();
     const models = productId ? COMBINED_MODELS.sportWearing : COMBINED_MODELS.sneakers;
@@ -56,6 +59,11 @@ const Step1 = React.memo(({
     const handleClose = () => document.getElementById('web-modal').style.display = 'none';
 
 
+    // const handleCloseLoading = () => {
+    //     dispatch(handleSwitchResultLoading())
+    //     dispatch(handleSwitchPopup());
+    // };
+
     return (
         <div>
             {productId ?
@@ -68,6 +76,7 @@ const Step1 = React.memo(({
                     <CgClose size={25} fill={colors.darkBlue} />
                 </button>) : (<Header _handleBack={_handleBack} _handleNext={_handleNext} />)
             }
+            {/* {isLoading && <Loader handleClose={handleCloseLoading} />} */}
             <div className='container-view' ref={ref}>
                 {productId && (
                     <>
@@ -81,7 +90,8 @@ const Step1 = React.memo(({
                     <Iframe src={uriGlb} /> :
                     <ModelViewer uriGlb={uriGlb} />
                 }
-                <>
+                {isLoading &&
+                 <>
                     <div className='icon-button'>
                         {
                             hide ? (
@@ -121,7 +131,7 @@ const Step1 = React.memo(({
                             </motion.div>
                         )
                     }
-                </>
+                </>}
             </div>
         </div>
     )

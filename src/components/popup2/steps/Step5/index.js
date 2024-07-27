@@ -12,7 +12,7 @@ import { Texts } from 'constants';
 import colors from 'themes/colors';
 
 import './styles.css';
-import { handleSwitchResultLoading } from 'reducer/features/ResultReducer';
+import { handleSwitchPopup, handleSwitchResultLoading } from 'reducer/features/ResultReducer';
 
 
 const Step5 = React.memo(() => {
@@ -26,7 +26,8 @@ const Step5 = React.memo(() => {
 
     const handleClose = () => {
         dispatch(handleSwitchStatusPopup2());
-        dispatch(handleSwitchResultLoading());
+        // dispatch(handleSwitchResultLoading());
+        dispatch(handleSwitchPopup());
     };
 
     return (

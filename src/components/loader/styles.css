@@ -6,7 +6,7 @@
     background-color: none;
     top: 0px;
     right: 0px;
-    z-index: 10;
+    z-index: 10000000;
     padding: 15px;
     background-color: var(--pink);
     border-radius: 0 50px 0 0;
