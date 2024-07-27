@@ -81,7 +81,7 @@ const Step1 = React.memo(({
             <div className='container-view' ref={ref}>
                 {productId && (
                     <>
-                        {isLoading && <Example />}
+                        {/* {isLoading && <Example />} */}
                         <Measurements />
                         <LayoutPopup1 />
                         <LayoutPopup2 />
