@@ -6,6 +6,7 @@ import stateStepsReducer from './features/Steps';
 import imageReducer from './features/ImagesState';
 import ItemReducer from './features/ItemReducer';
 import ResultReducer from './features/ResultReducer';
+import LoaderCloSet from './features/LoaderCloSet';
 
 
 const store = configureStore({
@@ -15,7 +16,8 @@ const store = configureStore({
         steps: stateStepsReducer,
         imageReducer: imageReducer,
         ItemReducer: ItemReducer,
-        result: ResultReducer
+        result: ResultReducer,
+        loaderCloSet: LoaderCloSet
     },
 });
 

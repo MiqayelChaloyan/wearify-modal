@@ -5,7 +5,10 @@
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 25px;
+    position: relative;
+    top: 20px;
 }
+
 
 .button-try-on {
     font-size: 15px;

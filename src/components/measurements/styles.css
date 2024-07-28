@@ -1,23 +1,39 @@
 .containter {
-    position: relative;
     z-index: 20;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    right: 21px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 22px;
 }
 
 .measurements {
     display: grid;
-    justify-content: flex-end;
     align-items: center;
-    position: absolute;
-    right: 10px;
-    top: 75px;
+    padding: 5px 1px;
+    position: relative;
 }
 
 .button {
-    font-size: 17px;
-    margin: 5px 10px;
-    padding: 4px;
-    font-weight: var(--font-weight-medium);
-    background-color: none;
+    padding: 15px 0;
+    background-color: transparent !important;
     cursor: pointer;
     transition: var(--transition);
+}
+
+.line-horizontal {
+    height: 1px;
+    background-color: rgb(210, 210, 212);
+    min-width: 30px; 
+    flex: 1;
+    margin: 0 10px;
+    max-width: 30px;
 }

@@ -4,14 +4,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { handleSwitchStatusPopup1, handleSwitchStatusPopup2 } from 'reducer/features/PopupState';
 
 import MeasurementsIcon from 'icons/measurements';
-import UserIcon from 'icons/user'
+import UserIcon from 'icons/people'
 import colors from 'themes/colors';
 
 import './styles.css';
 
 
 const Measurements = React.memo(() => {
+    const { isLoading } = useSelector(state => state.loaderCloSet);
     const { isFinish } = useSelector((state) => state.steps);
+
     const dispatch = useDispatch();
 
     const _handleSubmitPopup1 = () => {
@@ -22,14 +24,15 @@ const Measurements = React.memo(() => {
         dispatch(handleSwitchStatusPopup2());
     };
 
-    return (
+    return isLoading && (
         <div className='containter'>
             <div className='measurements'>
-                <button className='button' onClick={_handleSubmitPopup2} disabled={!isFinish}>
-                    <UserIcon width={22} height={22} fill={isFinish ? colors.darkBlue : colors.gray} />
-                </button>
                 <button className='button' onClick={_handleSubmitPopup1}>
-                    <MeasurementsIcon />
+                    <MeasurementsIcon size={24} fill={'rgb(235, 235, 237)'} />
+                </button>
+                <div className='line-horizontal' />
+                <button className='button' onClick={_handleSubmitPopup2} disabled={!isFinish}>
+                    <UserIcon size={24} fill={isFinish ? 'rgb(235, 235, 237)' : 'rgb(100, 100, 102)'} />
                 </button>
             </div>
         </div>

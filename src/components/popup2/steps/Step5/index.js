@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { handleSwitchStatusPopup2 } from 'reducer/features/PopupState';
@@ -12,7 +12,8 @@ import { Texts } from 'constants';
 import colors from 'themes/colors';
 
 import './styles.css';
-import { handleSwitchResultLoading } from 'reducer/features/ResultReducer';
+import { handleSwitchPopup, handleSwitchResultLoading } from 'reducer/features/ResultReducer';
+import { getDatabase, onValue, ref } from 'firebase/database';
 
 
 const Step5 = React.memo(() => {
@@ -26,8 +27,38 @@ const Step5 = React.memo(() => {
 
     const handleClose = () => {
         dispatch(handleSwitchStatusPopup2());
-        dispatch(handleSwitchResultLoading());
+        // dispatch(handleSwitchResultLoading());
+        dispatch(handleSwitchPopup());
     };
+
+    const userId = images[0]?.id;
+
+
+    useEffect(() => {
+        if (userId) {
+            const db = getDatabase();
+
+            const starCountRef = ref(db, 'avatars/' + userId);
+            onValue(starCountRef, (snapshot) => {
+                const data = snapshot.val();
+                if (!data?.isLoading) {
+                    // dispatch(updatedAvatarLoadingStatus(false));
+                    // dispatch(updatedAvatarErrorStatus(false));
+
+                    handleClose();
+                } else {
+                    // dispatch(updatedAvatarLoadingStatus(true));
+                    // dispatch(updatedAvatarErrorStatus(false));
+
+                }
+                if (data?.isAvatarError) {
+                    // dispatch(updatedAvatarErrorStatus(true));
+                    // dispatch(updatedAvatarLoadingStatus(false));
+                }
+            });
+        }
+    }, [userId]);
+
 
     return (
         <div className='child'>

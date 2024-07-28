@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
+import { useMultistepForm } from 'hooks/useMultistepForm';
 
 import SplashScreen from 'pages/SplashScreen';
 import Step1 from 'pages/Step1';
 import ScanQR from 'pages/ScanQR';
 
-import { useMultistepForm } from 'hooks/useMultistepForm';
 import Modal from 'components/modal';
 
 import useTheme from 'hooks/useTheme';

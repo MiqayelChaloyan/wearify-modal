@@ -196,13 +196,13 @@ const MALE_IMAGES = {
 const HEIGHT = [
     {
         unit: 'CENTIMETER',
-        min: 50,
-        max: 150
+        min: 149,
+        max: 179
     },
     {
         unit: 'INCHES',
-        min: 5,
-        max: 15
+        min: 127,
+        max: 238
     }
 ];
 
@@ -210,15 +210,24 @@ const HEIGHT = [
 const WEIGHT = [
     {
         unit: 'CENTIMETER',
-        min: 50,
-        max: 150
+        min: 58,
+        max: 108
     },
     {
         unit: 'INCHES',
-        min: 5,
-        max: 15
+        min: 127,
+        max: 238
     }
 ];
+
+const API_URL = "https://wearify-api.ew.r.appspot.com/";
+
+const API_ENDPOINTS = {
+    bodyShape: 'body-shape',
+    getData: 'data',
+    measurements: 'bmt?height='
+};
+
 
 
 export {
@@ -226,6 +235,8 @@ export {
     MALE_IMAGES,
     HEIGHT,
     WEIGHT,
+    API_URL,
+    API_ENDPOINTS
 };
 
 

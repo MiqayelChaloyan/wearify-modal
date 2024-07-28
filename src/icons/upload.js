@@ -1,4 +1,4 @@
-const logo = ({ width, height, fill }) => {
+const Logo = ({ width, height, fill }) => {
     return (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="24" height="24" fill="url(#pattern0_9_381)" />
@@ -12,4 +12,4 @@ const logo = ({ width, height, fill }) => {
     )
 }
 
-export default logo;
+export default Logo;

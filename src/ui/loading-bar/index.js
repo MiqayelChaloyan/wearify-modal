@@ -14,7 +14,7 @@ const LoadingBar = React.memo(({ handleSubmit }) => {
                 const nextProgress = prevProgress >= timer ? timer : prevProgress + 1;
                 if (nextProgress === timer) {
                     clearInterval(interval);
-                    setTimeout(() => handleSubmit(), 1500)
+                    setTimeout(() => handleSubmit(), 180000)
                 }
                 return nextProgress;
             });
