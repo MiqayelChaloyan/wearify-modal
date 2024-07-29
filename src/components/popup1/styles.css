@@ -38,7 +38,7 @@
     border-radius: 60px;
     cursor: pointer;
     text-decoration: none;
-    margin: 5px;
+    margin: 15px 35px;
 }
 
 .variant-1 {
@@ -65,7 +65,7 @@
     padding: 10px 15px;
 }
 
-.title {
+.title-s {
     font-weight: 500;
     font-size: 20px;
     line-height: 21.48px;

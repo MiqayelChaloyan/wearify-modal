@@ -13,7 +13,7 @@ const ScanQR = React.memo(({
 
     return (
         <div>
-            <div className='header'>
+            <div className='header-k'>
                 <button
                     className='button-back'
                     onClick={_handleBack}

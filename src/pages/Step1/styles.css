@@ -44,7 +44,8 @@
 
 
 /* media */
-@media screen and (max-width: 1536px) {
+
+@media screen and (max-width: 1919px) and (max-height: 1079px) {
     .button-right {
         bottom: 34%;
         right: 7%;
@@ -52,6 +53,25 @@
 
     .models {
         height: 149px;
+    }
+
+    .icon-button {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1650px) {
+    .button-right {
+        bottom: 34%;
+        right: 7%;
+    }
+
+    .models {
+        height: 149px;
+    }
+
+    .icon-button {
+        margin-bottom: 0;
     }
 }
 
@@ -65,8 +85,8 @@
         height: 149px;
     }
 
-    .icon-button{
-        margin-bottom: 25px;
+    .icon-button {
+        margin-bottom: 0;
     }
 }
 
@@ -77,11 +97,11 @@
     }
 
     .models {
-        height: 120px;
+        height: 149px;
     }
 
-    .icon-button{
-        margin-bottom: 10px;
+    .icon-button {
+        margin-bottom: 0;
     }
 }
 
@@ -92,11 +112,11 @@
     }
 
     .models {
-        height: 120px;
+        height: 149px;
     }
 
-    .icon-button{
-        margin-bottom: 15px;
+    .icon-button {
+        margin-bottom: 0;
     }
 }
 

@@ -6,7 +6,7 @@ const MEASUREMENTS = {
     shape: 0,
     skinTone: 0,
     age: 0,
-    isFemale: 0,
+    isFemale: 1,
     uploadImages: [],
 };
 

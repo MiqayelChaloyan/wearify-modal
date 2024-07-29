@@ -33,6 +33,7 @@ const Step2 = React.memo(() => {
         dispatch(handleUpdateData({ shape: shapeId }));
     };
 
+
     const slideItems = skins?.map((item) => (
         <Item
             key={item.title}

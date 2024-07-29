@@ -43,7 +43,7 @@ export default function LayoutPopup() {
 
             const [item] = closetItems?.data.filter(elem => elem.id === ID);
             let url = item?.closet_url;
-
+            
             if (item?.is_closet) {
                 const genderParams = isFemale ? bodyTypes.female : bodyTypes.male;
                 url += `?&avatar_info=${1}_${0}_${height}_${weight}_${genderParams.shapeType.TRIANGLE}&ui_capture=false&ui_logo=false&ui_like=false&ui_shopping_bag=false`;

@@ -1,17 +1,17 @@
-.header {
+.header-k {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 30px;
     padding-right: 20px;
-    margin-top: 42px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
 .button-back {
-    font-size: 15px;
-    width: 120px;
-    height: 46px;
+    font-size: 14px;
+    width: 100px;
+    height: 40px;
     font-weight: var(--font-weight-medium);
     background-color: var(--dark-blue);
     border: 1px solid var(--dark-blue);
@@ -23,9 +23,9 @@
 }
 
 .button-information {
-    font-size: 20px;
-    width: 49px;
-    height: 49px;
+    font-size: 17px;
+    width: 40px;
+    height: 40px;
     font-weight: var(--font-weight-medium);
     background-color: var(--light-blue);
     border: 1px solid var(--dark-blue);
@@ -37,13 +37,13 @@
 }
 
 .scanning-title {
-    font-size: 30px;
+    font-size: 20px;
+    line-height: 30.12px;
+    margin-bottom: 10px;
     font-weight: var(--font-weight-bold);
     color: var(--dark-blue);
     text-align: center;
     white-space: pre-line;
-    line-height: 40.12px;
-    margin-bottom: 10px;
 }
 
 .scanning-text {
@@ -63,16 +63,16 @@
 
 .qr-image {
     object-fit: cover;
-    width: 200px;
-    height: 200px;
-    border-radius: 30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
 }
 
 .line-qr {
     width: 70%;
     height: 2px;
     background-color: var(--gray);
-    margin: 5px auto;
+    margin: 10px auto;
 }
 
 .footer {
@@ -92,33 +92,32 @@
 /* @media */
 @media screen and (max-width: 1536px) {
     .button-back {
-        width: 120px;
-        height: 46px;
+        font-size: 14px;
+        width: 100px;
+        height: 40px;
     }
 
     .button-information {
-        font-size: 19px;
-        width: 46px;
-        height: 46px;
+        font-size: 17px;
+        width: 40px;
+        height: 40px;
     }
 
     .scanning-title {
-        font-size: 24px;
-        line-height: 32.12px;
+        font-size: 20px;
+        line-height: 30.12px;
         margin-bottom: 10px;
-    }
-
-
-    .scanning-text {
-        font-size: 14.89px;
-        line-height: 14.89px;
     }
 
     .qr-image {
         object-fit: cover;
-        width: 190px;
-        height: 190px;
-        border-radius: 30px;
+        width: 150px;
+        height: 150px;
+        border-radius: 20px;
+    }
+
+    .qr-block {
+        margin: 10px auto;
     }
 }
 
@@ -149,7 +148,7 @@
     }
 
     .qr-block {
-        margin: 15px auto;
+        margin: 10px auto;
     }
 }
 
@@ -179,7 +178,7 @@
     }
 
     .line-qr {
-        margin: 15px auto;
+        margin: 10px auto;
     }
 }
 

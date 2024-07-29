@@ -1,6 +1,6 @@
 .column {
     height: 120px;
-    width: 100px;
+    width: 91px;
     border-radius: 30px;
     background-color: var(--pink);
     transition: var(--transition);
@@ -9,9 +9,10 @@
 }
 
 .model-image {
+    height: 85px !important;
+    object-fit: cover;
+    padding: 17px 0;
     width: 100%;
-    height: 129px !important;
-    padding: 17px 0
 }
 
 .active-slide {
@@ -23,28 +24,28 @@
 @media screen and (max-width: 1536px) {
     .column {
         height: 120px;
-        width: 100px;
+        width: 91px;
     }
 }
 
 @media screen and (max-width: 1280px) {
     .column {
         height: 120px;
-        width: 100px;
+        width: 91px;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .column {
         height: 120px;
-        width: 110px;
+        width: 91px;
     }
 }
 
 @media screen and (max-width: 1024px) {
     .column {
         height: 120px;
-        width: 100px;    
+        width: 91px;   
     }
 }
 

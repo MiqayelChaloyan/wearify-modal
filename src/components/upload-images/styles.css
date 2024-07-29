@@ -7,7 +7,7 @@
     border-radius: 9px;
     background-color: var(--container-bg);
     padding: 5px;
-    margin: 5px;
+    margin: 17px;
     cursor: pointer;
     transition: var(--transition);
 }
@@ -170,6 +170,7 @@
 .images-bg {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 80%;
     margin: 0 auto;
 }

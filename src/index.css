@@ -93,35 +93,35 @@ model-viewer::part(default-ar-button) {
 @media screen and (max-width: 1536px) {
   model-viewer {
     width: 100%;
-    height: 277px;
+    height: 295px;
   }
 }
 
 @media screen and (max-width: 1280px) {
   model-viewer {
     width: 100%;
-    height: 230px;
+    height: 295px;
   }
 }
 
 @media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio:0) {
   model-viewer {
     width: 100%;
-    height: 225px;
+    height: 295px;
   }
 }
 
 @media screen and (max-width: 768px) {
   model-viewer {
     width: 100%;
-    height: 225px;
+    height: 295px;
   }
 }
 
 @media screen and (max-width: 640px) {
   model-viewer {
     width: 100%;
-    height: 215px;
+    height: 295px;
   }
 }
 

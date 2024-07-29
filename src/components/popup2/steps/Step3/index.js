@@ -31,13 +31,13 @@ const Step3 = React.memo(() => {
                     <div className='toggle-buttons'>
                         <button
                             className={cn('button-sizes', isFemale && 'active-sizes')}
-                            onClick={() => handleChangeGender(0)}
+                            onClick={() => handleChangeGender(1)}
                         >
                             {Gender.female}
                         </button>
                         <button
                             className={cn('button-sizes', !isFemale && 'active-sizes')}
-                            onClick={() => handleChangeGender(1)}
+                            onClick={() => handleChangeGender(0)}
                         >
                             {Gender.male}
                         </button>
