@@ -229,7 +229,7 @@ const API_ENDPOINTS = {
 };
 
 // TODO
-const CLO_SET_URL = 'https://style.clo-set.com/fitting/dxHpcm6cq08oKNptygCT%2Bg%3D%3D?';
+const CLO_SET_URL = 'https://style.clo-set.com/fitting/dxHpcm6cq0%2FY1ydMkb1XqA%3D%3D?';
 
 
 

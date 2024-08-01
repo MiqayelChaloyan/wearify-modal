@@ -9,7 +9,7 @@ export const Container = styled.div`
     right: 0;
     left: 0;
     background-color: var(--gray);
-    border-radius: 50px;
+    border-radius: 30px;
     -webkit-backdrop-filter: blur(3px);
     -moz-backdrop-filter: blur(3px);
     -ms-backdrop-filter: blur(3px);
@@ -34,7 +34,8 @@ export const Button = styled.button`
     right: 50px;
     z-index: 25;
     ${media.xl`
-        top: 100px;
+        top: 90px;
+        right: 20px;
     `}
 `;
 
@@ -50,6 +51,7 @@ export const Box = styled.div`
 
 export const ResultBox = styled.div`
     width: 90%;
+    height: 340px;
     margin: 0 auto;
 `;
 

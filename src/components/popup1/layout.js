@@ -33,10 +33,10 @@ export default function LayoutPopup() {
         ]);
 
     const { isFemale, height, weight } = useSelector((state) => state.data);
-    const { images } = useSelector((state) => state.imageReducer);
+    // const { images } = useSelector((state) => state.imageReducer);
     const dispatch = useDispatch();
 
-    const userId = images[0]?.id;
+    // const userId = images[0]?.id;
    
     const _handleNext = async () => {
         if (isFemale && height && weight) {
@@ -53,33 +53,34 @@ export default function LayoutPopup() {
 
             dispatch(handleUpdateData({ url, isCloset: item?.is_closet }));
 
-            try {
-                const response = await fetch(images[0].source);
+        //     try {
+        //         const response = await fetch(images[0].source);
 
-                const blob = await response.blob();
-                const newFile = new File([blob], 'example.png', { type: blob.type });
+        //         const blob = await response.blob();
+        //         const newFile = new File([blob], 'example.png', { type: blob.type });
 
-                const storageRef = sRef(storage, `WEB/${userId}/avatar_${userId}.png`);
+        //         const storageRef = sRef(storage, `WEB/${userId}/avatar_${userId}.png`);
 
-                uploadBytes(storageRef, newFile);
-            } catch (_) {
-                console.log('File upload error', _)
-            }
+        //         uploadBytes(storageRef, newFile);
+        //     } catch (_) {
+        //         console.log('File upload error', _)
+        //     }
 
-            set(ref(database, 'avatars/' + userId), {
-                isLoading: true,
-                isAvatarError: false,
-            }).catch(err => console.log(err));
+        //     set(ref(database, 'avatars/' + userId), {
+        //         isLoading: true,
+        //         isAvatarError: false,
+        //     }).catch(err => console.log(err));
 
 
-            set(ref(database, 'new/' + userId), {
-                closetURL: url,
-                status: 'new',
-                presetBackground: '033',
-                presetModel: '055',
-            }).catch(err => console.log(err))
+        //     set(ref(database, 'new/' + userId), {
+        //         closetURL: url,
+        //         status: 'new',
+        //         presetBackground: '033',
+        //         presetModel: '055',
+        //     }).catch(err => console.log(err))
+        // }
+
         }
-
         return next();
     };
 
