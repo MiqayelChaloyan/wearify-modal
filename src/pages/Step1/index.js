@@ -23,6 +23,7 @@ import colors from 'themes/colors';
 import COMBINED_MODELS from 'constants/models';
 
 import { Box, Button, CloseButton, Container, MotionBox } from './styles';
+import IframeCloSet from 'clo-set-iframe';
 
 // data-product-id="8666802487521"
 
@@ -77,7 +78,10 @@ const Step1 = ({
     }, [url]);
 
 
-    console.log(isCloset, uriGlb)
+    const handleBackStep1 = () => {
+        setUriGlb(COMBINED_MODELS.sportWearing[0].glbPath)
+    }
+
 
     return (
         <div>
@@ -103,7 +107,7 @@ const Step1 = ({
                 )}
                 {isOpen && <Result />}
                 {prod ?
-                    <Iframe src={uriGlb} /> :
+                    (uriGlb?.includes('avatar_info') && url && isCloset ? <IframeCloSet src={uriGlb} _handleBack={handleBackStep1}/> : <Iframe src={uriGlb} />) :
                     <ModelViewer uriGlb={uriGlb} />
                 }
                 {(isLoading && prod) || !prod ? (

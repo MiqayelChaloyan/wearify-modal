@@ -26,8 +26,6 @@ const IFrame = ({ src }) => {
     }
   }, [ref]);
 
-
-  console.log(src)
   return (
     <>
       {!loaded &&
@@ -49,17 +47,6 @@ const IFrame = ({ src }) => {
 
 
 const IframeWrapper = ({ src }) => {
-
-  if (src.includes('avatar_info')) {
-    return (
-      <ContainerClo3d>
-        <HideBorder />
-        <div style={{ position: 'relative', top: '20px', left: '20px', zIndex: 100 }}>Back</div>
-        <IFrame src={src} />
-      </ContainerClo3d>
-    );
-  };
-
   return (
     <Container>
       <HideBorder />
