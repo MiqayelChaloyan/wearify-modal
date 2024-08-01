@@ -30,8 +30,8 @@ export const Button = styled.button`
     margin: 5px;
     cursor: pointer;
     position: absolute;
-    top: 140px;
-    right: 50px;
+    top: 90px;
+    right: 20px;
     z-index: 25;
     ${media.xl`
         top: 90px;
