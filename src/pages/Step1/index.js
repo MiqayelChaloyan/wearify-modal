@@ -70,18 +70,19 @@ const Step1 = ({
     //     dispatch(handleSwitchPopup());
     // };
 
-    // useEffect(() => {
-    //     if(isCloset) {
-    //         setUriGlb(url)
-    //     }
-    // }, [url])
+    useEffect(() => {
+        if(isCloset) {
+            setUriGlb(url)
+        }
+    }, [url]);
 
-    // console.log(uriGlb)
+
+    console.log(isCloset, uriGlb)
 
     return (
         <div>
             {prod ?
-                (<CloseButton
+                (isLoading && <CloseButton
                     id='close-modal-fitting'
                     type='button'
                     onClick={handleClose}

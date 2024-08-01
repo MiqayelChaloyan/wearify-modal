@@ -13,7 +13,6 @@ export const Container = styled.div`
     right: 19px;
     top: 76.7px;
     padding: 11.5px 8px;
-    background: rgba(0, 0, 0, 0.3);
     transform: translateY(-50%);
     border-radius: 32px;
     cursor: no-drop;

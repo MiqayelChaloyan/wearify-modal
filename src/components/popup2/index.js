@@ -21,9 +21,6 @@ const Popup = ({
 
     const [isEmpty, setIsEmpty] = useState(true);
 
-
-    console.log(images)
-
     useEffect(() => {
         setIsEmpty(images.length === 0);
     }, [images.length]);

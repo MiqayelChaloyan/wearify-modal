@@ -17,7 +17,7 @@ const OptionsTexts = {
 
 const Texts = {
     creatingModelImage: 'Creating model images, it’s expected to take 2 minutes.',
-    uploadDescription: `Please upload 1 to 10 clear individual photos of the same model, ensuring that the model's facial features  are fully visible in the pictures.`,
+    uploadDescription: `Please upload 1 clear individual photos of the same model, ensuring that the model's facial features are fully visible in the pictures.`,
     loadingDescription1: 'Your task is in the queue..',
     scanningQR: '🖐️ Welcome to your \n virtual fitting room!',
     scanningText: 'Scan the QR code \n to open AR lens!',

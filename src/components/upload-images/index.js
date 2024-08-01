@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 
 import { useDispatch } from 'react-redux';
-import { addImage, removeImage } from 'reducer/features/ImagesState';
+import { addImage, clearImages, removeImage } from 'reducer/features/ImagesState';
 
 import { v4 as uuidv4 } from 'uuid';
 
@@ -38,7 +38,8 @@ const ImageUpload = () => {
             source: URL.createObjectURL(file)
         }));
 
-        const updatedImageURLs = [...imageURLs, ...newImageURLs];
+        // const updatedImageURLs = [...imageURLs, ...newImageURLs];
+        const updatedImageURLs = [...newImageURLs];
         setImageURLs(updatedImageURLs);
 
         newImageURLs.forEach(newImage => {
@@ -52,14 +53,21 @@ const ImageUpload = () => {
 
     const handleYesClick = (id) => {
         setIsModalOpen(false);
-        handleRemoveClick(removeId);
+        // handleRemoveClick(removeId);
+        handleClearImages()
     };
 
-    const handleRemoveClick = (id) => {
-        setImageURLs(imageURLs.filter(image => image.id !== id));
-        setImages(images.filter((_, index) => imageURLs[index].id !== id));
-        dispatch(removeImage(id));
-    };
+    // const handleRemoveClick = (id) => {
+    //     setImageURLs(imageURLs.filter(image => image.id !== id));
+    //     setImages(images.filter((_, index) => imageURLs[index].id !== id));
+    //     dispatch(removeImage(id));
+    // };
+
+    const handleClearImages = () => {
+        setImageURLs([]);
+        setImages([]);
+        dispatch(clearImages());
+    }
 
     const handleNoClick = () => {
         setIsModalOpen(false);
@@ -83,7 +91,7 @@ const ImageUpload = () => {
         <>
             <input
                 type='file'
-                multiple
+                // multiple
                 ref={fileInputRef}
                 onChange={fileSelectedHandler}
                 style={{ display: 'none' }}

@@ -30,5 +30,5 @@ export const P = styled.p`
 `;
 
 export const Loader = styled.div`
-    width: 80%;
+    width: 100%;
 `;

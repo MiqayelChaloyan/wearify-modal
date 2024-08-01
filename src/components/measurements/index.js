@@ -27,11 +27,11 @@ const Measurements = () => {
         <Container>
             <Box>
                 <Button onClick={_handleSubmitPopup1}>
-                    <MeasurementsIcon size={24} fill={'rgb(235, 235, 237)'} />
+                    <MeasurementsIcon size={24} fill={'#0C0D34'} />
                 </Button>
-                {/* <HorizontalLine className='line-horizontal' /> */}
+                <HorizontalLine />
                 <Button onClick={_handleSubmitPopup2} disabled={!isFinish}>
-                    <UserIcon size={24} fill={isFinish ? 'rgb(235, 235, 237)' : 'rgb(100, 100, 102)'} />
+                    <UserIcon size={24} fill={isFinish ? '#0C0D34' : '#ACACAC'} />
                 </Button>
             </Box>
         </Container>

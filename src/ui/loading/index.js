@@ -1,17 +1,22 @@
-import './styles.css';
+import { Container, LoadingLetter, Loading } from './styles';
 
 
 const IframeLoad = () => {
     return (
-        <div className="wrapper">
-            <div className="circle"></div>
-            <div className="circle"></div>
-            <div className="circle"></div>
-            <div className="shadow"></div>
-            <div className="shadow"></div>
-            <div className="shadow"></div>
-            <span>Loading</span>
-        </div>
+        <Container>
+            <Loading>
+                <LoadingLetter>W</LoadingLetter>
+                <LoadingLetter>E</LoadingLetter>
+                <LoadingLetter>A</LoadingLetter>
+                <LoadingLetter>R</LoadingLetter>
+                <LoadingLetter>I</LoadingLetter>
+                <LoadingLetter>F</LoadingLetter>
+                <LoadingLetter>Y</LoadingLetter>
+                <LoadingLetter>.</LoadingLetter>
+                <LoadingLetter>.</LoadingLetter>
+                <LoadingLetter>.</LoadingLetter>
+            </Loading>
+        </Container>
     )
 };
 

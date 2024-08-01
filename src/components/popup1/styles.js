@@ -35,7 +35,7 @@ export const Header = styled.div`
 
 export const Box = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 `;
 
 export const ButtonVariant1 = styled.button`
@@ -46,7 +46,7 @@ export const ButtonVariant1 = styled.button`
     border-radius: 60px;
     cursor: pointer;
     text-decoration: none;
-    margin: 15px 0;
+    margin: 15px 4px;
     background-color: var(--dark-blue);
     border: 1px solid var(--dark-blue);
     color: var(--text-first-color);
@@ -64,7 +64,7 @@ export const ButtonVariant2 = styled.button`
     border-radius: 60px;
     cursor: pointer;
     text-decoration: none;
-    margin: 15px 0;
+    margin: 15px 4px;
     background-color: var(--text-first-color);
     color: var(--dark-gray);
     border: 1px solid var(--dark-gray);

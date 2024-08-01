@@ -228,6 +228,9 @@ const API_ENDPOINTS = {
     measurements: 'bmt?height='
 };
 
+// TODO
+const CLO_SET_URL = 'https://style.clo-set.com/fitting/dxHpcm6cq08oKNptygCT%2Bg%3D%3D?';
+
 
 
 export {
@@ -236,7 +239,8 @@ export {
     HEIGHT,
     WEIGHT,
     API_URL,
-    API_ENDPOINTS
+    API_ENDPOINTS,
+    CLO_SET_URL
 };
 
 
