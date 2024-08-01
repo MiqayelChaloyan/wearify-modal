@@ -1,16 +1,18 @@
+import { Link } from './styles';
+
 const SafeExternalLink = ({
     href,
     children,
     className
 }) => (
-    <a
+    <Link
         href={href}
         target='_blank'
         rel='noopener noreferrer'
         className={className}
     >
         {children}
-    </a>
+    </Link>
 );
 
 export default SafeExternalLink;

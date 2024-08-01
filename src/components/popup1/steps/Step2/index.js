@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { handleUpdateData } from 'reducer/features/State';
@@ -10,29 +10,23 @@ import Header from '../header';
 import { Titles } from 'constants';
 import { FEMALE_IMAGES, MALE_IMAGES } from 'constants/data';
 
-import './styles.css';
+import { Box, Container, H3, ShapeBox, SlideBox } from './styles';
 
 
-const Step2 = React.memo(() => {
+const Step2 = () => {
     const { isFemale, skin, shape } = useSelector((state) => state.data);
     const dispatch = useDispatch();
-
-    // const [activeIndexSkin, setActiveIndexSkin] = useState(skin);
-    // const [activeIndexshape, setActiveIndexShape] = useState(shape);
 
     const shapes = isFemale ? FEMALE_IMAGES.SHAPE : MALE_IMAGES.SHAPE;
     const skins = isFemale ? FEMALE_IMAGES.SKIN : MALE_IMAGES.SKIN;
 
     const handleChangeSkin = (skinId) => {
-        // setActiveIndexSkin(index);
         dispatch(handleUpdateData({ skin: skinId }));
     };
 
     const handleChangeShape = (shapeId) => {
-        // setActiveIndexShape(index);
         dispatch(handleUpdateData({ shape: shapeId }));
     };
-
 
     const slideItems = skins?.map((item) => (
         <Item
@@ -47,36 +41,30 @@ const Step2 = React.memo(() => {
         <Item
             key={item.title}
             source={item.source}
-            isActive={item.id  === shape}
+            isActive={item.id === shape}
             onClick={() => handleChangeShape(item.id)}
         />
     ));
 
     return (
-        <div className='step'>
+        <Container>
             <Header title={Titles.selectSkin} />
-            <div className='options'>
+            <Box>
                 <div>
-                    <h3 className='title-type'>
-                        {Titles.skin}
-                    </h3>
-                    <div className='skin-slide'>
-                        <SlickSlider >
+                    <H3>{Titles.skin}</H3>
+                    <SlideBox>
+                        <SlickSlider>
                             {slideItems}
                         </SlickSlider>
-                    </div>
+                    </SlideBox>
                 </div>
                 <div>
-                    <h3 className='title-type'>
-                        {Titles.shape}
-                    </h3>
-                    <div className='shape-types'>
-                        {shapeItems}
-                    </div>
+                    <H3>{Titles.shape} </H3>
+                    <ShapeBox> {shapeItems} </ShapeBox>
                 </div>
-            </div>
-        </div>
+            </Box>
+        </Container>
     )
-});
+};
 
-export default Step2;
+export default React.memo(Step2);

@@ -5,7 +5,9 @@ const ButtonsTexts = {
     tryOn: 'Try-On ME',
     ok: 'Ok',
     backScanning: '<  Back',
-    info: 'i'
+    info: 'i',
+    yes: 'Yes',
+    no: 'No'
 };
 
 const OptionsTexts = {
@@ -38,7 +40,8 @@ const Titles = {
     ownModel: 'BE YOUR OWN MODEL',
     yourModel: 'BE YOUR OWN MODEL',
     age: 'AGE',
-    gender: 'GENDER'
+    gender: 'GENDER',
+    removeImage: 'Are you sure you want to remove the image?'
 };
 
 const UnitsOfMeasurement = {

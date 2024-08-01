@@ -1,4 +1,6 @@
-.containter {
+import styled from 'styled-components';
+
+export const Container = styled.div`
     z-index: 20;
     background: transparent;
     display: flex;
@@ -13,52 +15,29 @@
     top: 50%;
     transform: translateY(-50%);
     border-radius: 22px;
-}
+`;
 
-.measurements {
+export const Box = styled.div`
     display: grid;
     align-items: center;
     padding: 5px 1px;
     position: relative;
-}
+`;
 
-.button-s {
-    padding: 15px 12px;
+export const Button = styled.button`
+    padding: 17px 12px;
+    height: 59px;
+    width: 50px;    
     background-color: transparent !important;
     cursor: pointer;
     transition: var(--transition);
-}
+`;
 
-
-.button-d {
-    padding: 15px 12px;
-    background-color: transparent !important;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-
-.line-horizontal {
+export const HorizontalLine = styled.div`
     height: 1px;
     background-color: rgb(210, 210, 212);
     min-width: 30px; 
     flex: 1;
     margin: 0 10px;
     max-width: 30px;
-}
-
-
-
-
-/* media */
-@media screen and (max-width: 1919px) and (max-height: 1079px) {
-    .containter {
-        top: 50.6%
-    }
-}
-
-@media screen and (max-width: 1650px) {
-    .containter {
-        top: 50.6%
-    }
-}
+`;

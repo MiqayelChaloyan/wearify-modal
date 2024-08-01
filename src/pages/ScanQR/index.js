@@ -3,49 +3,37 @@ import React from 'react';
 import { ButtonsTexts, Texts } from 'constants';
 import { ImagePaths, DeepARLink } from 'constants';
 
-import './styles.css';
+import { ButtonPrev, Button, Column, H3, P, Image, Box, HorizontalLine, Text, Footer } from './styles';
 
 
-const ScanQR = React.memo(({
-    _handleBack
-}) => {
+const ScanQR = ({ _handleBack }) => {
     const handleNavigateToLink = (url) => window.open(url, '_blank');
 
     return (
         <div>
-            <div className='header-k'>
-                <button
-                    className='button-back'
-                    onClick={_handleBack}
-                >
+            <Column>
+                <ButtonPrev type='button' onClick={_handleBack}>
                     {ButtonsTexts.backScanning}
-                </button>
-                <button
-                    className='button-information'
-                    onClick={() => handleNavigateToLink(DeepARLink)}
-                >
+                </ButtonPrev>
+                <Button type='button' onClick={() => handleNavigateToLink(DeepARLink)}>
                     {ButtonsTexts.info}
-                </button>
-            </div>
+                </Button>
+            </Column>
             <div>
-                <h3 className='scanning-title'>{Texts.scanningQR}</h3>
-                <p className='scanning-text'>{Texts.scanningText}</p>
+                <H3>{Texts.scanningQR}</H3>
+                <P>{Texts.scanningText}</P>
             </div>
-            <div className='qr-block'>
-                <img
-                    src={ImagePaths.QRUrl}
-                    className='qr-image'
-                    alt='QR'
-                />
-            </div>
-            <div className='line-qr' />
-            <div className='footer'>
-                <p className='footer-text'>{Texts.scann}</p>
-                <p className='footer-text'>{Texts.allow}</p>
-                <p className='footer-text'>{Texts.tryOn}</p>
-            </div>
+            <Box>
+                <Image src={ImagePaths.QRUrl} alt='QR-Image' />
+            </Box>
+            <HorizontalLine />
+            <Footer>
+                <Text>{Texts.scann}</Text>
+                <Text>{Texts.allow}</Text>
+                <Text>{Texts.tryOn}</Text>
+            </Footer>
         </div>
     )
-});
+};
 
-export default ScanQR;
+export default React.memo(ScanQR);

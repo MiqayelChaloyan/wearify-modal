@@ -1,27 +1,24 @@
+import React from 'react';
 import { SwiperSlide } from 'swiper/react';
+
 import FlatList from 'components/flatList';
 
-import cn from 'classnames';
-import './styles.css';
+import { Column, Image } from './styles';
 
 
 const Models = ({ models, onClick, activeIndex }) => {
     const items = models?.map((model, index) => (
         <SwiperSlide key={model.id}>
-            <div
-                className={cn('column', activeIndex === index && 'active-slide')}
-                onClick={() => onClick(index)}
-            >
-                <img
+            <Column $isactive={activeIndex === index} onClick={() => onClick(index)}>
+                <Image
                     src={model.imgPath}
                     alt={model.id}
-                    className='model-image'
                 />
-            </div>
+            </Column>
         </SwiperSlide>
-    ))
+    ));
 
-    return <FlatList list={items} />
+    return <FlatList list={items} />;
 };
 
 export default Models;

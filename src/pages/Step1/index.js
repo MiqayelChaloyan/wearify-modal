@@ -5,31 +5,29 @@ import { handleAddItem } from 'reducer/features/ItemReducer';
 
 import Square from 'icons/square';
 
-import { motion } from 'framer-motion';
+import { CgClose } from 'react-icons/cg';
 
-import Loader from 'components/loader';
+// import Loader from 'components/loader';
 import Models from 'components/models';
 import Header from 'components/header';
 import Iframe from 'components/iframe';
 import Result from 'components/result';
 import ModelViewer from 'components/model-viewer';
 import Measurements from 'components/measurements';
+import FitHide from 'components/fit';
 import LayoutPopup1 from 'components/popup1/layout';
 import LayoutPopup2 from 'components/popup2/layout';
-import Example from 'components/example';
 
 import colors from 'themes/colors';
 
-import './styles.css';
+import COMBINED_MODELS from 'constants/models';
+
+import { Box, Button, CloseButton, Container, MotionBox } from './styles';
 
 // data-product-id="8666802487521"
-// TODO
-import { productId } from 'utils/fakeApi';
-import COMBINED_MODELS from 'constants/models';
-import { CgClose } from 'react-icons/cg';
-// import { handleSwitchPopup, handleSwitchResultLoading } from 'reducer/features/ResultReducer';
 
-const Step1 = React.memo(({
+
+const Step1 = ({
     _handleBack,
     _handleNext
 }) => {
@@ -42,7 +40,7 @@ const Step1 = React.memo(({
     const productId = element.getAttribute('productid');
 
     const val = '8666802487521'
-    const prod = productId === val;
+    const prod = productId !== val;
 
     const models = prod ? COMBINED_MODELS.sportWearing : COMBINED_MODELS.sneakers;
 
@@ -83,20 +81,20 @@ const Step1 = React.memo(({
     return (
         <div>
             {prod ?
-                (<button
+                (<CloseButton
                     id='close-modal-fitting'
                     type='button'
-                    className='close-modal-fitting'
                     onClick={handleClose}
                 >
                     <CgClose size={25} fill={colors.darkBlue} />
-                </button>) : (<Header _handleBack={_handleBack} _handleNext={_handleNext} />)
+                </CloseButton>
+                ) : (<Header _handleBack={_handleBack} _handleNext={_handleNext} />)
             }
             {/* {isLoading && <Loader handleClose={handleCloseLoading} />} */}
-            <div className='container-view' ref={ref}>
+            <Container ref={ref}>
                 {prod && (
                     <>
-                        {/* {isLoading && <Example />} */}
+                        <FitHide />
                         <Measurements />
                         <LayoutPopup1 />
                         <LayoutPopup2 />
@@ -109,28 +107,25 @@ const Step1 = React.memo(({
                 }
                 {(isLoading && prod) || !prod ? (
                     <>
-                        <div className="icon-button">
+                        <Box>
                             {hide ? (
-                                <button
-                                    className="button-right"
+                                <Button
                                     onClick={handleHide}
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     <Square width={25} height={25} fill="rgb(212, 215, 215)" />
-                                </button>
+                                </Button>
                             ) : (
-                                <button
-                                    className="button-right"
+                                <Button
                                     onClick={handleHide}
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     <Square width={25} height={25} fill={colors.darkBlue} />
-                                </button>
+                                </Button>
                             )}
-                        </div>
+                        </Box>
                         {hide && (
-                            <motion.div
-                                className="models"
+                            <MotionBox
                                 initial={{
                                     opacity: 0,
                                     x: prod ? 8 : 0,
@@ -150,14 +145,14 @@ const Step1 = React.memo(({
                                     onClick={handleSubmit}
                                     activeIndex={activeIndex}
                                 />
-                            </motion.div>
+                            </MotionBox>
                         )}
                     </>
                 ) : null}
-            </div>
+            </Container>
         </div>
     )
-});
+};
 
 export default Step1;
 

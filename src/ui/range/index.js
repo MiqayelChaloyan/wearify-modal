@@ -1,7 +1,8 @@
 import React from 'react';
-import './styles.css';
 
-const InputRange = React.memo(({
+import { RangeInput } from './styles';
+
+const InputRange = ({
   rangeValue,
   handleRangeChange,
   max,
@@ -9,7 +10,7 @@ const InputRange = React.memo(({
 }) => {
   return (
     <>
-      <input
+      <RangeInput
         id="range"
         type="range"
         min={min}
@@ -20,6 +21,6 @@ const InputRange = React.memo(({
       />
     </>
   );
-});
+};
 
-export default InputRange;
+export default React.memo(InputRange);

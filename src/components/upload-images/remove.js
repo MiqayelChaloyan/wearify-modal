@@ -1,21 +1,21 @@
 import React from 'react';
 
-import './styles.css';
+import { Titles, ButtonsTexts } from 'constants';
+
+import { ButtonGroup, H4, RemoveButton, RemoveContainer } from './styles';
+
 
 const RemovePopup = ({
     handleYesClick,
     handleNoClick
-}) => {
-
-    return (
-        <div className='remove-popup'>
-            <p className='remove-popup-title'>Are you sure you want to remove the image?</p>
-            <div className='remove-popup-buttons'>
-                <button className='remove-popup-button' onClick={handleYesClick}>Yes</button>
-                <button className='remove-popup-button' onClick={handleNoClick}>No</button>
-            </div>
-        </div>
-    )
-};
+}) => (
+    <RemoveContainer>
+        <H4>{Titles.removeImage}</H4>
+        <ButtonGroup>
+            <RemoveButton onClick={handleYesClick}>{ButtonsTexts.yes}</RemoveButton>
+            <RemoveButton onClick={handleNoClick}>{ButtonsTexts.no}</RemoveButton>
+        </ButtonGroup>
+    </RemoveContainer>
+);
 
 export default RemovePopup;

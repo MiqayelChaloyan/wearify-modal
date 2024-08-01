@@ -6,17 +6,19 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import settings from './settings';
 
+import { Container } from './styles';
+
 import './styles.css';
 
 const SlickSlider = React.memo(({
     children
 }) => {
     return (
-        <div className='slider-container'>
+        <Container>
             <Slider {...settings}>
                 {children}
             </Slider>
-        </div>
+        </Container>
     );
 });
 
