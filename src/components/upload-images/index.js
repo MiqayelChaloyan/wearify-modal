@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addImage, clearImages, removeImage } from 'reducer/features/ImagesState';
 
 import { v4 as uuidv4 } from 'uuid';
@@ -17,10 +17,12 @@ import { Box, Column, Image, Item, ItemButton, Text, UploadButton } from './styl
 const ImageUpload = () => {
     const dispatch = useDispatch();
 
+    const { images: data } = useSelector((state) => state.imageReducer);
+
     const [images, setImages] = useState([]);
     const [imageURLs, setImageURLs] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [removeId, setRemoveId] = useState(null)
+    // const [removeId, setRemoveId] = useState(null)
     const fileInputRef = useRef(null);
 
     const fileSelectedHandler = (e) => {
@@ -54,7 +56,7 @@ const ImageUpload = () => {
     const handleYesClick = (id) => {
         setIsModalOpen(false);
         // handleRemoveClick(removeId);
-        handleClearImages()
+        handleClearImages();
     };
 
     // const handleRemoveClick = (id) => {
@@ -73,19 +75,22 @@ const ImageUpload = () => {
         setIsModalOpen(false);
     };
 
-    const imageURLsSlide = imageURLs?.map((item) => (
-        <Item
-            key={item.id}
-            onClick={() => {
-                setIsModalOpen(true);
-                setRemoveId(item.id)
-            }}
-        >
-            <ItemButton>
-                <Image src={item.source} alt={item.id} />
-            </ItemButton>
-        </Item>
-    ));
+    // const imageURLsSlide = imageURLs?.map((item) => (
+    //     <Item
+    //         key={item.id}
+    //         onClick={() => {
+    //             setIsModalOpen(true);
+    //             setRemoveId(item.id)
+    //         }}
+    //     >
+    //         <ItemButton>
+    //             <Image src={item.source} alt={item.id} />
+    //         </ItemButton>
+    //     </Item>
+    // ));
+
+
+    console.log(data)
 
     return (
         <>
@@ -97,7 +102,7 @@ const ImageUpload = () => {
                 style={{ display: 'none' }}
             />
             <div>
-                {!imageURLs.length ?
+                {!data.length ?
                     (<Column>
                         <UploadButton
                             $disabled={images.length < 1}
@@ -126,7 +131,17 @@ const ImageUpload = () => {
                                 </Text>
                             </UploadButton>
                         </div>
-                        {imageURLsSlide}
+                        {/* {imageURLsSlide} */}
+                        <Item
+                            onClick={() => {
+                                setIsModalOpen(true);
+                                // setRemoveId(imageURLs[0].id)
+                            }}
+                        >
+                            <ItemButton>
+                                <Image src={data[0].source} alt={data[0].id} />
+                            </ItemButton>
+                        </Item>
                     </Box>
                 }
             </div>
