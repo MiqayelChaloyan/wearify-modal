@@ -39,7 +39,7 @@ export default function LayoutPopup() {
     const userId = images[0]?.id;
    
     const _handleNext = async () => {
-        if (currentStepIndex === 1) {
+        if (currentStepIndex >= 0) {
 
             const closetItems = await getClothesData(0); // isFemale convert after
 

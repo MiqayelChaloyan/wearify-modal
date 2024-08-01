@@ -9,7 +9,7 @@ export default function Close({
     onClose
 }) {
     return (
-        <button type='button' onClick={onClose}>
+        <button style={{ cursor: 'pointer' }} type='button' onClick={onClose}>
             <CgClose size={20} fill={colors.darkBlue} />
         </button>
     );

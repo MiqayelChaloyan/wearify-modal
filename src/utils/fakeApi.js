@@ -1,4 +1,4 @@
-const scanning = true;
+const scanning = false;
 const productId = true;
 
 // const models = [

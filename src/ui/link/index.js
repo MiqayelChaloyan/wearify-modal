@@ -1,18 +1,17 @@
-import { Link } from './styles';
+import React from 'react';
+import { Button } from './styles';
 
-const SafeExternalLink = ({
-    href,
-    children,
-    className
-}) => (
-    <Link
-        href={href}
-        target='_blank'
-        rel='noopener noreferrer'
-        className={className}
-    >
-        {children}
-    </Link>
-);
+
+const SafeExternalLink = ({ href, children, className }) => {
+    const handleOpenLink = () => {
+        window.open(href, '_blank', 'noopener,noreferrer');
+    };
+
+    return (
+        <Button onClick={handleOpenLink}>
+            {children}
+        </Button>
+    );
+};
 
 export default SafeExternalLink;

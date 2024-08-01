@@ -13,7 +13,8 @@ import { scanning } from 'utils/fakeApi';
 import { Button, ButtonTryOn, Container } from './styles';
 
 // TODO
-import { DeepARLink } from 'constants';
+// import { DeepARLink } from 'constants';
+import COMBINED_MODELS from 'constants/models';
 //
 
 const Header = ({
@@ -39,7 +40,7 @@ const Header = ({
                     {ButtonsTexts.tryOn}
                 </ButtonTryOn>
             ) : (
-                <SafeExternalLink href={DeepARLink}>
+                <SafeExternalLink href={COMBINED_MODELS.sneakers[0].link}>
                     {ButtonsTexts.tryOn}
                 </SafeExternalLink>
             )}

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { media } from 'globalStyles';
 
-export const Link = styled.a`
+
+export const Button = styled.button`
     font-size: 15px;
     width: 120px;
     height: 46px;

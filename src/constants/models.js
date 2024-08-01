@@ -6,7 +6,7 @@ const COMBINED_MODELS = {
         {
             id: 1,
             name: 'sneakers',
-            link: '',
+            link: 'https://wearifyai.github.io/ARTryOn/?effect=bows',
             imgPath: 'https://drive.google.com/thumbnail?id=1rHnMmArBGamBFGZc2BWnWVGt0grheE_3',
             glbPath: 'https://cdn.shopify.com/3d/models/o/2ab2b12bf3cf4cb2/pregomesh.glb' //sneakersGlb,
         },
