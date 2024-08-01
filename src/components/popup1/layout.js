@@ -48,7 +48,7 @@ export default function LayoutPopup() {
 
             if (item?.is_closet) {
                 const genderParams = isFemale ? bodyTypes.female : bodyTypes.male;
-                url = CLO_SET_URL + `?&avatar_info=${1}_${0}_${height}_${weight}_${genderParams.shapeType.TRIANGLE}&ui_capture=false&ui_logo=false&ui_like=false&ui_shopping_bag=false`;
+                url = CLO_SET_URL + `?&avatar_info=${1}_${0}_${height}_${weight}_${genderParams.shapeType.TRIANGLE}&ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none`;
             }
 
             dispatch(handleUpdateData({ url, isCloset: item?.is_closet }));

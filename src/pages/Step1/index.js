@@ -71,7 +71,7 @@ const Step1 = ({
     // };
 
     useEffect(() => {
-        if(isCloset) {
+        if (isCloset) {
             setUriGlb(url)
         }
     }, [url]);
@@ -125,7 +125,7 @@ const Step1 = ({
                                 </Button>
                             )}
                         </Box>
-                        {hide && (
+                        {hide && !uriGlb?.includes('avatar_info') && (
                             <MotionBox
                                 initial={{
                                     opacity: 0,

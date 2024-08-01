@@ -46,3 +46,10 @@ export const HideBorder = styled.div`
     z-index: 100000;
     display: block !important;
 `;
+
+export const ContainerClo3d = styled.div`
+    position: relative;
+    width: 100%;
+    height: 490px;
+    overflow: hidden;
+`;
