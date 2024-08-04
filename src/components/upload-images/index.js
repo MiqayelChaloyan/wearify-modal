@@ -89,9 +89,6 @@ const ImageUpload = () => {
     //     </Item>
     // ));
 
-
-    console.log(data)
-
     return (
         <>
             <input

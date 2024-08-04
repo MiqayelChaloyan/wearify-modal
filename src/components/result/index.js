@@ -26,7 +26,7 @@ const Result = () => {
     };
 
     const storage = getStorage();
-    const starsRef = ref(storage, `WEB/${userId}/result_${userId}.png`);
+    const starsRef = ref(storage, `WEB/${userId}/res_${userId}.png`);
 
     useEffect(() => {
         getDownloadURL(starsRef)

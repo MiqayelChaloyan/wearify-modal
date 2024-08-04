@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { getDatabase, onValue, ref } from 'firebase/database';
 
@@ -21,6 +21,7 @@ import { Box, Container, Image, Loader, P } from './styles';
 const Step5 = () => {
     const { images } = useSelector(state => state.imageReducer);
     const { item } = useSelector((state) => state.ItemReducer);
+    const [isLoading, setIsLoading] = useState(true);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -42,6 +43,7 @@ const Step5 = () => {
             onValue(starCountRef, (snapshot) => {
                 const data = snapshot.val();
                 if (!data?.isLoading) {
+                    setIsLoading(false)
                     // TODO
                     // dispatch(updatedAvatarLoadingStatus(false));
                     // dispatch(updatedAvatarErrorStatus(false));
@@ -74,7 +76,7 @@ const Step5 = () => {
             </Box>
             <P>{Texts.loadingDescription1}</P>
             <Loader>
-                <LoadingBar handleSubmit={handleClose} />
+                <LoadingBar handleSubmit={handleClose} isLoading={isLoading}/>
             </Loader>
         </Container>
     );
