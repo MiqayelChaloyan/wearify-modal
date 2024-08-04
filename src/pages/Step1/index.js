@@ -41,7 +41,7 @@ const Step1 = ({
     const productId = element.getAttribute('productid');
 
     const val = '8666802487521'
-    const prod = productId !== val;
+    const prod = productId === val;
 
     const models = prod ? COMBINED_MODELS.sportWearing : COMBINED_MODELS.sneakers;
 
