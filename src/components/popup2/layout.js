@@ -17,9 +17,9 @@ import { uploadBytes, ref as sRef } from 'firebase/storage';
 import { CLO_SET_URL } from 'constants/data';
 
 
-// TODO
-const ID = 2;
-//
+// // TODO
+// const ID = 2;
+// //
 
 
 export default function LayoutPopup() {
@@ -31,11 +31,12 @@ export default function LayoutPopup() {
         ]);
 
     const { isFemale, height, weight, url } = useSelector((state) => state.data);
+
     const { images } = useSelector((state) => state.imageReducer);
 
     const userId = images[0]?.id;
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
     const _handleNext = async () => {
         if (currentStepIndex === 1) {

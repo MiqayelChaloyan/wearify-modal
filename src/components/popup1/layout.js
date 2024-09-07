@@ -38,7 +38,8 @@ export default function LayoutPopup() {
             <Step2 />
         ]);
 
-    const { isFemale, height, weight } = useSelector((state) => state.data);
+    const { isFemale, height, weight, shape } = useSelector((state) => state.data);
+
     // const { images } = useSelector((state) => state.imageReducer);
     const dispatch = useDispatch();
 
@@ -49,13 +50,8 @@ export default function LayoutPopup() {
 
             // const closetItems = await getClothesData(0); // isFemale convert after
             const closetItems = FAKE_API;
-            console.log(closetItems)
-            console.log(productId)
 
             const [item] = closetItems?.filter(elem => elem.id == productId);
-
-            console.log(item, 'item');
-            console.log(item.closet_url, 'item.url')
 
             let url = item?.closet_url;
 
@@ -73,13 +69,11 @@ export default function LayoutPopup() {
                     closetIsFemale = 0;
                 }
 
-                url += `?&avatar_info=${closetIsFemale}_${0}_${height}_${weight}_${genderParams.shapeType.TRIANGLE}&ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none`;
+                url += `?&avatar_info=${closetIsFemale}_${0}_${height}_${weight}_${shape}&ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none`;
                 // //////
 
                 // url = CLO_SET_URL + `?&avatar_info=${1}_${0}_${height}_${weight}_${genderParams.shapeType.TRIANGLE}&ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none`;
             }
-
-            console.log(url, 'url after-----')
 
             dispatch(handleUpdateData({ url, isCloset: item?.is_closet }));
 

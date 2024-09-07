@@ -16,6 +16,11 @@ import { AgeBox, Container, H3, SkinBox } from './styles';
 
 const Step4 = () => {
     const { isFemale, age, skinTone } = useSelector((state) => state.data);
+
+
+    const userData = useSelector((state) => state.data);
+    console.log(userData)
+
     const dispatch = useDispatch();
 
     const ages = isFemale ? FEMALE_IMAGES.AGE : MALE_IMAGES.AGE;
@@ -31,19 +36,19 @@ const Step4 = () => {
 
     const slideItems = skinTones?.map((item) => (
         <Item
-            key={item.title}
+            key={item.ID}
             source={item.source}
-            isActive={item.id === skinTone}
-            onClick={() => handleChangeSkin(item.id)}
+            isActive={item.ID === skinTone}
+            onClick={() => handleChangeSkin(item.ID)}
         />
     ));
 
     const ageItems = ages?.map((item) => (
         <Item
-            key={item.title}
+            key={item.ID}
             source={item.source}
-            isActive={item.id === age}
-            onClick={() => handleChangeAge(item.id)}
+            isActive={item.ID === age}
+            onClick={() => handleChangeAge(item.ID)}
         />
     ));
 
