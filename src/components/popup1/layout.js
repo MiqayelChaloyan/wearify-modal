@@ -17,15 +17,21 @@ import { ref, set } from 'firebase/database';
 import { database, storage } from 'firebaseDatabase';
 import { uploadBytes, ref as sRef } from 'firebase/storage';
 
-import { CLO_SET_URL } from 'constants/data';
+import { CLO_SET_URL, FAKE_API } from 'constants/data';
 
 
-// TODO
-const ID = 2;
-//
+// // TODO
+// const ID = 2;
+// //
+
+
 
 
 export default function LayoutPopup() {
+    const element = document.getElementById('web-modal');
+    // const productId = element.getAttribute('data-product-id');
+    const productId = '8211036766361';
+
     const { currentStepIndex, step, back, next } =
         useMultistepForm([
             <Step1 />,
@@ -37,48 +43,45 @@ export default function LayoutPopup() {
     const dispatch = useDispatch();
 
     // const userId = images[0]?.id;
-   
+
     const _handleNext = async () => {
         if (isFemale && height && weight) {
 
-            const closetItems = await getClothesData(0); // isFemale convert after
+            // const closetItems = await getClothesData(0); // isFemale convert after
+            const closetItems = FAKE_API;
+            console.log(closetItems)
+            console.log(productId)
 
-            const [item] = closetItems?.data.filter(elem => elem.id === ID);
+            const [item] = closetItems?.filter(elem => elem.id == productId);
+
+            console.log(item, 'item');
+            console.log(item.closet_url, 'item.url')
+
             let url = item?.closet_url;
 
             if (item?.is_closet) {
                 const genderParams = isFemale ? bodyTypes.female : bodyTypes.male;
-                url = CLO_SET_URL + `?&avatar_info=${1}_${0}_${height}_${weight}_${genderParams.shapeType.TRIANGLE}&ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none`;
+
+                // TODO
+                // Remove After
+                let closetIsFemale = 1;
+
+                if (item.id === '8211036766361') {
+                    closetIsFemale = 1;
+                }
+                if (item.id === '8211137200281') {
+                    closetIsFemale = 0;
+                }
+
+                url += `?&avatar_info=${closetIsFemale}_${0}_${height}_${weight}_${genderParams.shapeType.TRIANGLE}&ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none`;
+                // //////
+
+                // url = CLO_SET_URL + `?&avatar_info=${1}_${0}_${height}_${weight}_${genderParams.shapeType.TRIANGLE}&ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none`;
             }
 
+            console.log(url, 'url after-----')
+
             dispatch(handleUpdateData({ url, isCloset: item?.is_closet }));
-
-        //     try {
-        //         const response = await fetch(images[0].source);
-
-        //         const blob = await response.blob();
-        //         const newFile = new File([blob], 'example.png', { type: blob.type });
-
-        //         const storageRef = sRef(storage, `WEB/${userId}/avatar_${userId}.png`);
-
-        //         uploadBytes(storageRef, newFile);
-        //     } catch (_) {
-        //         console.log('File upload error', _)
-        //     }
-
-        //     set(ref(database, 'avatars/' + userId), {
-        //         isLoading: true,
-        //         isAvatarError: false,
-        //     }).catch(err => console.log(err));
-
-
-        //     set(ref(database, 'new/' + userId), {
-        //         closetURL: url,
-        //         status: 'new',
-        //         presetBackground: '033',
-        //         presetModel: '055',
-        //     }).catch(err => console.log(err))
-        // }
 
         }
         return next();

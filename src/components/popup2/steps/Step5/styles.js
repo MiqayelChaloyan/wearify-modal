@@ -11,7 +11,7 @@ export const Box = styled.div`
     justify-content: center;
 `;
 
-export const Image = styled.img`
+export const ImageUser = styled.img`
     width: 55px;
     height: 55px;
     background-color: var(--container-bg);
@@ -19,6 +19,17 @@ export const Image = styled.img`
     border-radius: 10px;
     object-fit: cover;
 `;
+
+export const Image = styled.img`
+    width: 55px;
+    height: 55px;
+    background-color: var(--container-bg);
+    margin: 20px; 
+    padding: 4px;
+    border-radius: 10px;
+    object-fit: contain;
+`;
+
 
 export const P = styled.p`
     text-align: center;

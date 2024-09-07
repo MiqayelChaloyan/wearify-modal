@@ -15,7 +15,7 @@ import { Texts } from 'constants';
 
 import colors from 'themes/colors';
 
-import { Box, Container, Image, Loader, P } from './styles';
+import { Box, Container, Image, ImageUser, Loader, P } from './styles';
 
 
 const Step5 = () => {
@@ -66,7 +66,7 @@ const Step5 = () => {
     return (
         <Container>
             <Box>
-                <Image src={images[0]?.source} alt={images[0]?.id} />
+                <ImageUser src={images[0]?.source} alt={images[0]?.id} />
                 <ArrowRight
                     width={19}
                     height={19}

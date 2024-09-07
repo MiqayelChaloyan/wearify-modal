@@ -42,4 +42,5 @@ export const Image = styled.img`
     object-fit: cover;
     width: 100%;
     padding: 5px;
+    border-radius: 30px;
 `;

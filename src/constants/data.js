@@ -220,7 +220,30 @@ const WEIGHT = [
     }
 ];
 
+
 const API_URL = "https://wearify-api.ew.r.appspot.com/";
+// const API_URL = "https://wearify-api-432112.wl.r.appspot.com/";
+
+// TODO 
+// Remove After
+const FAKE_API = [
+    {
+        id: '8211036766361',
+        name: 'Clothes',
+        closet_url: 'https://style.clo-set.com/fitting/VHFF%2FhHOfsKxdmNtRHgRGw%3D%3D?',
+        is_closet: true
+    },
+    {
+        id: '8211137200281',
+        name: 'AZAT MARD',
+        closet_url: 'https://style.clo-set.com/fitting/VHFF%2FhHOfsJJDtlwD7hvZg%3D%3D?',
+        is_closet: true
+    }
+];
+// /////////
+
+
+
 
 const API_ENDPOINTS = {
     bodyShape: 'body-shape',
@@ -240,7 +263,8 @@ export {
     WEIGHT,
     API_URL,
     API_ENDPOINTS,
-    CLO_SET_URL
+    CLO_SET_URL,
+    FAKE_API
 };
 
 

@@ -17,16 +17,20 @@ import Measurements from 'components/measurements';
 import FitHide from 'components/fit';
 import LayoutPopup1 from 'components/popup1/layout';
 import LayoutPopup2 from 'components/popup2/layout';
+import IframeCloSet from 'clo-set-iframe';
 
 import colors from 'themes/colors';
 
 import COMBINED_MODELS from 'constants/models';
 
 import { Box, Button, CloseButton, Container, MotionBox } from './styles';
-import IframeCloSet from 'clo-set-iframe';
 
-// data-product-id="8666802487521"
 
+const PRODS_ID = {
+    AZAT_MARD: '8211137200281',
+    PREGOMESH: '8211035390105',
+    CLOTHES: '8211036766361'
+};
 
 const Step1 = ({
     _handleBack,
@@ -37,26 +41,37 @@ const Step1 = ({
     const { url, isCloset } = useSelector((state) => state.data);
 
     const dispatch = useDispatch();
-    const element = document.getElementById('web-modal');
-    const productId = element.getAttribute('productid');
+    // const element = document.getElementById('web-modal');
+    // const productId = element.getAttribute('data-product-id');
+    const productId = '8211036766361'
 
-    const val = '8666802487521'
-    const prod = productId === val;
+    const prodIds = [PRODS_ID.AZAT_MARD, PRODS_ID.CLOTHES];
+    const prod = prodIds.includes(productId);
 
     const models = prod ? COMBINED_MODELS.sportWearing : COMBINED_MODELS.sneakers;
+    const model = models?.filter(model => model.id == productId);
 
-    const [uriGlb, setUriGlb] = useState(models[0].glbPath)
+    const [uriGlb, setUriGlb] = useState(model[0]?.glbPath);
     const [hide, setHide] = useState(true);
     const [activeIndex, setActiveIndex] = useState(0);
+
+    console.log(uriGlb, 'uriGlb')
 
     const ref = useRef(null);
 
     useEffect(() => {
-        dispatch(handleAddItem(models[0]));
+        dispatch(handleAddItem(model[0]));
     }, [])
 
     const handleSubmit = (index) => {
         setUriGlb(COMBINED_MODELS.sportWearing[index].glbPath)
+
+        // TODO 
+        // Remove After
+        // setUriGlb(model[0].glbPath);
+        // //////
+
+
         setActiveIndex(index);
         dispatch(handleAddItem(models[index]));
     }
@@ -64,7 +79,6 @@ const Step1 = ({
     const handleHide = () => setHide(!hide);
 
     const handleClose = () => document.getElementById('web-modal').style.display = 'none';
-
 
     // const handleCloseLoading = () => {
     //     dispatch(handleSwitchResultLoading())
@@ -79,8 +93,10 @@ const Step1 = ({
 
 
     const handleBackStep1 = () => {
-        setUriGlb(COMBINED_MODELS.sportWearing[0].glbPath)
-    }
+        // setUriGlb(COMBINED_MODELS.sportWearing[0].glbPath)
+
+        setUriGlb(model[0]?.glbPath);
+    };
 
 
     return (
@@ -107,7 +123,7 @@ const Step1 = ({
                 )}
                 {isOpen && <Result />}
                 {prod ?
-                    (uriGlb?.includes('avatar_info') && url && isCloset ? <IframeCloSet src={uriGlb} _handleBack={handleBackStep1}/> : <Iframe src={uriGlb} />) :
+                    (uriGlb?.includes('avatar_info') && url && isCloset ? <IframeCloSet src={uriGlb} _handleBack={handleBackStep1} /> : <Iframe src={uriGlb} />) :
                     <ModelViewer uriGlb={uriGlb} />
                 }
                 {(isLoading && prod) || !prod ? (
@@ -146,7 +162,7 @@ const Step1 = ({
                                 viewport={{ once: true }}
                             >
                                 <Models
-                                    models={models}
+                                    models={model}
                                     onClick={handleSubmit}
                                     activeIndex={activeIndex}
                                 />
