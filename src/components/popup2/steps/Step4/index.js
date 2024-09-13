@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { handleUpdateData } from 'reducer/features/State';
@@ -15,31 +15,34 @@ import { AgeBox, Container, H3, SkinBox } from './styles';
 
 
 const Step4 = () => {
-    const { isFemale, age, skinTone } = useSelector((state) => state.data);
-
+    const { isFemale } = useSelector((state) => state.data);
+    const [skinID, setSkinID] = useState();
+    const [ageID, setAgeID] = useState();
 
     const userData = useSelector((state) => state.data);
-    console.log(userData)
+    // console.log(userData)
 
     const dispatch = useDispatch();
 
     const ages = isFemale ? FEMALE_IMAGES.AGE : MALE_IMAGES.AGE;
     const skinTones = isFemale ? FEMALE_IMAGES.SKIN_TONE : MALE_IMAGES.SKIN_TONE;
 
-    const handleChangeSkin = (skinToneId) => {
-        dispatch(handleUpdateData({ skinTone: skinToneId }));
+    const handleChangeSkin = (id, skinTone) => {
+        setSkinID(id);
+        dispatch(handleUpdateData({ skinTone }));
     };
 
-    const handleChangeAge = (ageId) => {
-        dispatch(handleUpdateData({ age: ageId }));
+    const handleChangeAge = (id, age) => {
+        setAgeID(id);
+        dispatch(handleUpdateData({ age }));
     };
 
     const slideItems = skinTones?.map((item) => (
         <Item
             key={item.ID}
             source={item.source}
-            isActive={item.ID === skinTone}
-            onClick={() => handleChangeSkin(item.ID)}
+            isActive={item.ID === skinID}
+            onClick={() => handleChangeSkin(item.ID, item.Skin)}
         />
     ));
 
@@ -47,8 +50,8 @@ const Step4 = () => {
         <Item
             key={item.ID}
             source={item.source}
-            isActive={item.ID === age}
-            onClick={() => handleChangeAge(item.ID)}
+            isActive={item.ID === ageID}
+            onClick={() => handleChangeAge(item.ID, item.Age)}
         />
     ));
 

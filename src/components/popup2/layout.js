@@ -15,6 +15,7 @@ import { ref, set } from 'firebase/database';
 import { database, storage } from 'firebaseDatabase';
 import { uploadBytes, ref as sRef } from 'firebase/storage';
 import { CLO_SET_URL } from 'constants/data';
+import { getGenaiData } from 'utils/genaiApi';
 
 
 // // TODO
@@ -30,17 +31,18 @@ export default function LayoutPopup() {
             <Step5 />
         ]);
 
-    const { isFemale, height, weight, url } = useSelector((state) => state.data);
+    const { isFemale, url, skinTone, age } = useSelector((state) => state.data);
 
     const { images } = useSelector((state) => state.imageReducer);
 
     const userId = images[0]?.id;
 
-    // const dispatch = useDispatch();
-
     const _handleNext = async () => {
         if (currentStepIndex === 1) {
+            const presetModelResultId = await getGenaiData(isFemale, skinTone, age);
+            // console.log(presetModelResultId, 'presetModelResultId');
 
+            
             try {
                 const response = await fetch(images[0].source);
 
@@ -64,7 +66,7 @@ export default function LayoutPopup() {
                 closetURL: url,
                 status: 'new',
                 presetBackground: '033',
-                presetModel: '055',
+                presetModel: presetModelResultId,
             }).catch(err => console.log(err))
         }
 

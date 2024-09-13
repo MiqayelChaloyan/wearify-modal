@@ -29,8 +29,8 @@ import { CLO_SET_URL, FAKE_API } from 'constants/data';
 
 export default function LayoutPopup() {
     const element = document.getElementById('web-modal');
-    // const productId = element.getAttribute('data-product-id');
-    const productId = '8211036766361';
+    const productId = element.getAttribute('data-product-id');
+    // const productId = '8211036766361';
 
     const { currentStepIndex, step, back, next } =
         useMultistepForm([

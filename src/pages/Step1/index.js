@@ -32,6 +32,7 @@ const PRODS_ID = {
     CLOTHES: '8211036766361'
 };
 
+
 const Step1 = ({
     _handleBack,
     _handleNext
@@ -41,9 +42,9 @@ const Step1 = ({
     const { url, isCloset } = useSelector((state) => state.data);
 
     const dispatch = useDispatch();
-    // const element = document.getElementById('web-modal');
-    // const productId = element.getAttribute('data-product-id');
-    const productId = '8211036766361'
+    const element = document.getElementById('web-modal');
+    const productId = element.getAttribute('data-product-id');
+    // const productId = '8211036766361'
 
     const prodIds = [PRODS_ID.AZAT_MARD, PRODS_ID.CLOTHES];
     const prod = prodIds.includes(productId);
@@ -55,7 +56,7 @@ const Step1 = ({
     const [hide, setHide] = useState(true);
     const [activeIndex, setActiveIndex] = useState(0);
 
-    console.log(uriGlb, 'uriGlb')
+    // console.log(uriGlb, 'uriGlb')
 
     const ref = useRef(null);
 
@@ -132,14 +133,14 @@ const Step1 = ({
                             {hide ? (
                                 <Button
                                     onClick={handleHide}
-                                    whileTap={{ scale: 0.95 }}
+                                    whiletap={{ scale: 0.95 }}
                                 >
                                     <Square width={25} height={25} fill="rgb(212, 215, 215)" />
                                 </Button>
                             ) : (
                                 <Button
                                     onClick={handleHide}
-                                    whileTap={{ scale: 0.95 }}
+                                    whiletap={{ scale: 0.95 }}
                                 >
                                     <Square width={25} height={25} fill={colors.darkBlue} />
                                 </Button>

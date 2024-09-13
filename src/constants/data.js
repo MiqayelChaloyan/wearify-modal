@@ -292,7 +292,7 @@ const WEIGHT = [
 
 
 const API_URL = "https://wearify-api.ew.r.appspot.com/";
-// const API_URL = "https://wearify-api-432112.wl.r.appspot.com/";
+const GENAI_API_URL = 'https://w2w-api-c76466fc82ee.herokuapp.com';
 
 // TODO 
 // Remove After
@@ -318,7 +318,8 @@ const FAKE_API = [
 const API_ENDPOINTS = {
     bodyShape: 'body-shape',
     getData: 'data',
-    measurements: 'bmt?height='
+    measurements: 'bmt?height=',
+    genai_id: '/genai_id'
 };
 
 // TODO
@@ -334,7 +335,8 @@ export {
     API_URL,
     API_ENDPOINTS,
     CLO_SET_URL,
-    FAKE_API
+    FAKE_API,
+    GENAI_API_URL
 };
 
 
