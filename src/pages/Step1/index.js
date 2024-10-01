@@ -129,7 +129,7 @@ const Step1 = ({
                     (uriGlb?.includes('avatar_info') && url && isCloset ? <IframeCloSet src={uriGlb} _handleBack={handleBackStep1} /> : <Iframe src={uriGlb} />) :
                     <ModelViewer uriGlb={uriGlb} />
                 }
-                {(isLoading && prod) || !prod ? (
+                {/* {(isLoading && prod) || !prod ? (
                     <>
                         <Box>
                             {hide ? (
@@ -147,8 +147,8 @@ const Step1 = ({
                                     <Square width={25} height={25} fill={colors.darkBlue} />
                                 </Button>
                             )}
-                        </Box>
-                        {hide && !uriGlb?.includes('avatar_info') && (
+                        </Box> */}
+                        {/* {hide && !uriGlb?.includes('avatar_info') && (
                             <MotionBox
                                 initial={{
                                     opacity: 0,
@@ -170,9 +170,9 @@ const Step1 = ({
                                     activeIndex={activeIndex}
                                 />
                             </MotionBox>
-                        )}
-                    </>
-                ) : null}
+                        )} */}
+                    {/* </>
+                ) : null} */}
             </Container>
         </div>
     )
