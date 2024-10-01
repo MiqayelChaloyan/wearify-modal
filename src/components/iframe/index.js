@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
+
 import { useDispatch } from 'react-redux';
 import { handleSwitchLoading } from 'reducer/features/LoaderCloSet';
 
 import IframeLoad from 'ui/loading';
 
-import './styles.css';
+import { Box, Container, HideBorder, Iframe, ContainerClo3d } from './styles';
 
 
-function IFrame({ src }) {
+const IFrame = ({ src }) => {
   const [ref, setRef] = useState(null);
   const [loaded, setLoaded] = useState(false);
   const dispatch = useDispatch();
@@ -25,21 +26,19 @@ function IFrame({ src }) {
     }
   }, [ref]);
 
-
   return (
     <>
       {!loaded &&
-        <div className="loader">
+        <Box>
           <IframeLoad />
-        </div>}
-      <iframe
+        </Box>}
+      <Iframe
+        $loaded={loaded}
         title="iframe"
         ref={setRef}
         src={src}
-        className={`iframe ${loaded ? 'loaded' : ''}`}
         frameBorder="0"
         id="myIframe"
-        sandbox={true}
         loading="eager"
       />
     </>
@@ -47,15 +46,15 @@ function IFrame({ src }) {
 };
 
 
-const Iframe = ({ src }) => {
+const IframeWrapper = ({ src }) => {
   return (
-    <div className="Iframe">
-      <div className="hide-border" />
+    <Container>
+      <HideBorder />
       <IFrame src={src} />
-    </div>
+    </Container>
   );
 }
 
-export default Iframe;
+export default IframeWrapper;
 
 

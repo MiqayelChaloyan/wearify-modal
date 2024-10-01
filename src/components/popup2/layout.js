@@ -4,6 +4,7 @@ import Popup from './index';
 import Step3 from './steps/Step3';
 import Step4 from './steps/Step4';
 import Step5 from './steps/Step5';
+
 import { getClothesData } from 'utils/api';
 import { useDispatch, useSelector } from 'react-redux';
 import { handleUpdateData } from 'reducer/features/State';
@@ -13,11 +14,13 @@ import bodyTypes from 'constants/bodyTypes';
 import { ref, set } from 'firebase/database';
 import { database, storage } from 'firebaseDatabase';
 import { uploadBytes, ref as sRef } from 'firebase/storage';
+import { CLO_SET_URL } from 'constants/data';
+import { getGenaiData } from 'utils/genaiApi';
 
 
-// TODO
-const ID = 2;
-//
+// // TODO
+// const ID = 2;
+// //
 
 
 export default function LayoutPopup() {
@@ -28,31 +31,17 @@ export default function LayoutPopup() {
             <Step5 />
         ]);
 
-    const { isFemale, height, weight } = useSelector((state) => state.data);
+    const { isFemale, url, skinTone, age } = useSelector((state) => state.data);
+        // console.log(isFemale, skinTone, age)
     const { images } = useSelector((state) => state.imageReducer);
 
     const userId = images[0]?.id;
 
-    const dispatch = useDispatch();
-
-
     const _handleNext = async () => {
         if (currentStepIndex === 1) {
-
-            const closetItems = await getClothesData(0); // isFemale convert after
-
-            const [item] = closetItems?.data.filter(elem => elem.id === ID);
-            let url = item?.closet_url;
-
-            if (item?.is_closet) {
-                const genderParams = isFemale ? bodyTypes.female : bodyTypes.male;
-                url += `?&avatar_info=${1}_${0}_${height}_${weight}_${genderParams.shapeType.TRIANGLE}&ui_capture=false&ui_logo=false&ui_like=false&ui_shopping_bag=false`;
-            }
-
-            dispatch(handleUpdateData({ url, isCloset: item?.is_closet }));
-
-            ///////
-
+            const presetModelResultId = await getGenaiData(isFemale, skinTone, age);
+            // console.log(presetModelResultId, 'presetModelResultId');
+ 
             try {
                 const response = await fetch(images[0].source);
 
@@ -76,7 +65,7 @@ export default function LayoutPopup() {
                 closetURL: url,
                 status: 'new',
                 presetBackground: '033',
-                presetModel: '055',
+                presetModel: presetModelResultId,
             }).catch(err => console.log(err))
         }
 

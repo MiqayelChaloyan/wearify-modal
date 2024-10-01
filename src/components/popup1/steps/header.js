@@ -1,8 +1,10 @@
-export default function Header({ title, className }) {
+import { H2, HorizontalLine } from '../styles';
+
+export default function Header({ title }) {
     return (
-        <section className={className}>
-            <h2 className='title'>{title}</h2>
-            <div className='line' />
+        <section>
+            <H2>{title}</H2>
+            <HorizontalLine />
         </section>
     );
 };

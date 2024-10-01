@@ -4,9 +4,9 @@ const MEASUREMENTS = {
     weight: 0,
     skin: 0,
     shape: 0,
-    skinTone: 0,
+    skinTone: '',
     age: 0,
-    isFemale: 0,
+    isFemale: 1,
     uploadImages: [],
 };
 

@@ -7,6 +7,9 @@ export const getClothesData = async (gender) => {
     try {
         const apiUrl = `${API_URL}${API_ENDPOINTS.getData}`;
 
+        // const test = await axios.get('https://wearify-api-432112.wl.r.appspot.com/genai_id?isFemale=false&skin=029&age=25')
+        // console.log(test, 'test')
+        
         const response = await axios.get(apiUrl, {
             params: {
                 type: 2,

@@ -3,7 +3,7 @@ export default function ModelViewer({ uriGlb }) {
         <div className='viewer'>
             <model-viewer
                 src={uriGlb}
-                // ios-src={'/model/main.usdc'}
+                // src={src}
                 seamless-poster
                 environment-image='neutral'
                 shadow-intensity='1'
@@ -20,7 +20,6 @@ export default function ModelViewer({ uriGlb }) {
                 width='1800px'
                 disable-zoom
                 loading='eager'
-            // poster="https://test-aorist-bucket.s3.amazonaws.com/images/artwork/900x600/187.1.jpg"
 
             >
             </model-viewer>

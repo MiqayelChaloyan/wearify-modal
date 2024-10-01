@@ -45,50 +45,85 @@ const FEMALE_IMAGES = {
     ],
     SKIN_TONE: [
         {
-            id: 0,
+            ID: '002',
+            Name: 'Clara',
+            Age: 'Youth',
+            Gender: 'Female',
+            Skin: 'Fair',
             source: 'https://drive.google.com/thumbnail?id=1oRsnLPz33xb_cHtC4KLVkcS9hOiRjgOJ',
-            title: '1'
         },
         {
-            id: 1,
+            ID: '004',
+            Name: 'Mia',
+            Age: 'Youth',
+            Gender: 'Female',
+            Skin: 'Medium',
             source: 'https://drive.google.com/thumbnail?id=1YDSfbeHBttPSRiiGKlaSuuTAChCBLw3x',
-            title: '2'
         },
         {
-            id: 2,
+            ID: '003',
+            Name: 'Jamila',
+            Age: 'Youth',
+            Gender: 'Female',
+            Skin: 'Deep',
             source: 'https://drive.google.com/thumbnail?id=1OzZianpJ3aUHmSI-o1hmyuc8gdjVf_EF',
-            title: '2'
         },
         {
-            id: 3,
+            ID: '042',
+            Name: 'Lavanya',
+            Age: 'Youth',
+            Gender: 'Female',
+            Skin: 'Tanned',
             source: 'https://drive.google.com/thumbnail?id=1B8Hiz22nOPdZSJaGbSfkdoY40ybRQtN1',
-            title: '3'
         },
         {
-            id: 4,
+            ID: '001',
+            Name: 'Antonia',
+            Age: 'Youth',
+            Gender: 'Female',
+            Skin: 'Olive',
             source: 'https://drive.google.com/thumbnail?id=19q1mvVZ_ys6Vv4F7KzMsVR5XBpPkous9',
-            title: '4'
         },
     ],
     AGE: [
         {
-            id: 0,
+            ID: '025',
+            Name: 'Amy',
+            Age: 'Children',
+            Gender: 'Female',
+            Skin: 'Fair',
             source: 'https://storage-web.pixocial.com/vmake-prod/~/static/images/5f178a55f4615779383f.jpg'
         },
         {
-            id: 1,
+            ID: '035',
+            Name: 'Valeria',
+            Age: 'Teen',
+            Gender: 'Female',
+            Skin: 'Olive',
             source: 'https://storage-web.pixocial.com/vmake-prod/~/static/images/991ed613b9300c14be17.jpg'
         },
         {
-            id: 2,
+            ID: '001',
+            Name: 'Antonia',
+            Age: 'Youth',
+            Gender: 'Female',
+            Skin: 'Olive',
             source: 'https://storage-web.pixocial.com/vmake-prod/~/static/images/5cf712188a2e16949c50.jpg'
         },
         {
-            id: 3,
+            ID: '009',
+            Name: 'Camila',
+            Age: 'Middle-Aged',
+            Gender: 'Female',
+            Skin: 'Olive',
             source: 'https://storage-web.pixocial.com/vmake-prod/~/static/images/ec50edfc5b9cf45e69a6.jpg'
         },
         {
-            id: 4,
+            ID: '017',
+            Name: 'Valentina',
+            Age: 'Senior',
+            Gender: 'Female',
+            Skin: 'Olive',
             source: 'https://storage-web.pixocial.com/vmake-prod/~/static/images/08c59376e3a291162ae7.jpg'
         },
     ]
@@ -143,50 +178,85 @@ const MALE_IMAGES = {
     ],
     SKIN_TONE: [
         {
-            id: 0,
+            ID: '006',
+            Name: 'Henry',
+            Age: 'Youth',
+            Gender: 'Male',
+            Skin: 'Fair',
             source: 'https://drive.google.com/thumbnail?id=19ggDJEYxtxlNXDVn5qBDFbQdOLK7RVVY',
-            title: '1'
         },
         {
-            id: 1,
+            ID: '008',
+            Name: 'Vincent',
+            Age: 'Youth',
+            Gender: 'Male',
+            Skin: 'Medium',
             source: 'https://drive.google.com/thumbnail?id=1I0qOlnhoA4cXH6-YVhHPa98A-4dgmuCe',
-            title: '2'
         },
         {
-            id: 2,
+            ID: '007',
+            Name: 'Ekon',
+            Age: 'Youth',
+            Gender: 'Male',
+            Skin: 'Deep',
             source: 'https://drive.google.com/thumbnail?id=1A5FZ3vrpXnVV9OQ1ZHRO9ymCi8NWrXAk',
-            title: '2'
         },
         {
-            id: 3,
+            ID: '005',
+            Name: 'Martín',
+            Age: 'Youth',
+            Gender: 'Male',
+            Skin: 'Olive',
             source: 'https://drive.google.com/thumbnail?id=1j3rgWEpwVVlvmsM4KlwaEHkET2lZArd4',
-            title: '3'
         },
         {
-            id: 4,
+            ID: '043',
+            Name: 'Aarav',
+            Age: 'Youth',
+            Gender: 'Male',
+            Skin: 'Tanned',            
             source: 'https://drive.google.com/thumbnail?id=181BIo1CJQfZKXYr9Wr6jFe2QKJ_e8z-K',
-            title: '4'
         },
     ],
     AGE: [
         {
-            id: 0,
+            ID: '031',
+            Name: 'Víctor',
+            Age: 'Children',
+            Gender: 'Male',
+            Skin: 'Olive',  
             source: 'https://storage-web.pixocial.com/vmake-prod/~/static/images/3c011985c7bb99d0725f.jpg'
         },
         {
-            id: 1,
+            ID: '039',
+            Name: 'Ricardo',
+            Age: 'Teen',
+            Gender: 'Male',
+            Skin: 'Olive',  
             source: 'https://storage-web.pixocial.com/vmake-prod/~/static/images/19de2ec153af8a7eb25b.jpg'
         },
         {
-            id: 2,
+            ID: '005',
+            Name: 'Martín',
+            Age: 'Youth',
+            Gender: 'Male',
+            Skin: 'Olive',  
             source: 'https://storage-web.pixocial.com/vmake-prod/~/static/images/3160aa753a8469f7f62f.jpg'
         },
         {
-            id: 3,
+            ID: '013',
+            Name: 'Daniel',
+            Age: 'Middle-Aged',
+            Gender: 'Male',
+            Skin: 'Olive',  
             source: 'https://storage-web.pixocial.com/vmake-prod/~/static/images/c3c9d918333425bd98fc.jpg'
         },
         {
-            id: 4,
+            ID: '021',
+            Name: 'Antonio',
+            Age: 'Senior',
+            Gender: 'Male',
+            Skin: 'Olive',  
             source: 'https://storage-web.pixocial.com/vmake-prod/~/static/images/86e2103894354069be7f.jpg'
         },
     ]
@@ -220,13 +290,40 @@ const WEIGHT = [
     }
 ];
 
+
 const API_URL = "https://wearify-api.ew.r.appspot.com/";
+const GENAI_API_URL = 'https://w2w-api-c76466fc82ee.herokuapp.com';
+
+// TODO 
+// Remove After
+const FAKE_API = [
+    {
+        id: '8211036766361',
+        name: 'Clothes',
+        closet_url: 'https://style.clo-set.com/fitting/VHFF%2FhHOfsKxdmNtRHgRGw%3D%3D?',
+        is_closet: true
+    },
+    {
+        id: '8211137200281',
+        name: 'AZAT MARD',
+        closet_url: 'https://style.clo-set.com/fitting/VHFF%2FhHOfsJJDtlwD7hvZg%3D%3D?',
+        is_closet: true
+    }
+];
+// /////////
+
+
+
 
 const API_ENDPOINTS = {
     bodyShape: 'body-shape',
     getData: 'data',
-    measurements: 'bmt?height='
+    measurements: 'bmt?height=',
+    genai_id: '/genai_id'
 };
+
+// TODO
+const CLO_SET_URL = 'https://style.clo-set.com/fitting/dxHpcm6cq0%2FY1ydMkb1XqA%3D%3D?';
 
 
 
@@ -236,7 +333,10 @@ export {
     HEIGHT,
     WEIGHT,
     API_URL,
-    API_ENDPOINTS
+    API_ENDPOINTS,
+    CLO_SET_URL,
+    FAKE_API,
+    GENAI_API_URL
 };
 
 

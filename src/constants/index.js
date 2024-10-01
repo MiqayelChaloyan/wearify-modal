@@ -5,7 +5,9 @@ const ButtonsTexts = {
     tryOn: 'Try-On ME',
     ok: 'Ok',
     backScanning: '<  Back',
-    info: 'i'
+    info: 'i',
+    yes: 'Yes',
+    no: 'No'
 };
 
 const OptionsTexts = {
@@ -15,7 +17,7 @@ const OptionsTexts = {
 
 const Texts = {
     creatingModelImage: 'Creating model images, it’s expected to take 2 minutes.',
-    uploadDescription: `Please upload 1 to 10 clear individual photos of the same model, ensuring that the model's facial features  are fully visible in the pictures.`,
+    uploadDescription: `Please upload 1 clear individual photos of the same model, ensuring that the model's facial features are fully visible in the pictures.`,
     loadingDescription1: 'Your task is in the queue..',
     scanningQR: '🖐️ Welcome to your \n virtual fitting room!',
     scanningText: 'Scan the QR code \n to open AR lens!',
@@ -38,7 +40,8 @@ const Titles = {
     ownModel: 'BE YOUR OWN MODEL',
     yourModel: 'BE YOUR OWN MODEL',
     age: 'AGE',
-    gender: 'GENDER'
+    gender: 'GENDER',
+    removeImage: 'Are you sure you want to remove the image?'
 };
 
 const UnitsOfMeasurement = {

@@ -1,0 +1,59 @@
+theme.liquid
+
+    <!-- Wearify Start  -->
+      <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+      <script type="module" src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
+
+      {{ 'wearify.45103340.css' | asset_url | stylesheet_tag }}
+      <script src="{{ 'wearify.dbf03bab.js' | asset_url }}" defer="defer"></script>
+    <!-- Wearify End  -->
+
+
+
+main-product.liquid
+
+  <!-- Wearify button Try-On integration start  -->
+      <div id="root"></div>
+  <!-- Wearify integration End  -->
+
+
+
+
+              <!-- Wearify button integration Start  -->
+                 <button id="wearify-button" type="button" class="wearify-button">Try On</button>
+                 <script>
+                   document.addEventListener('DOMContentLoaded', function () {
+                       document.getElementById('wearify-button').onclick = function () {
+                         const wearifyModal = document.getElementById('web-modal');
+
+                         if(wearifyModal) {
+                           wearifyModal.style.display = 'block';
+                           wearifyModal.setAttribute('data-product-id', '{{ product.id }}');
+                         } else {
+                           console.log('Modal element not found');
+                         }
+                       }
+                   })
+                 </script>
+              <!-- Wearify integration End  -->
+
+
+
+section-main-product.css
+
+/* Wearify Try-On button styles  */
+.wearify-button {
+  background-color: #0C0D34;
+  color: #fff;
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  font-weight: 900;
+  text-align: center;
+  width: 100%;
+  height: 44px;
+  border: none;
+  display: block;
+  cursor: pointer;
+  font-family: var(--font-body-family);
+}
+/* Wearify styles end  */

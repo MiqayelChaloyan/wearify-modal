@@ -1,16 +1,13 @@
 import React from 'react';
 
-import './styles.css';
+import { Button, Image } from './styles';
+
 
 const Item = ({ source, isActive, onClick }) => {
     return (
-        <button className={`shape-button ${isActive ? 'active' : ''}`} onClick={onClick}>
-            <img
-                src={source}
-                alt={source}
-                className='image'
-            />
-        </button>
+        <Button $isactive={isActive} onClick={onClick}>
+            <Image src={source} alt={source} />
+        </Button>
     );
 };
 

@@ -11,71 +11,69 @@ import SlickSlider from 'ui/slickSlider';
 import { Titles } from 'constants';
 import { FEMALE_IMAGES, MALE_IMAGES } from 'constants/data';
 
-// TODO
-import { images } from 'utils/fakeApi';
-
-import './styles.css';
+import { AgeBox, Container, H3, SkinBox } from './styles';
 
 
-const Step4 = React.memo(() => {
-    const { isFemale, age, skinTone } = useSelector((state) => state.data);
+const Step4 = () => {
+    const { isFemale } = useSelector((state) => state.data);
+    const [skinID, setSkinID] = useState();
+    const [ageID, setAgeID] = useState();
+
+    const userData = useSelector((state) => state.data);
+    // console.log(userData)
+
     const dispatch = useDispatch();
-    
+
     const ages = isFemale ? FEMALE_IMAGES.AGE : MALE_IMAGES.AGE;
     const skinTones = isFemale ? FEMALE_IMAGES.SKIN_TONE : MALE_IMAGES.SKIN_TONE;
 
-    // const [activeIndexSkin, setActiveIndexSkin] = useState(null);
-    // const [activeIndexshape, setActiveIndexShape] = useState(null);
-
-    const handleChangeSkin = (skinToneId) => {
-        dispatch(handleUpdateData({ skinTone: skinToneId }));
-        // setActiveIndexSkin(index);
+    const handleChangeSkin = (id, skinTone) => {
+        setSkinID(id);
+        dispatch(handleUpdateData({ skinTone }));
     };
 
-    const handleChangeAge = (ageId) => {
-        dispatch(handleUpdateData({ age: ageId }));
-        // setActiveIndexShape(index);
+    const handleChangeAge = (id, age) => {
+        setAgeID(id);
+        dispatch(handleUpdateData({ age }));
     };
 
     const slideItems = skinTones?.map((item) => (
         <Item
-            key={item.title}
+            key={item.ID}
             source={item.source}
-            isActive={item.id === skinTone}
-            onClick={() => handleChangeSkin(item.id)}
+            isActive={item.ID === skinID}
+            onClick={() => handleChangeSkin(item.ID, item.Skin)}
         />
     ));
 
     const ageItems = ages?.map((item) => (
         <Item
-            key={item.title}
+            key={item.ID}
             source={item.source}
-            isActive={item.id === age}
-            onClick={() => handleChangeAge(item.id)}
+            isActive={item.ID === ageID}
+            onClick={() => handleChangeAge(item.ID, item.Age)}
         />
     ));
 
     return (
-        <div className='step'>
+        <div>
             <Header title={Titles.yourModel} />
-            <div className='options'>
+            <Container>
                 <div>
-                    <h3 className='title-type'>{Titles.skin}</h3>
-                    <div className='skin-slide'>
+                    <H3>{Titles.skin}</H3>
+                    <SkinBox>
                         <SlickSlider>
                             {slideItems}
                         </SlickSlider>
-                    </div>
+                    </SkinBox>
                 </div>
                 <div>
-                    <h3 className='title-type'>{Titles.age}</h3>
-                    <div className='age-types'>
-                        {ageItems}
-                    </div>
+                    <H3>{Titles.age}</H3>
+                    <AgeBox>{ageItems}</AgeBox>
                 </div>
-            </div>
+            </Container>
         </div>
     )
-});
+};
 
-export default Step4;
+export default React.memo(Step4);

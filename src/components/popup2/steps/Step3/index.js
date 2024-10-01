@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { handleUpdateData } from 'reducer/features/State';
@@ -8,48 +8,43 @@ import ImagesUpload from 'components/upload-images';
 
 import { Texts, Titles, Gender } from 'constants';
 
-import cn from 'classnames';
-import './styles.css';
+import { Container, H3, P, ToggleBox, ToggleButton } from './styles';
 
 
-const Step3 = React.memo(() => {
+const Step3 = () => {
     const { isFemale } = useSelector((state) => state.data);
     const dispatch = useDispatch();
-    // const [isFemale, setIsFemale] = useState(defaultFemale);
 
     const handleChangeGender = (gender) => {
         dispatch(handleUpdateData({ isFemale: gender }));
-        // setIsFemale(gender);
     };
 
     return (
         <div>
             <Header title={Titles.yourModel} />
-            <div className='options'>
+            <Container>
                 <div>
-                    <h3 className='toggle-title'>{Titles.gender}</h3>
-                    <div className='toggle-buttons'>
-                        <button
-                            className={cn('button-sizes', isFemale && 'active-sizes')}
-                            onClick={() => handleChangeGender(0)}
-                        >
-                            {Gender.female}
-                        </button>
-                        <button
-                            className={cn('button-sizes', !isFemale && 'active-sizes')}
+                    <H3>{Titles.gender}</H3>
+                    <ToggleBox>
+                        <ToggleButton
+                            $isactive={isFemale}
                             onClick={() => handleChangeGender(1)}
                         >
+                            {Gender.female}
+                        </ToggleButton>
+                        <ToggleButton
+                            $isactive={!isFemale}
+                            onClick={() => handleChangeGender(0)}
+                        >
                             {Gender.male}
-                        </button>
-                    </div>
+                        </ToggleButton>
+                    </ToggleBox>
                 </div>
-                <p className='description'>
-                    {Texts.uploadDescription}
-                </p>
+                <P>{Texts.uploadDescription}</P>
                 <ImagesUpload />
-            </div>
+            </Container>
         </div>
     )
-});
+};
 
-export default Step3;
+export default React.memo(Step3);

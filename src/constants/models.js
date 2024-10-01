@@ -1,44 +1,22 @@
 // VIDEO RECORDING TEST API
-import sneakersGlb from 'assets/models/sneakers.glb';
 
 const COMBINED_MODELS = {
     sneakers: [
         {
-            id: 1,
+            id: '8211035390105',
             name: 'sneakers',
-            link: '',
-            imgPath: 'https://drive.google.com/thumbnail?id=1UFvOIgy9Tr3Y9XE4sP4KX-SJRX-j_VgS',
-            glbPath: sneakersGlb,
+            link: 'https://wearifyai.github.io/ARTryOn/?effect=bows',
+            imgPath: 'https://drive.google.com/thumbnail?id=1rHnMmArBGamBFGZc2BWnWVGt0grheE_3',
+            glbPath: 'https://cdn.shopify.com/3d/models/o/2ab2b12bf3cf4cb2/pregomesh.glb' // sneakersGlb,
         },
-        {
-            id: 2,
-            name: 'sneakers',
-            link: '',
-            imgPath: 'https://drive.google.com/thumbnail?id=1nHwJLuJD8pMaKenekqnN-BQdvlCJ-BOo',
-            glbPath: sneakersGlb,
-        },
-        {
-            id: 3,
-            name: 'sneakers',
-            link: '',
-            imgPath: 'https://drive.google.com/thumbnail?id=1FNTltYiW4YeeW1zjGe7WMQhf1dbRs-Lw',
-            glbPath: sneakersGlb,
-        },
-        {
-            id: 4,
-            name: 'sneakers',
-            link: '',
-            imgPath: 'https://drive.google.com/thumbnail?id=1WsB6OW4sOrHpxHFNSEtBTP6WfWSa2HbN',
-            glbPath: sneakersGlb,
-        }
     ],
     sportWearing: [
         {
-            id: 1,
-            name: 'sport wearing',
-            link: 'https://style.clo-set.com/fitting/IR5k8MMQlGf3QPkI80wHZw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
-            imgPath: 'https://drive.google.com/thumbnail?id=185R0E69OO_gtMLDLE9TjAbqkF_aRSKKS',
-            glbPath: 'https://style.clo-set.com/fitting/IR5k8MMQlGf3QPkI80wHZw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
+            id: '8211036766361',
+            name: 'Clothes',
+            link: 'https://style.clo-set.com/fitting/VHFF%2FhHOfsKxdmNtRHgRGw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
+            imgPath: 'https://drive.google.com/thumbnail?id=1yFi63gbSqE6_xVIpiooL0Y4bl3nn7e1N',
+            glbPath: 'https://style.clo-set.com/fitting/VHFF%2FhHOfsKxdmNtRHgRGw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
             result: [
                 'https://drive.google.com/thumbnail?id=1XXN0I5vHzEGMVXQMYKUxbaQFKpTA3FUY',
                 'https://drive.google.com/thumbnail?id=1vb225jy9V4vrZb2PGYHkVH-90NgpS1GP',
@@ -46,11 +24,11 @@ const COMBINED_MODELS = {
             ]
         },
         {
-            id: 2,
-            name: 'sport wearing',
-            link: 'https://style.clo-set.com/fitting/IR5k8MMQlGf3QPkI80wHZw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
-            imgPath: 'https://drive.google.com/thumbnail?id=1yFi63gbSqE6_xVIpiooL0Y4bl3nn7e1N',
-            glbPath: 'https://style.clo-set.com/fitting/IR5k8MMQlGf3QPkI80wHZw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
+            id: '8211137200s81',
+            name: 'Pregomesh Rozie',
+            link: 'https://style.clo-set.com/fitting/VHFF%2FhHOfsJJDtlwD7hvZg%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
+            imgPath: 'https://drive.google.com/thumbnail?id=1KFk3ZMIi9Pzot26xXSiNbSdQVzvoa7mW',
+            glbPath: 'https://style.clo-set.com/fitting/VHFF%2FhHOfsJJDtlwD7hvZg%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
             result: [
                 'https://drive.google.com/thumbnail?id=1XXN0I5vHzEGMVXQMYKUxbaQFKpTA3FUY',
                 'https://drive.google.com/thumbnail?id=1vb225jy9V4vrZb2PGYHkVH-90NgpS1GP',
@@ -58,23 +36,11 @@ const COMBINED_MODELS = {
             ]
         },
         {
-            id: 3,
-            name: 'sport wearing',
-            link: 'https://style.clo-set.com/fitting/IR5k8MMQlGf3QPkI80wHZw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
-            imgPath: 'https://drive.google.com/thumbnail?id=1yFi63gbSqE6_xVIpiooL0Y4bl3nn7e1N',
-            glbPath: 'https://style.clo-set.com/fitting/IR5k8MMQlGf3QPkI80wHZw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
-            result: [
-                'https://drive.google.com/thumbnail?id=1XXN0I5vHzEGMVXQMYKUxbaQFKpTA3FUY',
-                'https://drive.google.com/thumbnail?id=1vb225jy9V4vrZb2PGYHkVH-90NgpS1GP',
-                'https://drive.google.com/thumbnail?id=18yQQmvNCf76K5Pl80168dKcuc9jIfbtJ'
-            ]
-        },
-        {
-            id: 4,
-            name: 'sport wearing',
-            link: 'https://style.clo-set.com/fitting/IR5k8MMQlGf3QPkI80wHZw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
-            imgPath: 'https://drive.google.com/thumbnail?id=1yFi63gbSqE6_xVIpiooL0Y4bl3nn7e1N',
-            glbPath: 'https://style.clo-set.com/fitting/IR5k8MMQlGf3QPkI80wHZw%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
+            id: '8211137200s81',
+            name: 'AZAT MARD',
+            link: 'https://style.clo-set.com/fitting/VHFF%2FhHOfsJJDtlwD7hvZg%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
+            imgPath: 'https://drive.google.com/thumbnail?id=1KFk3ZMIi9Pzot26xXSiNbSdQVzvoa7mW',
+            glbPath: 'https://style.clo-set.com/fitting/VHFF%2FhHOfsJJDtlwD7hvZg%3D%3D?ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none',
             result: [
                 'https://drive.google.com/thumbnail?id=1XXN0I5vHzEGMVXQMYKUxbaQFKpTA3FUY',
                 'https://drive.google.com/thumbnail?id=1vb225jy9V4vrZb2PGYHkVH-90NgpS1GP',
@@ -83,6 +49,8 @@ const COMBINED_MODELS = {
         },
     ]
 };
+
+
 
 export default COMBINED_MODELS;
 

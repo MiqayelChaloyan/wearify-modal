@@ -8,7 +8,7 @@ import { ButtonsTexts } from 'constants';
 
 import Close from './close';
 
-import './styles.css';
+import { Box, ButtonVariant1, ButtonVariant2, Container, Header, Modal } from './styles';
 
 
 const Popup = ({
@@ -30,34 +30,34 @@ const Popup = ({
     };
 
     return isPopup1Active && (
-        <div className='container'>
-            <div className='popup'>
-                <div className='header-popup'>
-                    <Close className='close-modal' onClose={handleClose} />
-                </div>
+        <Container>
+            <Modal>
+                <Header>
+                    <Close onClose={handleClose} />
+                </Header>
                 <div>
                     {children}
                 </div>
                 <div>
                     {currentStepIndex === 0 ? (
-                        <div className='buttons'>
-                            <button className='button-popup variant-1' onClick={_handleNext}>
+                        <Box>
+                            <ButtonVariant1 onClick={_handleNext}>
                                 {ButtonsTexts.next}
-                            </button>
-                        </div>
+                            </ButtonVariant1>
+                        </Box>
                     ) : (
-                        <div className='buttons'>
-                            <button className='button-popup variant-2' onClick={_handleBack}>
+                        <Box>
+                            <ButtonVariant2 onClick={_handleBack}>
                                 {ButtonsTexts.back}
-                            </button>
-                            <button className='button-popup variant-1' onClick={handleSaveAndClsoe}>
+                            </ButtonVariant2>
+                            <ButtonVariant1 onClick={handleSaveAndClsoe}>
                                 {ButtonsTexts.ok}
-                            </button>
-                        </div>
+                            </ButtonVariant1>
+                        </Box>
                     )}
                 </div>
-            </div>
-        </div>
+            </Modal>
+        </Container>
     )
 };
 

@@ -1,24 +1,27 @@
 import React, { useEffect, useState } from 'react';
 
+import { getDatabase, onValue, ref } from 'firebase/database';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { handleSwitchStatusPopup2 } from 'reducer/features/PopupState';
 import { handleUpdateData } from 'reducer/features/State';
+import { handleSwitchPopup } from 'reducer/features/ResultReducer';
 
 import ArrowRight from 'icons/arrow';
 
 import LoadingBar from 'ui/loading-bar';
 
 import { Texts } from 'constants';
+
 import colors from 'themes/colors';
 
-import './styles.css';
-import { handleSwitchPopup, handleSwitchResultLoading } from 'reducer/features/ResultReducer';
-import { getDatabase, onValue, ref } from 'firebase/database';
+import { Box, Container, Image, ImageUser, Loader, P } from './styles';
 
 
-const Step5 = React.memo(() => {
+const Step5 = () => {
     const { images } = useSelector(state => state.imageReducer);
     const { item } = useSelector((state) => state.ItemReducer);
+    const [isLoading, setIsLoading] = useState(true);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -27,12 +30,10 @@ const Step5 = React.memo(() => {
 
     const handleClose = () => {
         dispatch(handleSwitchStatusPopup2());
-        // dispatch(handleSwitchResultLoading());
         dispatch(handleSwitchPopup());
     };
 
     const userId = images[0]?.id;
-
 
     useEffect(() => {
         if (userId) {
@@ -42,16 +43,18 @@ const Step5 = React.memo(() => {
             onValue(starCountRef, (snapshot) => {
                 const data = snapshot.val();
                 if (!data?.isLoading) {
+                    setIsLoading(false)
+                    // TODO
                     // dispatch(updatedAvatarLoadingStatus(false));
                     // dispatch(updatedAvatarErrorStatus(false));
-
                     handleClose();
                 } else {
+                    // TODO
                     // dispatch(updatedAvatarLoadingStatus(true));
                     // dispatch(updatedAvatarErrorStatus(false));
-
                 }
                 if (data?.isAvatarError) {
+                    // TODO
                     // dispatch(updatedAvatarErrorStatus(true));
                     // dispatch(updatedAvatarLoadingStatus(false));
                 }
@@ -61,20 +64,22 @@ const Step5 = React.memo(() => {
 
 
     return (
-        <div className='child'>
-            <div className='process'>
-                <img className='div' src={images[0]?.source} alt={images[0]?.id} />
-                <ArrowRight width={19} height={19} fill={colors.lightGray} />
-                <img className='div' src={item?.imgPath} alt={item?.name} />
-            </div>
-            <p className='queue-text'>
-                {Texts.loadingDescription1}
-            </p>
-            <div className='loader'>
-                <LoadingBar handleSubmit={handleClose} />
-            </div>
-        </div>
+        <Container>
+            <Box>
+                <ImageUser src={images[0]?.source} alt={images[0]?.id} />
+                <ArrowRight
+                    width={19}
+                    height={19}
+                    fill={colors.lightGray}
+                />
+                <Image src={item?.imgPath} alt={item?.name} />
+            </Box>
+            <P>{Texts.loadingDescription1}</P>
+            <Loader>
+                <LoadingBar handleSubmit={handleClose} isLoading={isLoading}/>
+            </Loader>
+        </Container>
     );
-})
+};
 
-export default Step5;
+export default React.memo(Step5);
