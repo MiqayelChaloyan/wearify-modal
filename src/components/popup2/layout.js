@@ -32,7 +32,7 @@ export default function LayoutPopup() {
         ]);
 
     const { isFemale, url, skinTone, age } = useSelector((state) => state.data);
-
+        // console.log(isFemale, skinTone, age)
     const { images } = useSelector((state) => state.imageReducer);
 
     const userId = images[0]?.id;
@@ -41,8 +41,7 @@ export default function LayoutPopup() {
         if (currentStepIndex === 1) {
             const presetModelResultId = await getGenaiData(isFemale, skinTone, age);
             // console.log(presetModelResultId, 'presetModelResultId');
-
-            
+ 
             try {
                 const response = await fetch(images[0].source);
 

@@ -1,4 +1,3 @@
-// import src from 'assets/models/arev.glb'
 export default function ModelViewer({ uriGlb }) {
     return (
         <div className='viewer'>

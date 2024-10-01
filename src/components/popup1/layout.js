@@ -29,8 +29,8 @@ import { CLO_SET_URL, FAKE_API } from 'constants/data';
 
 export default function LayoutPopup() {
     const element = document.getElementById('web-modal');
-    const productId = element.getAttribute('data-product-id');
-    // const productId = '8211036766361';
+    // const productId = element.getAttribute('data-product-id');
+    const productId = '8211137200281';
 
     const { currentStepIndex, step, back, next } =
         useMultistepForm([
@@ -69,7 +69,7 @@ export default function LayoutPopup() {
                     closetIsFemale = 0;
                 }
 
-                url += `?&avatar_info=${closetIsFemale}_${0}_${height}_${weight}_${shape}&ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none`;
+                url += `?&avatar_info=${closetIsFemale}_${'3e35445aaa7d49a6acc00087ef6c22bd'}_${height}_${weight}_${shape}&ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none`;
                 // //////
 
                 // url = CLO_SET_URL + `?&avatar_info=${1}_${0}_${height}_${weight}_${genderParams.shapeType.TRIANGLE}&ui_colorway=0&ui_size=0&ui_capture=0&ui_shopping_bag=0&ui_like=0&ui_logo=none`;

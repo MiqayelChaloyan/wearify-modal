@@ -43,8 +43,10 @@ const Step1 = ({
 
     const dispatch = useDispatch();
     const element = document.getElementById('web-modal');
-    const productId = element.getAttribute('data-product-id');
-    // const productId = '8211036766361'
+    const productIdd = element.getAttribute('data-product-id');
+    const productId = '8211036766361'
+
+    console.log(productIdd)
 
     const prodIds = [PRODS_ID.AZAT_MARD, PRODS_ID.CLOTHES];
     const prod = prodIds.includes(productId);

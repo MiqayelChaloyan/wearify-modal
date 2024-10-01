@@ -18,6 +18,9 @@ const Result = () => {
     const [url, setUrl] = useState(null);
     const { images } = useSelector(state => state.imageReducer);
 
+
+    console.log(url, 'url');
+    
     const userId = images[0]?.id;
 
     const handleClose = () => {

@@ -1,0 +1,143 @@
+.Iframe {
+    position: absolute;
+    width: 400px;
+    bottom: 165px;
+    height: 500px; /* Use percentage padding to maintain aspect ratio */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (56.25% = 9/16 * 100) */
+    left: 0;
+    overflow: hidden;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: none; /* Hidden initially */
+}
+
+.iframe.loaded {
+    display: block; /* Display iframe once loaded */
+}
+
+.close-button{
+    position: absolute;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10000; /* Ensure buttons are above the iframe */
+}
+
+.close-button {
+    top: 100px;
+    right: 100px;
+}
+
+/* .reload-button {
+    bottom: 10px;
+    right: 15px;
+} */
+
+/* Media Queries for Different Screen Sizes */
+
+/* Larger screens (desktops) */
+@media (min-width: 1536px) {
+    .Iframe {
+        bottom: 165px; /* Adjust as needed for large screens */
+        padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+    }
+
+    .close-button, .reload-button {
+        right: 15px; /* Adjust button positioning */
+    }
+}
+
+/* Tablets and medium screens */
+@media (max-width: 1536px) and (min-width: 1200px) {
+    .Iframe {
+        bottom: 170px;
+        padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+    }
+
+    .close-button, .reload-button {
+        right: 12px; /* Adjust button positioning */
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 1024px) {
+    .Iframe {
+        bottom: 140px;
+        height: 420px;
+        padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+    }
+
+    .close-button, .reload-button {
+        right: 10px; /* Adjust button positioning */
+    }
+}
+
+/* Small tablets and large smartphones */
+@media (max-width: 1024px) and (min-width: 850px) {
+    .Iframe {
+        bottom: 160px;
+        height: 400px;
+        padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+    }
+
+    .close-button, .reload-button {
+        right: 8px; /* Adjust button positioning */
+    }
+}
+
+/* Small smartphones */
+@media (max-width: 850px) and (min-width: 750px) {
+    .Iframe {
+        bottom: 120px;
+        height: 340px;
+        padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+    }
+
+    .close-button, .reload-button {
+        right: 8px; /* Adjust button positioning */
+    }
+}
+
+@media (max-width: 750px) and (min-width: 480px) {
+    .Iframe {
+        bottom: 70px;
+        padding-bottom: 75%; /* Adjust aspect ratio for smaller screens */
+    }
+
+    .close-button, .reload-button {
+        right: 5px; /* Adjust button positioning */
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .Iframe {
+        bottom: 140px;
+        height: 330px;
+        padding-bottom: 50%;
+    }
+
+    .close-button, .reload-button {
+        right: 5px; /* Adjust button positioning */
+    }
+}
+
+@media (max-width: 360px) {
+    .Iframe {
+        bottom: 70px;
+        height: 330px;
+        padding-bottom: 50%;
+    }
+
+    .close-button, .reload-button {
+        right: 5px; /* Adjust button positioning */
+    }
+}
